@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Test
           command: |
-            yarn test
+            yarn test:ci
       # - run:
       #       name: Build Demo
       #       command: |

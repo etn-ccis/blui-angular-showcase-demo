@@ -1,36 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
-import { HeroModule, ChannelValueModule } from '@pxblue/angular-components';
-
-//pxblue modules
-import { NgProgressIconsModule } from '@pxblue/ng-progress-icons';
-
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
+import {AppModule} from "./app.module";
 
 describe('AppComponent', () => {
     beforeEach(async(() => {
         void TestBed.configureTestingModule({
-            declarations: [AppComponent],
             imports: [
-                BrowserModule,
-                HeroModule,
-                ChannelValueModule,
-                FormsModule,
-                MatDividerModule,
-                MatIconModule,
-                MatCardModule,
-                MatListModule,
-                HttpClientModule,
-                //pxblue
-                NgProgressIconsModule,
-            ],
+                AppModule
+            ]
         }).compileComponents();
     }));
 
