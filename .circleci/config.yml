@@ -36,6 +36,6 @@ jobs:
 
 workflows:
   version: 2
-  angular_library:
+  angular_demo:
     jobs:
       - build_demo
