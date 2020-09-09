@@ -67,8 +67,7 @@ pxb-score-card {
     .mat-list-base {
         padding: 16px 0px !important;
     }
-    .mat-list-item,
-    .card-body-item .pxb-info-list-item.pxb-info-list-item-dense .mat-list-item-content {
+    .pxb-score-card-body .mat-list-item-content {
         height: 36px !important;
     }
     .mat-list-text {
