@@ -255,7 +255,6 @@
                     </div>
                 </pxb-info-list-item>
             </mat-card>
-
             <mat-card class="container-card" style="margin-top: 10px; margin-bottom: 24px; padding: 16px;">
                 <pxb-empty-state title="No Devices" description="Consult your local admin for details">
                     <mat-icon pxb-empty-icon>devices</mat-icon>
@@ -265,6 +264,328 @@
                     </button>
                 </pxb-empty-state>
             </mat-card>
+
+            <div class="mat-example-container">
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Checkboxes</mat-card-header>
+                    <mat-card-content class="checkbox-demo-content">
+                        <mat-checkbox [checked]="false">Basic</mat-checkbox>
+                        <mat-checkbox [checked]="true" color="primary">Primary</mat-checkbox>
+                        <mat-checkbox [checked]="true" color="accent">Accent</mat-checkbox>
+                        <mat-checkbox [checked]="true" color="warn">Warn</mat-checkbox>
+                        <mat-checkbox [checked]="false" [indeterminate]="true">Indeterminate</mat-checkbox>
+                        <mat-checkbox [disabled]="true">Disabled</mat-checkbox>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Datepicker</mat-card-header>
+                    <mat-card-content class="date-picker-demo-content">
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="picker" placeholder="Choose a date" />
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Input Fields</mat-card-header>
+                    <mat-card-content class="form-field-demo-content">
+                        <mat-form-field appearance="legacy">
+                            <mat-label>Legacy form field</mat-label>
+                            <input matInput placeholder="Placeholder" />
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                            <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Standard form field</mat-label>
+                            <input matInput placeholder="Placeholder" />
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                            <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Fill form field</mat-label>
+                            <input matInput placeholder="Placeholder" />
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                            <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Outline form field</mat-label>
+                            <input matInput placeholder="Placeholder" />
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                            <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Radio Buttons</mat-card-header>
+                    <mat-card-content class="radio-button-demo-content">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1" [checked]="false">Basic</mat-radio-button>
+                            <mat-radio-button value="2" [checked]="true" color="primary">Primary</mat-radio-button>
+                            <mat-radio-button value="3" [checked]="true" color="accent">Accent</mat-radio-button>
+                            <mat-radio-button value="4" [checked]="true" color="warn">Warn</mat-radio-button>
+                            <mat-radio-button value="5" disabled="true">Disabled</mat-radio-button>
+                        </mat-radio-group>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Select Field</mat-card-header>
+                    <mat-card-content class="select-demo-content">
+                        <mat-form-field appearance="legacy">
+                            <mat-label>Basic</mat-label>
+                            <mat-select>
+                                <mat-option>Test</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Disabled</mat-label>
+                            <mat-select disabled="true">
+                                <mat-option value="Test">Test</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Required</mat-label>
+                            <mat-select required="true">
+                                <mat-option value="Test">Test</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Sliders</mat-card-header>
+                    <mat-card-content class="slider-demo-content">
+                        Basic: <br />
+                        <mat-slider style="width: 100%" thumbLabel tickInterval="10" min="1" max="100"></mat-slider>
+                        With Value: <br />
+                        <mat-slider
+                            style="width: 100%"
+                            value="50"
+                            thumbLabel
+                            tickInterval="10"
+                            min="1"
+                            max="100"
+                        ></mat-slider>
+                        Disabled <br />
+                        <mat-slider
+                            style="width: 100%"
+                            disabled="true"
+                            thumbLabel
+                            tickInterval="10"
+                            min="1"
+                            max="100"
+                        ></mat-slider>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Slide Toggle</mat-card-header>
+                    <mat-card-content class="slide-toggle-demo-content">
+                        <mat-slide-toggle [checked]="false">Basic</mat-slide-toggle>
+                        <mat-slide-toggle [checked]="true" color="primary">Primary</mat-slide-toggle>
+                        <mat-slide-toggle [checked]="true" color="accent">Accent</mat-slide-toggle>
+                        <mat-slide-toggle [checked]="true" color="warn">Warn</mat-slide-toggle>
+                        <mat-slide-toggle [disabled]="true">Disabled</mat-slide-toggle>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Stepper</mat-card-header>
+                    <mat-card-content>
+                        <mat-vertical-stepper [linear]="true" #stepper>
+                            <mat-step>
+                                <form>
+                                    <ng-template matStepLabel>Fill out your name</ng-template>
+                                    <mat-form-field>
+                                        <input matInput placeholder="Last name, First name" required />
+                                    </mat-form-field>
+                                    <div>
+                                        <button mat-button matStepperNext>Next</button>
+                                    </div>
+                                </form>
+                            </mat-step>
+                            <mat-step>
+                                <form>
+                                    <ng-template matStepLabel>Fill out your age</ng-template>
+                                    <mat-form-field>
+                                        <input matInput placeholder="Age" required />
+                                    </mat-form-field>
+                                    <div>
+                                        <button mat-button matStepperNext>Next</button>
+                                    </div>
+                                </form>
+                            </mat-step>
+                            <mat-step>
+                                <ng-template matStepLabel>Done</ng-template>
+                                You are now done.
+                                <div>
+                                    <button mat-button matStepperPrevious>Back</button>
+                                    <button mat-button>Reset</button>
+                                </div>
+                            </mat-step>
+                        </mat-vertical-stepper>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Tabs</mat-card-header>
+                    <mat-card-content class="tab-demo-content">
+                        <mat-tab-group>
+                            <mat-tab label="First"> Content 1 </mat-tab>
+                            <mat-tab label="Second"> Content 2 </mat-tab>
+                            <mat-tab label="Third"> Content 3 </mat-tab>
+                        </mat-tab-group>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Basic Buttons</mat-card-header>
+                    <mat-card-content class="button-demo-content">
+                        <button mat-button>Basic</button>
+                        <button mat-button color="primary">Primary</button>
+                        <button mat-button color="accent">Accent</button>
+                        <button mat-button color="warn">Warn</button>
+                        <button mat-button disabled>Disabled</button>
+                        <a mat-button routerLink=".">Link</a>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Raised Buttons</mat-card-header>
+                    <mat-card-content class="button-demo-content">
+                        <button mat-raised-button>Basic</button>
+                        <button mat-raised-button color="primary">Primary</button>
+                        <button mat-raised-button color="accent">Accent</button>
+                        <button mat-raised-button color="warn">Warn</button>
+                        <button mat-raised-button disabled>Disabled</button>
+                        <a mat-raised-button routerLink=".">Link</a>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Stroked Buttons</mat-card-header>
+                    <mat-card-content class="button-demo-content">
+                        <button mat-stroked-button>Basic</button>
+                        <button mat-stroked-button color="primary">Primary</button>
+                        <button mat-stroked-button color="accent">Accent</button>
+                        <button mat-stroked-button color="warn">Warn</button>
+                        <button mat-stroked-button disabled>Disabled</button>
+                        <a mat-stroked-button routerLink=".">Link</a>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Flat Buttons</mat-card-header>
+                    <mat-card-content class="button-demo-content">
+                        <button mat-flat-button>Basic</button>
+                        <button mat-flat-button color="primary">Primary</button>
+                        <button mat-flat-button color="accent">Accent</button>
+                        <button mat-flat-button color="warn">Warn</button>
+                        <button mat-flat-button disabled>Disabled</button>
+                        <a mat-flat-button routerLink=".">Link</a>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Icon Buttons</mat-card-header>
+                    <mat-card-content class="button-demo-content">
+                        <button mat-icon-button aria-label="Example icon-button with a heart icon">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                        <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                        <button mat-icon-button color="accent" aria-label="Example icon-button with a heart icon">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                        <button mat-icon-button disabled aria-label="Example icon-button with a heart icon">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Fab Buttons</mat-card-header>
+                    <mat-card-content class="button-demo-content">
+                        <button mat-fab>Basic</button>
+                        <button mat-fab color="primary">Primary</button>
+                        <button mat-fab color="accent">Accent</button>
+                        <button mat-fab color="warn">Warn</button>
+                        <button mat-fab disabled>Disabled</button>
+                        <button mat-fab aria-label="Example icon-button with a heart icon">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                        <a mat-fab routerLink=".">Link</a>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Mini Fab Buttons</mat-card-header>
+                    <mat-card-content class="button-demo-content">
+                        <button mat-mini-fab>Basic</button>
+                        <button mat-mini-fab color="primary">Primary</button>
+                        <button mat-mini-fab color="accent">Accent</button>
+                        <button mat-mini-fab color="warn">Warn</button>
+                        <button mat-mini-fab disabled>Disabled</button>
+                        <button mat-mini-fab aria-label="Example icon-button with a heart icon">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                        <a mat-mini-fab routerLink=".">Link</a>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Badge</mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            <span matBadge="4" matBadgeOverlap="false">Basic</span>
+                        </p>
+                        <p>
+                            <span matBadge="4" matBadgeOverlap="false" matBadgeColor="primary">Primary</span>
+                        </p>
+                        <p>
+                            <span matBadge="4" matBadgeOverlap="false" matBadgeColor="accent">Accent</span>
+                        </p>
+                        <p>
+                            <span matBadge="4" matBadgeOverlap="false" matBadgeColor="warn">Warn</span>
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Chips</mat-card-header>
+                    <mat-card-content>
+                        <mat-chip-list aria-label="chip selection">
+                            <mat-chip color="primary">Primary</mat-chip>
+                            <mat-chip color="accent">Accent</mat-chip>
+                            <mat-chip color="warn" selected>Warn</mat-chip>
+                        </mat-chip-list>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Progress Spinner</mat-card-header>
+                    <mat-card-content>
+                        <mat-spinner></mat-spinner>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="container-card ng-comp-card">
+                    <mat-card-header class="mat-h2">Progress Bar</mat-card-header>
+                    <mat-card-content>
+                        <mat-progress-bar mode="query"></mat-progress-bar>
+                    </mat-card-content>
+                </mat-card>
+            </div>
         </div>
     </div>
 </pxb-drawer-layout>
