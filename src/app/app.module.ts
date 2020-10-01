@@ -42,10 +42,15 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
 
 @NgModule({
-    declarations: [AppComponent, DrawerComponent],
+    declarations: [AppComponent, DrawerComponent, DashboardComponent, KitchenSinkComponent],
     imports: [
+        AppRoutingModule,
         BrowserAnimationsModule,
         BrowserModule,
         FormsModule,
@@ -83,6 +88,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
         DrawerModule,
         ListItemTagModule,
         DropdownToolbarModule,
+        RouterModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

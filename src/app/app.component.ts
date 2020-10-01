@@ -62,11 +62,6 @@ export class AppComponent {
         );
     }
 
-    test(): void {
-        // eslint-disable-next-line no-alert
-        alert('Hero component');
-    }
-
     isMobile(): boolean {
         return this._viewportService.isSmall();
     }

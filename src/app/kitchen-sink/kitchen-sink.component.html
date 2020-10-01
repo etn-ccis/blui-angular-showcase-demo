@@ -1,0 +1,415 @@
+<div class="mat-example-container">
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Datepicker</mat-card-header>
+        <mat-card-content class="date-picker-demo-content">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choose a date" />
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Tabs</mat-card-header>
+        <mat-card-content class="tab-demo-content">
+            <mat-tab-group>
+                <mat-tab label="First" isActive="true"> Content 1 </mat-tab>
+                <mat-tab label="Second"> Content 2 </mat-tab>
+                <mat-tab label="Third"> Content 3 </mat-tab>
+            </mat-tab-group>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Basic Buttons</mat-card-header>
+        <mat-card-content class="button-demo-content">
+            <button mat-button>Basic</button>
+            <button mat-button color="primary">Primary</button>
+            <button mat-button color="accent">Accent</button>
+            <button mat-button color="warn">Warn</button>
+            <button mat-button disabled>Disabled</button>
+            <a mat-button routerLink=".">Link</a>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Raised Buttons</mat-card-header>
+        <mat-card-content class="button-demo-content">
+            <button mat-raised-button>Basic</button>
+            <button mat-raised-button color="primary">Primary</button>
+            <button mat-raised-button color="accent">Accent</button>
+            <button mat-raised-button color="warn">Warn</button>
+            <button mat-raised-button disabled>Disabled</button>
+            <a mat-raised-button routerLink=".">Link</a>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Stroked Buttons</mat-card-header>
+        <mat-card-content class="button-demo-content">
+            <button mat-stroked-button>Basic</button>
+            <button mat-stroked-button color="primary">Primary</button>
+            <button mat-stroked-button color="accent">Accent</button>
+            <button mat-stroked-button color="warn">Warn</button>
+            <button mat-stroked-button disabled>Disabled</button>
+            <a mat-stroked-button routerLink=".">Link</a>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Flat Buttons</mat-card-header>
+        <mat-card-content class="button-demo-content">
+            <button mat-flat-button>Basic</button>
+            <button mat-flat-button color="primary">Primary</button>
+            <button mat-flat-button color="accent">Accent</button>
+            <button mat-flat-button color="warn">Warn</button>
+            <button mat-flat-button disabled>Disabled</button>
+            <a mat-flat-button routerLink=".">Link</a>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Icon Buttons</mat-card-header>
+        <mat-card-content class="button-demo-content">
+            <button mat-icon-button aria-label="Example icon-button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button color="accent" aria-label="Example icon-button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button disabled aria-label="Example icon-button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Fab Buttons</mat-card-header>
+        <mat-card-content class="button-demo-content">
+            <button mat-fab>Basic</button>
+            <button mat-fab color="primary">Primary</button>
+            <button mat-fab color="accent">Accent</button>
+            <button mat-fab color="warn">Warn</button>
+            <button mat-fab disabled>Disabled</button>
+            <button mat-fab aria-label="Example icon-button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <a mat-fab routerLink=".">Link</a>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Mini Fab Buttons</mat-card-header>
+        <mat-card-content class="button-demo-content">
+            <button mat-mini-fab>Basic</button>
+            <button mat-mini-fab color="primary">Primary</button>
+            <button mat-mini-fab color="accent">Accent</button>
+            <button mat-mini-fab color="warn">Warn</button>
+            <button mat-mini-fab disabled>Disabled</button>
+            <button mat-mini-fab aria-label="Example icon-button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <a mat-mini-fab routerLink=".">Link</a>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Chips</mat-card-header>
+        <mat-card-content>
+            <mat-chip-list aria-label="chip selection">
+                <mat-chip color="primary">Primary</mat-chip>
+                <mat-chip color="accent">Accent</mat-chip>
+                <mat-chip color="warn" selected>Warn</mat-chip>
+            </mat-chip-list>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">List Item Tag</mat-card-header>
+        <mat-card-content>
+            <pxb-list-item-tag label="monitored" style="display: inline-flex"></pxb-list-item-tag>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Progress Bar</mat-card-header>
+        <mat-card-content>
+            <mat-progress-bar mode="query"></mat-progress-bar>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Heroes</mat-card-header>
+        <mat-card-content>
+            <pxb-hero-banner>
+                <pxb-hero label="Estimated">
+                    <mat-icon pxb-primary>timer</mat-icon>
+                    <pxb-channel-value value="1" units="h"></pxb-channel-value>
+                    <pxb-channel-value value="26" units="m"></pxb-channel-value>
+                </pxb-hero>
+
+                <pxb-hero label="Battery" value="Full">
+                    <battery-progress class="progress-icon" percent="90" size="36" pxb-primary> </battery-progress>
+                </pxb-hero>
+
+                <pxb-hero label="Load">
+                    <pie-progress class="progress-icon" percent="65" size="36" pxb-primary></pie-progress>
+                    <pxb-channel-value value="65" units="%">
+                        <mat-icon [style.color]="colors.red['500']">trending_up</mat-icon>
+                    </pxb-channel-value>
+                </pxb-hero>
+            </pxb-hero-banner>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Progress Spinner</mat-card-header>
+        <mat-card-content>
+            <mat-spinner></mat-spinner>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Radio Buttons</mat-card-header>
+        <mat-card-content class="radio-button-demo-content">
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1" [checked]="false">Basic</mat-radio-button>
+                <mat-radio-button value="2" [checked]="true" color="primary">Primary</mat-radio-button>
+                <mat-radio-button value="3" [checked]="true" color="accent">Accent</mat-radio-button>
+                <mat-radio-button value="4" [checked]="true" color="warn">Warn</mat-radio-button>
+                <mat-radio-button value="5" disabled="true">Disabled</mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Select Field</mat-card-header>
+        <mat-card-content class="select-demo-content">
+            <mat-form-field appearance="legacy">
+                <mat-label>Basic</mat-label>
+                <mat-select>
+                    <mat-option>Test</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Disabled</mat-label>
+                <mat-select disabled="true">
+                    <mat-option value="Test">Test</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Required</mat-label>
+                <mat-select required="true">
+                    <mat-option value="Test">Test</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Sliders</mat-card-header>
+        <mat-card-content class="slider-demo-content">
+            Basic: <br />
+            <mat-slider style="width: 100%" thumbLabel tickInterval="10" min="1" max="100"></mat-slider>
+            With Value: <br />
+            <mat-slider style="width: 100%" value="50" thumbLabel tickInterval="10" min="1" max="100"></mat-slider>
+            Disabled <br />
+            <mat-slider style="width: 100%" disabled="true" thumbLabel tickInterval="10" min="1" max="100"></mat-slider>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Slide Toggle</mat-card-header>
+        <mat-card-content class="slide-toggle-demo-content">
+            <mat-slide-toggle [checked]="false">Basic</mat-slide-toggle>
+            <mat-slide-toggle [checked]="true" color="primary">Primary</mat-slide-toggle>
+            <mat-slide-toggle [checked]="true" color="accent">Accent</mat-slide-toggle>
+            <mat-slide-toggle [checked]="true" color="warn">Warn</mat-slide-toggle>
+            <mat-slide-toggle [disabled]="true">Disabled</mat-slide-toggle>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Badge</mat-card-header>
+        <mat-card-content>
+            <p>
+                <span matBadge="4" matBadgeOverlap="false">Basic</span>
+            </p>
+            <p>
+                <span matBadge="4" matBadgeOverlap="false" matBadgeColor="primary">Primary</span>
+            </p>
+            <p>
+                <span matBadge="4" matBadgeOverlap="false" matBadgeColor="accent">Accent</span>
+            </p>
+            <p>
+                <span matBadge="4" matBadgeOverlap="false" matBadgeColor="warn">Warn</span>
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Checkboxes</mat-card-header>
+        <mat-card-content class="checkbox-demo-content">
+            <mat-checkbox [checked]="false">Basic</mat-checkbox>
+            <mat-checkbox [checked]="true" color="primary">Primary</mat-checkbox>
+            <mat-checkbox [checked]="true" color="accent">Accent</mat-checkbox>
+            <mat-checkbox [checked]="true" color="warn">Warn</mat-checkbox>
+            <mat-checkbox [checked]="false" [indeterminate]="true">Indeterminate</mat-checkbox>
+            <mat-checkbox [disabled]="true">Disabled</mat-checkbox>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Input Fields</mat-card-header>
+        <mat-card-content class="form-field-demo-content">
+            <mat-form-field appearance="legacy">
+                <mat-label>Legacy form field</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+                <mat-label>Standard form field</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Fill form field</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder" />
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">InfoListItem</mat-card-header>
+        <mat-card-content>
+            <mat-list style="position: relative; padding-top: 0">
+                <pxb-info-list-item dense="true" divider="true" hidePadding="true">
+                    <div pxb-title>Home</div>
+                </pxb-info-list-item>
+                <pxb-info-list-item dense="true" divider="true">
+                    <mat-icon pxb-icon>home</mat-icon>
+                    <div pxb-title>Home</div>
+                </pxb-info-list-item>
+                <pxb-info-list-item dense="true" divider="true">
+                    <mat-icon pxb-icon>home</mat-icon>
+                    <div pxb-title>Home</div>
+                    <div pxb-subtitle>Return back to the main page</div>
+                </pxb-info-list-item>
+                <pxb-info-list-item divider="true" chevron="true" statusColor="'red'">
+                    <mat-icon pxb-icon>home</mat-icon>
+                    <div pxb-title>Home</div>
+                    <div pxb-subtitle>Return back to the main page</div>
+                    <div pxb-info>Even longer description goes here</div>
+                </pxb-info-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Empty State</mat-card-header>
+        <mat-card-content>
+            <pxb-empty-state title="No Devices" description="Consult your local admin for details">
+                <mat-icon pxb-empty-icon>devices</mat-icon>
+                <button mat-raised-button color="primary" pxb-actions>
+                    <mat-icon>add_circle</mat-icon>
+                    ADD DEVICE
+                </button>
+            </pxb-empty-state>
+        </mat-card-content> </mat-card
+    ><mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Stepper</mat-card-header>
+        <mat-card-content>
+            <mat-vertical-stepper [linear]="true" #stepper>
+                <mat-step>
+                    <form>
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field>
+                            <input matInput placeholder="Last name, First name" required />
+                        </mat-form-field>
+                        <div>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step>
+                    <form>
+                        <ng-template matStepLabel>Fill out your age</ng-template>
+                        <mat-form-field>
+                            <input matInput placeholder="Age" required />
+                        </mat-form-field>
+                        <div>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Done</ng-template>
+                    You are now done.
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button>Reset</button>
+                    </div>
+                </mat-step>
+            </mat-vertical-stepper>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Score Card</mat-card-header>
+        <mat-card-content>
+            <pxb-score-card
+                [badgeOffset]="-72"
+                style="max-width: 100%"
+                class="red-score-card"
+                [headerTitle]="'Substation 3'"
+                [headerSubtitle]="'High Humidity Alarm'"
+                [headerInfo]="'4 Devices'"
+            >
+                <mat-icon pxb-action-items>more_vert</mat-icon>
+                <mat-list pxb-body>
+                    <pxb-info-list-item dense="true" [style.color]="colors.red[500]" [style.height.px]="40">
+                        <div pxb-title>1 Alarm</div>
+                        <mat-icon pxb-icon>notifications</mat-icon>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item dense="true" [style.color]="colors.blue[500]">
+                        <div pxb-title>1 Event</div>
+                        <mat-icon pxb-icon>list_alt</mat-icon>
+                    </pxb-info-list-item>
+                </mat-list>
+                <pxb-hero
+                    pxb-badge
+                    label="Health"
+                    value="98"
+                    units="%"
+                    [iconBackgroundColor]="colors.white[50]"
+                    style="cursor: pointer"
+                    [iconSize]="72"
+                >
+                    <mat-icon svgIcon="px-icons:grade_a" pxb-primary [style.color]="colors.green[500]"></mat-icon>
+                </pxb-hero>
+                <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row>
+                    <div pxb-title>More</div>
+                    <mat-icon mat-list-icon pxb-right-content class="scorecard-chevron">chevron_right</mat-icon>
+                </pxb-info-list-item>
+            </pxb-score-card>
+        </mat-card-content>
+    </mat-card>
+</div>
