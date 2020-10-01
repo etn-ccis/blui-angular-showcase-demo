@@ -7,7 +7,7 @@ describe('KitchenSinkComponent', () => {
     let fixture: ComponentFixture<KitchenSinkComponent>;
 
     beforeEach(async(() => {
-        TestBed.configureTestingModule({
+        void TestBed.configureTestingModule({
             declarations: [KitchenSinkComponent],
         }).compileComponents();
     }));
@@ -19,6 +19,6 @@ describe('KitchenSinkComponent', () => {
     });
 
     it('should create', () => {
-        expect(component).toBeTruthy();
+        void expect(component).toBeTruthy();
     });
 });

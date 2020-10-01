@@ -7,7 +7,7 @@ describe('DashboardComponent', () => {
     let fixture: ComponentFixture<DashboardComponent>;
 
     beforeEach(async(() => {
-        TestBed.configureTestingModule({
+        void TestBed.configureTestingModule({
             declarations: [DashboardComponent],
         }).compileComponents();
     }));
@@ -19,6 +19,6 @@ describe('DashboardComponent', () => {
     });
 
     it('should create', () => {
-        expect(component).toBeTruthy();
+        void expect(component).toBeTruthy();
     });
 });

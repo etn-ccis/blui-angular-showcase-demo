@@ -42,7 +42,7 @@ import { Router } from '@angular/router';
 })
 export class DrawerComponent {
     colors = PXBColors;
-    selectedItemId: string = 'Dashboard';
+    selectedItemId = 'Dashboard';
 
     constructor(
         private readonly _stateService: StateService,
@@ -67,8 +67,7 @@ export class DrawerComponent {
     ];
 
     navigate(url: string): void {
-        this._router.navigateByUrl(url);
-        this._changeDetector.detectChanges();
+        void this._router.navigateByUrl(url);
     }
 
     isOpen(): boolean {
