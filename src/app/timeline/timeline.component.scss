@@ -1,0 +1,49 @@
+@import '~@pxblue/colors/palette.scss';
+
+.host {
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-root {
+    max-width: 1200px;
+    width: 100%;
+    padding: 16px;
+    justify-content: center;
+    mat-card {
+        width: 100%;
+        padding: 0;
+    }
+    mat-card-header {
+        .mat-card-header-text {
+            margin-left: 8px!important;
+        }
+        height: 50px;
+        line-height: 50px;
+        color: map-get($pxb-blue, 500);
+        font-weight: 600;
+    }
+    pxb-list-item-tag {
+        margin-right: 16px;
+    }
+    .pxb-info-list-item-left-content-wrapper {
+        font-size: 12px;
+        margin-left: 16px;
+        margin-right: 24px;
+        div {
+            display: block;
+        }
+    }
+    .ampm {
+        font-weight: 600;
+        margin-left: 2px;
+    }
+    .station-chevron {
+        font-size: 14px;
+        height: 14px;
+        width: 14px;
+        margin-left: 4px;
+        margin-right: 4px;
+        line-height: 18px;
+    }
+}
