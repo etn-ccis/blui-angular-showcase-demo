@@ -29,6 +29,12 @@ import { Router } from '@angular/router';
                         [selected]="selectedItemId === navItem.title"
                         (select)="navItem.onSelect(); setActive(navItem.title)"
                     >
+                        <pxb-drawer-nav-item
+                            *ngFor="let nestedItem of navItem.items"
+                            [title]="nestedItem.title"
+                            [selected]="selectedItemId === nestedItem.title"
+                            (select)="nestedItem.onSelect(); setActive(nestedItem.title)"
+                        ></pxb-drawer-nav-item>
                         <mat-icon pxb-icon>{{ navItem.icon }}</mat-icon>
                     </pxb-drawer-nav-item>
                 </pxb-drawer-nav-group>
@@ -53,10 +59,20 @@ export class DrawerComponent {
 
     navItems: DrawerNavItem[] = [
         {
-            title: 'Dashboard',
-            subtitle: 'components in context',
-            onSelect: (): void => this.navigate('/dashboard'),
-            icon: 'dashboard',
+            title: 'Contextual',
+            subtitle: 'components in an app setting',
+            icon: 'layers',
+            onSelect: (): void => {},
+            items: [
+                {
+                    title: 'Dashboard',
+                    onSelect: (): void => this.navigate('/dashboard'),
+                },
+                {
+                    title: 'Timeline',
+                    onSelect: (): void => this.navigate('/timeline'),
+                },
+            ],
         },
         {
             title: 'Kitchen Sink',

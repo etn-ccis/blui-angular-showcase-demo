@@ -29,7 +29,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
@@ -46,10 +46,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+import { TimelineComponent } from './timeline/timeline.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
-    declarations: [AppComponent, DrawerComponent, DashboardComponent, KitchenSinkComponent],
+    declarations: [AppComponent, DashboardComponent, DrawerComponent, KitchenSinkComponent, TimelineComponent],
     imports: [
+        MatRippleModule,
         AppRoutingModule,
         BrowserAnimationsModule,
         BrowserModule,
@@ -89,6 +92,7 @@ import { AppRoutingModule } from './app.routing';
         ListItemTagModule,
         DropdownToolbarModule,
         RouterModule,
+        MatExpansionModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
