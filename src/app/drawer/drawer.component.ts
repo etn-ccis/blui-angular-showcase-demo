@@ -62,6 +62,7 @@ export class DrawerComponent {
             title: 'Contextual',
             subtitle: 'components in an app setting',
             icon: 'layers',
+            onSelect: (): void => {},
             items: [
                 {
                     title: 'Dashboard',
