@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
-import {TimelineComponent} from "./timeline/timeline.component"; // CLI imports router
+import { TimelineComponent } from './timeline/timeline.component'; // CLI imports router
 
 const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },

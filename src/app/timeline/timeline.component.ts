@@ -7,8 +7,8 @@ import * as PXBColors from '@pxblue/colors';
     styleUrls: ['./timeline.component.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        'class' : 'host'
-    }
+        class: 'host',
+    },
 })
 export class TimelineComponent implements AfterViewInit {
     colors = PXBColors;
