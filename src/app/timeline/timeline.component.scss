@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+.mat-list-base {
+    padding-top: 0!important;
+}
+
 .timeline-root {
     max-width: 1200px;
     width: 100%;
@@ -30,8 +34,9 @@
         font-size: 12px;
         margin-left: 16px;
         margin-right: 24px;
-        div {
-            display: block;
+        > div {
+            width: 60px!important;
+            display: inline-block!important;
         }
     }
     .ampm {
