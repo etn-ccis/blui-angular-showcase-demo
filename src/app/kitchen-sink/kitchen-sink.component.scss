@@ -1,0 +1,72 @@
+@import '~@pxblue/colors/palette.scss';
+
+.mat-example-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+mat-card.ng-comp-card {
+    width: 100%;
+    max-width: 400px;
+    min-width: 350px;
+    box-sizing: border-box;
+    margin: 8px 8px;
+    padding: 16px;
+}
+
+.checkbox-demo-content {
+    flex-direction: column;
+    display: flex !important;
+    mat-checkbox {
+        margin: 8px 8px !important;
+    }
+}
+
+.form-field-demo-content,
+.select-demo-content,
+.date-picker-demo-content {
+    .mat-form-field {
+        display: block !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+        .mat-form-field-wrapper {
+            width: 100%;
+        }
+    }
+}
+
+.radio-button-demo-content mat-radio-group {
+    flex-direction: column;
+    display: flex !important;
+    mat-radio-button {
+        margin: 8px 8px !important;
+    }
+}
+
+.slide-toggle-demo-content {
+    flex-direction: column;
+    display: flex !important;
+    mat-slide-toggle {
+        margin: 8px 8px !important;
+    }
+}
+
+.progress-icon {
+    color: map-get($pxb-blue, 500);
+}
+
+.tab-demo-content {
+    .mat-tab-label {
+        width: 33.3%;
+        min-width: unset;
+    }
+}
+
+.button-demo-content {
+    button {
+        margin: 8px !important;
+    }
+}

@@ -27,10 +27,33 @@ import { MatButtonModule } from '@angular/material/button';
 import { DrawerComponent } from './drawer/drawer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
+import { TimelineComponent } from './timeline/timeline.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
-    declarations: [AppComponent, DrawerComponent],
+    declarations: [AppComponent, DashboardComponent, DrawerComponent, KitchenSinkComponent, TimelineComponent],
     imports: [
+        MatRippleModule,
+        AppRoutingModule,
         BrowserAnimationsModule,
         BrowserModule,
         FormsModule,
@@ -40,8 +63,23 @@ import { MatMenuModule } from '@angular/material/menu';
         MatListModule,
         MatButtonModule,
         HttpClientModule,
+        MatCheckboxModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatFormFieldModule,
+        MatInputModule,
         MatToolbarModule,
         MatMenuModule,
+        MatRadioModule,
+        MatSelectModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        MatStepperModule,
+        MatTabsModule,
+        MatBadgeModule,
+        MatChipsModule,
+        MatProgressSpinnerModule,
+        MatProgressBarModule,
         //pxblue
         UserMenuModule,
         NgProgressIconsModule,
@@ -53,6 +91,8 @@ import { MatMenuModule } from '@angular/material/menu';
         DrawerModule,
         ListItemTagModule,
         DropdownToolbarModule,
+        RouterModule,
+        MatExpansionModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
