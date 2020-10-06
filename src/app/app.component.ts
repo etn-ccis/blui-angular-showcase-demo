@@ -6,7 +6,7 @@ import { ViewportService } from './services/viewport.service';
 import { DrawerLayoutVariantType } from '@pxblue/angular-components';
 import { StateService } from './services/state.service';
 
-const iconSet = require('@pxblue/icons-svg/icons.svg');
+const iconSet = require('@pxblue/icons-svg/icons.svg').default;
 
 @Component({
     selector: 'app-root',
