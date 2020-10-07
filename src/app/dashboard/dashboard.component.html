@@ -8,28 +8,30 @@
                     </mat-panel-title>
                 </mat-expansion-panel-header>
                 <mat-divider></mat-divider>
-                <pxb-info-list-item divider="full" chevron="true">
-                    <mat-icon pxb-icon>feedback</mat-icon>
-                    <div pxb-title>Basement Sensor</div>
-                    <div pxb-subtitle>Dwyer RJ382</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true" [statusColor]="colors.red[500]" avatar="true">
-                    <mat-icon pxb-icon [style.color]="colors.white[50]" [style.backgroundColor]="colors.red[500]"
+                <mat-nav-list style="padding-top: 0">
+                    <pxb-info-list-item divider="full" chevron="true">
+                        <mat-icon pxb-icon>feedback</mat-icon>
+                        <div pxb-title>Basement Sensor</div>
+                        <div pxb-subtitle>Dwyer RJ382</div>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item divider="full" chevron="true" [statusColor]="colors.red[500]" avatar="true">
+                        <mat-icon pxb-icon [style.color]="colors.white[50]" [style.backgroundColor]="colors.red[500]"
                         >alarms</mat-icon
-                    >
-                    <div pxb-title>Cabinet 5 Wire</div>
-                    <div pxb-subtitle>Exampo Device Model</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true">
-                    <mat-icon pxb-icon>battery_full</mat-icon>
-                    <div pxb-title>Battery</div>
-                    <div pxb-subtitle>Battery Charger</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true">
-                    <mat-icon pxb-icon>wifi</mat-icon>
-                    <div pxb-title>WIRC Gateway</div>
-                    <div pxb-subtitle>WIRC Gateway</div>
-                </pxb-info-list-item>
+                        >
+                        <div pxb-title>Cabinet 5 Wire</div>
+                        <div pxb-subtitle>Exampo Device Model</div>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item divider="full" chevron="true">
+                        <mat-icon pxb-icon>battery_full</mat-icon>
+                        <div pxb-title>Battery</div>
+                        <div pxb-subtitle>Battery Charger</div>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item divider="full" chevron="true">
+                        <mat-icon pxb-icon>wifi</mat-icon>
+                        <div pxb-title>WIRC Gateway</div>
+                        <div pxb-subtitle>WIRC Gateway</div>
+                    </pxb-info-list-item>
+                </mat-nav-list>
             </mat-expansion-panel>
         </mat-accordion>
 
@@ -43,49 +45,51 @@
                     </mat-panel-title>
                 </mat-expansion-panel-header>
                 <mat-divider></mat-divider>
-                <pxb-info-list-item divider="full" chevron="true">
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
-                    <div pxb-left-content>
-                        <div>8:05 <span class="ampm">AM</span></div>
-                        <div>09/23/19</div>
-                    </div>
-                    <div pxb-title>Connection Lost</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true">
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
-                    <div pxb-left-content>
-                        <div>8:05 <span class="ampm">AM</span></div>
-                        <div>09/23/19</div>
-                    </div>
-                    <div pxb-title>Back Online</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true">
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
-                    <div pxb-left-content>
-                        <div>12:12<span class="ampm">PM</span></div>
-                        <div>07/19/19</div>
-                    </div>
-                    <div pxb-title>Connection Lost</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true" [statusColor]="colors.red[500]" avatar="true">
-                    <mat-icon pxb-icon [style.color]="colors.white[50]" [style.backgroundColor]="colors.red[500]"
-                        >alarms</mat-icon
-                    >
-                    <div pxb-left-content>
-                        <div>2:12<span class="ampm">PM</span></div>
-                        <div>07/13/19</div>
-                    </div>
-                    <div pxb-title>Cabinet 5 Wire</div>
-                    <div pxb-subtitle>Exampo Device Model</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true">
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
-                    <div pxb-left-content>
-                        <div>12:12<span class="ampm">PM</span></div>
-                        <div>07/19/19</div>
-                    </div>
-                    <div pxb-title>Back Online</div>
-                </pxb-info-list-item>
+                <mat-nav-list style="padding-top: 0">
+                    <pxb-info-list-item divider="full" chevron="true">
+                        <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
+                        <div pxb-left-content>
+                            <div>8:05 <span class="ampm">AM</span></div>
+                            <div>09/23/19</div>
+                        </div>
+                        <div pxb-title>Connection Lost</div>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item divider="full" chevron="true">
+                        <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
+                        <div pxb-left-content>
+                            <div>8:05 <span class="ampm">AM</span></div>
+                            <div>09/23/19</div>
+                        </div>
+                        <div pxb-title>Back Online</div>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item divider="full" chevron="true">
+                        <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
+                        <div pxb-left-content>
+                            <div>12:12<span class="ampm">PM</span></div>
+                            <div>07/19/19</div>
+                        </div>
+                        <div pxb-title>Connection Lost</div>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item divider="full" chevron="true" [statusColor]="colors.red[500]" avatar="true">
+                        <mat-icon pxb-icon [style.color]="colors.white[50]" [style.backgroundColor]="colors.red[500]"
+                            >alarms</mat-icon
+                        >
+                        <div pxb-left-content>
+                            <div>2:12<span class="ampm">PM</span></div>
+                            <div>07/13/19</div>
+                        </div>
+                        <div pxb-title>Cabinet 5 Wire</div>
+                        <div pxb-subtitle>Exampo Device Model</div>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item divider="full" chevron="true">
+                        <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
+                        <div pxb-left-content>
+                            <div>12:12<span class="ampm">PM</span></div>
+                            <div>07/19/19</div>
+                        </div>
+                        <div pxb-title>Back Online</div>
+                    </pxb-info-list-item>
+                </mat-nav-list>
             </mat-expansion-panel>
         </mat-accordion>
     </div>
@@ -120,7 +124,7 @@
                     <mat-icon svgIcon="px-icons:moisture" pxb-primary [style.color]="colors.blue[300]"> </mat-icon>
                 </pxb-hero>
             </pxb-hero-banner>
-            <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row>
+            <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row mat-ripple>
                 <div pxb-title>More</div>
                 <mat-icon mat-list-icon pxb-right-content class="scorecard-chevron">chevron_right</mat-icon>
             </pxb-info-list-item>
@@ -160,7 +164,7 @@
             >
                 <mat-icon svgIcon="px-icons:grade_a" pxb-primary [style.color]="colors.green[500]"></mat-icon>
             </pxb-hero>
-            <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row>
+            <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row mat-ripple>
                 <div pxb-title>View Location</div>
                 <mat-icon mat-list-icon pxb-right-content class="scorecard-chevron">chevron_right</mat-icon>
             </pxb-info-list-item>

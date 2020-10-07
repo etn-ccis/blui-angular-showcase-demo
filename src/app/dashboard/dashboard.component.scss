@@ -51,8 +51,9 @@ pxb-score-card {
     .pxb-info-list-item-left-content-wrapper {
         font-size: 12px;
         margin-right: 8px;
-        div {
-            display: block;
+        > div {
+            width: 60px !important;
+            display: inline-block !important;
         }
     }
     .ampm {

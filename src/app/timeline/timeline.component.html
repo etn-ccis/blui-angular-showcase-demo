@@ -3,7 +3,7 @@
         <mat-card-header>Today</mat-card-header>
         <mat-divider></mat-divider>
         <mat-nav-list>
-            <pxb-info-list-item divider="full" [statusColor]="colors.red[500]" avatar="true" chevron="true">
+            <pxb-info-list-item style="overflow: hidden" [statusColor]="colors.red[500]" avatar="true" chevron="true">
                 <mat-icon pxb-icon [style.backgroundColor]="colors.red[500]" [style.color]="colors.white[500]"
                     >notifications</mat-icon
                 >
@@ -42,7 +42,7 @@
                     [backgroundColor]="colors.blue[50]"
                 ></pxb-list-item-tag>
             </pxb-info-list-item>
-            <pxb-info-list-item divider="full" chevron="true">
+            <pxb-info-list-item chevron="true">
                 <mat-icon pxb-icon>notifications</mat-icon>
                 <div pxb-left-content>
                     <div>8:05 <span class="ampm">PM</span></div>
@@ -68,7 +68,7 @@
         <mat-card-header>Last Week</mat-card-header>
         <mat-divider></mat-divider>
         <mat-nav-list>
-            <pxb-info-list-item divider="full" chevron="true">
+            <pxb-info-list-item chevron="true">
                 <mat-icon pxb-icon [style.color]="colors.red[500]">notifications</mat-icon>
                 <div pxb-left-content>
                     <div>12:00 <span class="ampm">PM</span></div>
@@ -139,7 +139,7 @@
                     Substation 4 <mat-icon class="station-chevron">chevron_left</mat-icon>Gary Steelworks
                 </div>
             </pxb-info-list-item>
-            <pxb-info-list-item divider="full" [statusColor]="colors.red[500]" avatar="true" chevron="true">
+            <pxb-info-list-item [statusColor]="colors.red[500]" avatar="true" chevron="true">
                 <mat-icon pxb-icon [style.backgroundColor]="colors.red[500]" [style.color]="colors.white[500]"
                     >notifications</mat-icon
                 >
