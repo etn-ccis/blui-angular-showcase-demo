@@ -6,7 +6,7 @@ import { ViewportService } from './services/viewport.service';
 import { DrawerLayoutVariantType } from '@pxblue/angular-components';
 import { StateService } from './services/state.service';
 
-const iconSet = require('@pxblue/icons-svg/icons.svg').default;
+// const iconSet = require('@pxblue/icons-svg/icons.svg').default;
 
 @Component({
     selector: 'app-root',
@@ -58,7 +58,9 @@ export class AppComponent {
         this.colors = PXBColors;
         this._matIconRegistry.addSvgIconSetInNamespace(
             'px-icons',
-            this._domSanitizer.bypassSecurityTrustResourceUrl(iconSet)
+            // Stackblitz works with https request instead of using icons from node_modules.
+            this._domSanitizer.bypassSecurityTrustResourceUrl('https://raw.githubusercontent.com/pxblue/icons/dev/svg/icons.svg')
+            // this._domSanitizer.bypassSecurityTrustResourceUrl('iconSet')
         );
     }
 
