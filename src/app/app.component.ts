@@ -59,7 +59,9 @@ export class AppComponent {
         this._matIconRegistry.addSvgIconSetInNamespace(
             'px-icons',
             // Stackblitz works with https request instead of using icons from node_modules.
-            this._domSanitizer.bypassSecurityTrustResourceUrl('https://raw.githubusercontent.com/pxblue/icons/dev/svg/icons.svg')
+            this._domSanitizer.bypassSecurityTrustResourceUrl(
+                'https://raw.githubusercontent.com/pxblue/icons/dev/svg/icons.svg'
+            )
             // this._domSanitizer.bypassSecurityTrustResourceUrl('iconSet')
         );
     }

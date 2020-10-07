@@ -92,7 +92,7 @@ export class DrawerComponent {
 
     setActive(id: string): void {
         this.selectedItemId = id;
-        if(this._viewportService.isSmall()) {
+        if (this._viewportService.isSmall()) {
             this._stateService.setDrawerOpen(false);
         }
     }
