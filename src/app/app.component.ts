@@ -6,7 +6,6 @@ import { ViewportService } from './services/viewport.service';
 import { DrawerLayoutVariantType } from '@pxblue/angular-components';
 import { StateService } from './services/state.service';
 
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
