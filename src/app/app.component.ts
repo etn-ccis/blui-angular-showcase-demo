@@ -6,7 +6,6 @@ import { ViewportService } from './services/viewport.service';
 import { DrawerLayoutVariantType } from '@pxblue/angular-components';
 import { StateService } from './services/state.service';
 
-// const iconSet = require('@pxblue/icons-svg/icons.svg').default;
 
 @Component({
     selector: 'app-root',
@@ -58,11 +57,16 @@ export class AppComponent {
         this.colors = PXBColors;
         this._matIconRegistry.addSvgIconSetInNamespace(
             'px-icons',
-            // Stackblitz works with https request instead of using icons from node_modules.
+            /* **Note to PX Blue Users:
+                Stackblitz has difficulty reading static assets found within the node_modules folder.
+                For this example to work inside Stackblitz, we use a https request to fetch the PX Blue icon set.
+                In normal situations, we encourage you to import the iconSet directly from the node_modules folder like below:
+                    // const iconSet = require('@pxblue/icons-svg/icons.svg').default;
+                    // this._domSanitizer.bypassSecurityTrustResourceUrl('iconSet')
+             */
             this._domSanitizer.bypassSecurityTrustResourceUrl(
                 'https://raw.githubusercontent.com/pxblue/icons/dev/svg/icons.svg'
             )
-            // this._domSanitizer.bypassSecurityTrustResourceUrl('iconSet')
         );
     }
 
