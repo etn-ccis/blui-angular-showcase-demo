@@ -1226,11 +1226,12 @@
   resolved "https://registry.yarnpkg.com/@pxblue/icons-svg/-/icons-svg-1.0.19.tgz#656388ee8abea09ac3b35fd88941a6e4d26ddbaa"
   integrity sha512-86Oo4IxhLPabS7trzWYgFZ47mT4RWEj+8mPZttDmw8hKwJv152y1vpJGatULplDh6Ke10E5JW/d+mW8RvSYVFA==
 
-"@pxblue/ng-progress-icons@^1.1.3":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@pxblue/ng-progress-icons/-/ng-progress-icons-1.1.4.tgz#02e3051d8d0d7be33deedccd603c033f17e1dd8c"
-  integrity sha512-s3O4DINjeCUAXRWPMTqsbK9cTUEockb0/+MG7rsXoVur+ef9FDu1QQHVRC8jG6/+cB6LGt96Di8yFgCixQEQ4A==
+"@pxblue/ng-progress-icons@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@pxblue/ng-progress-icons/-/ng-progress-icons-1.2.1.tgz#2a512107d774e7bc22cdaecf2718cd42094ccd78"
+  integrity sha512-qBowwudAnmHG8wAtvCcSgY4Y3AGGStgsbhrzOH6+nHh5FI6XZoeygTB30kadF/ppuiR/VRD0Q2HhbRDNLkt9Tg==
   dependencies:
+    color "^3.1.2"
     tslib "^1.9.0"
 
 "@pxblue/prettier-config@^1.0.2":
