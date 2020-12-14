@@ -15,6 +15,7 @@ import {
     ListItemTagModule,
     DropdownToolbarModule,
     UserMenuModule,
+    MobileStepperModule,
 } from '@pxblue/angular-components';
 
 //material modules
@@ -89,6 +90,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
         HeroModule,
         InfoListItemModule,
         DrawerModule,
+        MobileStepperModule,
         ListItemTagModule,
         DropdownToolbarModule,
         RouterModule,

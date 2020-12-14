@@ -11,6 +11,32 @@
     </mat-card>
 
     <mat-card class="ng-comp-card">
+        <mat-card-header class="mat-h2">Mobile Stepper</mat-card-header>
+        <mat-card-content class="slider-demo-content">
+            <pxb-mobile-stepper [steps]="4" [activeStep]="mobileStepperStep">
+                <button
+                    pxb-back-button
+                    mat-stroked-button
+                    color="primary"
+                    [disabled]="mobileStepperStep === 0"
+                    (click)="mobileStepperStep = mobileStepperStep - 1"
+                >
+                    Back
+                </button>
+                <button
+                    pxb-next-button
+                    mat-flat-button
+                    color="primary"
+                    [disabled]="mobileStepperStep === 4 - 1"
+                    (click)="mobileStepperStep = mobileStepperStep + 1"
+                >
+                    Next
+                </button>
+            </pxb-mobile-stepper>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
         <mat-card-header class="mat-h2">Tabs</mat-card-header>
         <mat-card-content class="tab-demo-content">
             <mat-tab-group>

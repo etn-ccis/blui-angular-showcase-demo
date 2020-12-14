@@ -8,4 +8,5 @@ import * as PXBColors from '@pxblue/colors';
 })
 export class KitchenSinkComponent {
     colors = PXBColors;
+    mobileStepperStep = 0;
 }
