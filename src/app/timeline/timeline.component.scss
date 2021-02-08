@@ -12,61 +12,61 @@
     }
 }
 
-    .host {
-        display: flex;
-        justify-content: center;
-    }
+.host {
+    display: flex;
+    justify-content: center;
+}
 
-    .mat-list-base {
-        padding-top: 0 !important;
-    }
+.mat-list-base {
+    padding-top: 0 !important;
+}
 
-    .timeline-root {
-        box-sizing: border-box;
-        max-width: 1200px;
+.timeline-root {
+    box-sizing: border-box;
+    max-width: 1200px;
+    width: 100%;
+    padding: 16px;
+    justify-content: center;
+    mat-card {
         width: 100%;
-        padding: 16px;
-        justify-content: center;
-        mat-card {
-            width: 100%;
-            padding: 0;
-            margin-top: 16px;
-            overflow:hidden;
+        padding: 0;
+        margin-top: 16px;
+        overflow: hidden;
+    }
+    mat-card:first-child {
+        margin-top: 8px;
+    }
+    mat-card-header {
+        .mat-card-header-text {
+            margin-left: 8px !important;
         }
-        mat-card:first-child {
-            margin-top: 8px;
-        }
-        mat-card-header {
-            .mat-card-header-text {
-                margin-left: 8px !important;
-            }
-            height: 48px;
-            line-height: 48px;
-            color: map-get($pxb-blue, 500);
-            font-weight: 600;
-        }
-        pxb-list-item-tag {
-            margin-right: 16px;
-        }
-        .pxb-info-list-item-left-content-wrapper {
-            font-size: 12px;
-            margin-left: 8px;
-            margin-right: 16px;
-            > div {
-                width: 60px !important;
-                display: inline-block !important;
-            }
-        }
-        .ampm {
-            font-weight: 600;
-            margin-left: 2px;
-        }
-        .station-chevron {
-            font-size: 14px;
-            height: 14px;
-            width: 14px;
-            margin-left: 4px;
-            margin-right: 4px;
-            line-height: 18px;
+        height: 48px;
+        line-height: 48px;
+        color: map-get($pxb-blue, 500);
+        font-weight: 600;
+    }
+    pxb-list-item-tag {
+        margin-right: 16px;
+    }
+    .pxb-info-list-item-left-content-wrapper {
+        font-size: 12px;
+        margin-left: 8px;
+        margin-right: 16px;
+        > div {
+            width: 60px !important;
+            display: inline-block !important;
         }
     }
+    .ampm {
+        font-weight: 600;
+        margin-left: 2px;
+    }
+    .station-chevron {
+        font-size: 14px;
+        height: 14px;
+        width: 14px;
+        margin-left: 4px;
+        margin-right: 4px;
+        line-height: 18px;
+    }
+}
