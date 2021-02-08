@@ -1,5 +1,11 @@
 @import '~@pxblue/colors/palette.scss';
 
+/* RTL styles */
+[dir='rtl'] pxb-list-item-tag {
+    margin-left: 16px;
+    margin-right: 0;
+}
+
 .host {
     display: flex;
     justify-content: center;

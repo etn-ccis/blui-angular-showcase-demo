@@ -70,3 +70,16 @@ mat-card.ng-comp-card {
         margin: 8px !important;
     }
 }
+
+/* Empty state styles */
+.pxb-empty-state .empty-state-action-icon {
+    margin-right: 8px;
+    margin-left: -4px;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+}
+[dir='rtl'] .pxb-empty-state .empty-state-action-icon {
+    margin-right: -4px;
+    margin-left: 8px;
+}

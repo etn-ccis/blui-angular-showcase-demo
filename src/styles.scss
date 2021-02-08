@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@pxblue/angular-themes/theme.scss';
+@import '~@pxblue/colors/palette.scss';
 
 body {
     margin: 0;
@@ -10,4 +11,18 @@ body {
 
     // for dark theme
     // background-color: map-get($pxb-darkBlack, 100);
+}
+
+[dir='rtl'] .invert-rtl {
+    transform: scaleX(-1);
+}
+
+/* Scorecard styles */
+.pxb-blue-dark {
+    .pxb-hero-primary-wrapper {
+        background: map-get($pxb-black, 900);
+    }
+}
+.pxb-hero-primary-wrapper {
+    background: map-get($pxb-white, 50);
 }

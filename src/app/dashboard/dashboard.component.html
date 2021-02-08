@@ -10,7 +10,7 @@
                 <mat-divider></mat-divider>
                 <mat-nav-list style="padding-top: 0">
                     <pxb-info-list-item divider="full" chevron="true">
-                        <mat-icon pxb-icon>feedback</mat-icon>
+                        <mat-icon pxb-icon class="invert-rtl">feedback</mat-icon>
                         <div pxb-title>Basement Sensor</div>
                         <div pxb-subtitle>Dwyer RJ382</div>
                     </pxb-info-list-item>
@@ -103,16 +103,16 @@
         >
             <mat-icon pxb-action-items>more_vert</mat-icon>
             <mat-list pxb-body>
-                <pxb-info-list-item dense="true" [style.color]="colors.red[500]" class="card-body-item">
-                    <div pxb-title>1 Alarm</div>
-                    <mat-icon pxb-icon>notifications</mat-icon>
+                <pxb-info-list-item dense="true" class="card-body-item">
+                    <div pxb-title [style.color]="colors.red[500]">1 Alarm</div>
+                    <mat-icon pxb-icon [style.color]="colors.red[500]">notifications</mat-icon>
                 </pxb-info-list-item>
                 <pxb-info-list-item dense="true" [style.color]="colors.blue[500]" class="card-body-item">
-                    <div pxb-title>1 Event</div>
-                    <mat-icon pxb-icon>list_alt</mat-icon>
+                    <div pxb-title [style.color]="colors.blue[500]">1 Event</div>
+                    <mat-icon pxb-icon [style.color]="colors.blue[500]" class="invert-rtl">list_alt</mat-icon>
                 </pxb-info-list-item>
                 <pxb-info-list-item dense="true" class="card-body-item">
-                    <div pxb-title>Online</div>
+                    <div pxb-title style="font-weight: 400">Online</div>
                     <mat-icon pxb-icon>cloud</mat-icon>
                 </pxb-info-list-item>
             </mat-list>
@@ -125,7 +125,7 @@
                 </pxb-hero>
             </pxb-hero-banner>
             <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row mat-ripple>
-                <div pxb-title>More</div>
+                <div pxb-title>View Location</div>
                 <mat-icon mat-list-icon pxb-right-content class="scorecard-chevron">chevron_right</mat-icon>
             </pxb-info-list-item>
         </pxb-score-card>
@@ -141,27 +141,19 @@
             <mat-icon pxb-action-items>more_vert</mat-icon>
             <mat-list pxb-body>
                 <pxb-info-list-item dense="true" class="card-body-item">
-                    <div pxb-title>0 Alarms</div>
+                    <div pxb-title style="font-weight: 400">0 Alarms</div>
                     <mat-icon pxb-icon>notifications</mat-icon>
                 </pxb-info-list-item>
-                <pxb-info-list-item dense="true" [style.color]="colors.blue[500]" class="card-body-item">
-                    <div pxb-title>1 Event</div>
-                    <mat-icon pxb-icon>list_alt</mat-icon>
+                <pxb-info-list-item dense="true" class="card-body-item">
+                    <div pxb-title [style.color]="colors.blue[500]">1 Event</div>
+                    <mat-icon pxb-icon [style.color]="colors.blue[500]" class="invert-rtl">list_alt</mat-icon>
                 </pxb-info-list-item>
                 <pxb-info-list-item dense="true" class="card-body-item">
-                    <div pxb-title>Online</div>
+                    <div pxb-title style="font-weight: 400">Online</div>
                     <mat-icon pxb-icon>cloud</mat-icon>
                 </pxb-info-list-item>
             </mat-list>
-            <pxb-hero
-                pxb-badge
-                label="Health"
-                value="98"
-                units="%"
-                [iconBackgroundColor]="colors.white[50]"
-                style="cursor: pointer"
-                [iconSize]="72"
-            >
+            <pxb-hero pxb-badge label="Health" value="98" units="%" [iconSize]="72">
                 <mat-icon svgIcon="px-icons:grade_a" pxb-primary [style.color]="colors.green[500]"></mat-icon>
             </pxb-hero>
             <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row mat-ripple>
@@ -184,7 +176,7 @@
                     <pxb-hero label="Load">
                         <pie-progress class="progress-icon" percent="65" size="36" pxb-primary></pie-progress>
                         <pxb-channel-value value="65" units="%">
-                            <mat-icon [style.color]="colors.red['500']">trending_up</mat-icon>
+                            <mat-icon [style.color]="colors.red['500']" class="invert-rtl">trending_up</mat-icon>
                         </pxb-channel-value>
                     </pxb-hero>
 
