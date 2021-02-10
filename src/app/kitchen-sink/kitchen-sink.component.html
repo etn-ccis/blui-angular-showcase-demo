@@ -176,19 +176,20 @@
         <mat-card-content>
             <pxb-hero-banner>
                 <pxb-hero label="Estimated">
-                    <mat-icon pxb-primary>timer</mat-icon>
+                    <mat-icon pxb-primary class="invert-rtl">timer</mat-icon>
                     <pxb-channel-value value="1" units="h"></pxb-channel-value>
                     <pxb-channel-value value="26" units="m"></pxb-channel-value>
                 </pxb-hero>
 
                 <pxb-hero label="Battery" value="Full">
-                    <battery-progress class="progress-icon" percent="90" size="36" pxb-primary> </battery-progress>
+                    <battery-progress class="progress-icon invert-rtl" percent="90" size="36" pxb-primary>
+                    </battery-progress>
                 </pxb-hero>
 
                 <pxb-hero label="Load">
-                    <pie-progress class="progress-icon" percent="65" size="36" pxb-primary></pie-progress>
+                    <pie-progress class="progress-icon invert-rtl" percent="65" size="36" pxb-primary></pie-progress>
                     <pxb-channel-value value="65" units="%">
-                        <mat-icon [style.color]="colors.red['500']">trending_up</mat-icon>
+                        <mat-icon [style.color]="colors.red['500']" class="invert-rtl">trending_up</mat-icon>
                     </pxb-channel-value>
                 </pxb-hero>
             </pxb-hero-banner>
@@ -354,8 +355,10 @@
         <mat-card-content>
             <pxb-empty-state title="No Devices" description="Consult your local admin for details">
                 <mat-icon pxb-empty-icon>devices</mat-icon>
-                <button mat-raised-button color="primary" pxb-actions>
-                    <mat-icon>add_circle</mat-icon>
+                <button pxb-actions mat-stroked-button color="primary">
+                    <mat-icon class="empty-state-action-icon">
+                        add
+                    </mat-icon>
                     ADD DEVICE
                 </button>
             </pxb-empty-state>
@@ -417,18 +420,10 @@
                     </pxb-info-list-item>
                     <pxb-info-list-item dense="true" [style.color]="colors.blue[500]">
                         <div pxb-title>1 Event</div>
-                        <mat-icon pxb-icon>list_alt</mat-icon>
+                        <mat-icon pxb-icon class="invert-rtl">list_alt</mat-icon>
                     </pxb-info-list-item>
                 </mat-list>
-                <pxb-hero
-                    pxb-badge
-                    label="Health"
-                    value="98"
-                    units="%"
-                    [iconBackgroundColor]="colors.white[50]"
-                    style="cursor: pointer"
-                    [iconSize]="72"
-                >
+                <pxb-hero pxb-badge label="Health" value="98" units="%" [iconSize]="72">
                     <mat-icon svgIcon="px-icons:grade_a" pxb-primary [style.color]="colors.green[500]"></mat-icon>
                 </pxb-hero>
                 <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row>

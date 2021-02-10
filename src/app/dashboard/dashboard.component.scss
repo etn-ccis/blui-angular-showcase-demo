@@ -7,7 +7,7 @@
     }
     .tag-label {
         margin-right: 0;
-        margin-left: 8px;
+        margin-left: 16px;
     }
     .red-score-card {
         margin-left: 16px;
@@ -28,18 +28,19 @@
         margin-right: 24px;
         margin-bottom: 24px;
     }
-    .right-side {
-    }
 }
 
 .data-panel mat-expansion-panel,
 .data-card,
 pxb-score-card {
-    width: 450px;
+    width: 400px;
 }
 
 .data-panel {
     mat-expansion-panel {
+        mat-expansion-panel-header {
+            height: 48px !important;
+        }
         .mat-expansion-panel-body {
             padding: 0;
         }
@@ -92,5 +93,5 @@ pxb-score-card {
 }
 
 .tag-label {
-    margin-right: 8px;
+    margin-right: 16px;
 }
