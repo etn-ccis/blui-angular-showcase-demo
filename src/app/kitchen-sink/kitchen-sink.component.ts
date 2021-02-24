@@ -27,7 +27,7 @@ export class KitchenSinkComponent {
 
     openSnackBar(): void {
         this._snackBar.open('Sample Message', 'DISMISS', {
-            duration: 2000,
+            duration: 20000,
         });
     }
 }
