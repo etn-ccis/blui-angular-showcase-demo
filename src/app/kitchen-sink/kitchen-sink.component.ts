@@ -30,4 +30,8 @@ export class KitchenSinkComponent {
             duration: 20000,
         });
     }
+
+    click(): void {
+
+    }
 }

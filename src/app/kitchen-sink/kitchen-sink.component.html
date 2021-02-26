@@ -356,15 +356,15 @@
     <mat-card class="ng-comp-card">
         <mat-card-header class="mat-h2">InfoListItem</mat-card-header>
         <mat-card-content>
-            <mat-list style="position: relative; padding-top: 0">
-                <pxb-info-list-item dense="true" divider="true" hidePadding="true">
+            <mat-nav-list style="position: relative; padding-top: 0">
+                <pxb-info-list-item dense="true" divider="true" hidePadding="true" (click)="click()">
                     <div pxb-title>Home</div>
                 </pxb-info-list-item>
-                <pxb-info-list-item dense="true" divider="true">
+                <pxb-info-list-item dense="true" divider="true" (click)="click()">
                     <mat-icon pxb-icon>home</mat-icon>
                     <div pxb-title>Home</div>
                 </pxb-info-list-item>
-                <pxb-info-list-item dense="true" divider="true">
+                <pxb-info-list-item dense="true" divider="true" (click)="click()">
                     <mat-icon pxb-icon>home</mat-icon>
                     <div pxb-title>Home</div>
                     <div pxb-subtitle>Return back to the main page</div>
@@ -375,7 +375,7 @@
                     <div pxb-subtitle>Return back to the main page</div>
                     <div pxb-info>Even longer description goes here</div>
                 </pxb-info-list-item>
-            </mat-list>
+            </mat-nav-list>
         </mat-card-content>
     </mat-card>
 
