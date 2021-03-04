@@ -21,7 +21,7 @@ import {
 //material modules
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -49,6 +49,9 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { TimelineComponent } from './timeline/timeline.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [AppComponent, DashboardComponent, DrawerComponent, KitchenSinkComponent, TimelineComponent],
@@ -64,7 +67,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
         MatListModule,
         MatButtonModule,
         HttpClientModule,
+        ReactiveFormsModule,
+        MatButtonToggleModule,
         MatCheckboxModule,
+        MatTooltipModule,
         MatDatepickerModule,
         MatNativeDateModule,
         MatFormFieldModule,
@@ -81,6 +87,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
         MatChipsModule,
         MatProgressSpinnerModule,
         MatProgressBarModule,
+        MatSnackBarModule,
         //pxblue
         UserMenuModule,
         NgProgressIconsModule,
