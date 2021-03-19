@@ -31,7 +31,5 @@ export class KitchenSinkComponent {
         });
     }
 
-    click(): void {
-
-    }
+    click(): void {}
 }
