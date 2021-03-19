@@ -1,8 +1,7 @@
-import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import * as PXBColors from '@pxblue/colors';
 import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { MatTab } from '@angular/material/tabs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class AlwaysErrorState implements ErrorStateMatcher {
