@@ -27,7 +27,7 @@
         "@angular/platform-browser-dynamic": "~10.1.2",
         "@angular/router": "~10.1.2",
         "@pxblue/angular-components": "^4.2.0",
-        "@pxblue/angular-themes": "^6.0.0",
+        "@pxblue/angular-themes": "^6.0.1",
         "@pxblue/colors": "^3.0.0",
         "@pxblue/icons-svg": "^1.2.0",
         "@pxblue/ng-progress-icons": "^1.2.1",
