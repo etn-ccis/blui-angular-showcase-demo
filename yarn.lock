@@ -1198,17 +1198,17 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@pxblue/angular-components@^4.2.0-beta.1":
-  version "4.2.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@pxblue/angular-components/-/angular-components-4.2.0-beta.1.tgz#aa68759b45e4ab7f543dfcfaed84e02094424941"
-  integrity sha512-jkd2+60gDk23pFegDRt509T0msfUNi9IYELw03FzmxMPpFG04kJSmNjA91sdS/rNoo1iJk9I7nPq9pfk5D/XCA==
+"@pxblue/angular-components@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@pxblue/angular-components/-/angular-components-4.2.0.tgz#337b50011bc0391a390bb14f1284ac7b97d7b2ab"
+  integrity sha512-fM6OVQDrX8hexzq5S7ZHe7kMs1iW08tk/2LyXp6rRdVZSMHsEdRd0Aejq/RIqtoo75A7yU/sdeeSi1J+5rWKsQ==
   dependencies:
     tslib "^2.0.0"
 
-"@pxblue/angular-themes@^6.0.0-beta.2":
-  version "6.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@pxblue/angular-themes/-/angular-themes-6.0.0-beta.2.tgz#00453b97d2ecf0cfea8f9c1fca309303d5a99130"
-  integrity sha512-C6VQ2lzw1GskTv9GGhnFK4MAiqk4e9F/x1eW2kKH+pXW1IBtJcDDoT7T9PTD198B5+xqPjGRjnaSMO+eFgKW1w==
+"@pxblue/angular-themes@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@pxblue/angular-themes/-/angular-themes-6.0.1.tgz#706b7297a35aa47d6ded39311aeb8eaaaa557e25"
+  integrity sha512-Coc0SD5bMz8dw7AV7njZeEvHas8YIgyNbuFw7s4cdaFclD/AGh5Ca45LeOZZFTlHycglNAxUto6sU4BZpWkSLA==
   dependencies:
     "@fontsource/open-sans" "^4.1.0"
     "@pxblue/colors" "^3.0.0"
@@ -1230,12 +1230,12 @@
   optionalDependencies:
     eslint-plugin-react "^7.16.0"
 
-"@pxblue/icons-svg@^1.0.10":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@pxblue/icons-svg/-/icons-svg-1.1.2.tgz#986c961d6e72f05cad8f8a1e177b352b782db15f"
-  integrity sha512-Oyv5h8pTlFUNuszbE6KCGv22FILz2igyExGYti7W0WND9Tzm3evkGLPOP8psEuPupLrTRuty6GpkatKVEbSCNw==
+"@pxblue/icons-svg@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@pxblue/icons-svg/-/icons-svg-1.2.0.tgz#574d9a1f478265fc23f23e6706ecf524331a8cdf"
+  integrity sha512-tjpgdwRmY+5ikUI3Ur3g7QqvpSwSNM6Jwwuwp1K4K367LxKV1UVOQDdsa4gavN3ulZ3sYCZb9vyheSBcYx1VrA==
 
-"@pxblue/ng-progress-icons@^1.1.3":
+"@pxblue/ng-progress-icons@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@pxblue/ng-progress-icons/-/ng-progress-icons-1.2.1.tgz#2a512107d774e7bc22cdaecf2718cd42094ccd78"
   integrity sha512-qBowwudAnmHG8wAtvCcSgY4Y3AGGStgsbhrzOH6+nHh5FI6XZoeygTB30kadF/ppuiR/VRD0Q2HhbRDNLkt9Tg==
