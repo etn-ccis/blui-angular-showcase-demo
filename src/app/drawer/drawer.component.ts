@@ -80,6 +80,12 @@ export class DrawerComponent {
             onSelect: (): void => this.navigate('/kitchen-sink'),
             icon: 'kitchen',
         },
+        {
+            title: 'Typography',
+            subtitle: 'see all font sizes and variants',
+            onSelect: (): void => this.navigate('/typography'),
+            icon: 'text_fields',
+        },
     ];
 
     navigate(url: string): void {

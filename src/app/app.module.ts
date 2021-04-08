@@ -52,9 +52,17 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TypographyComponent } from './typography/typography.component';
 
 @NgModule({
-    declarations: [AppComponent, DashboardComponent, DrawerComponent, KitchenSinkComponent, TimelineComponent],
+    declarations: [
+        AppComponent,
+        DashboardComponent,
+        DrawerComponent,
+        KitchenSinkComponent,
+        TimelineComponent,
+        TypographyComponent,
+    ],
     imports: [
         MatRippleModule,
         AppRoutingModule,
