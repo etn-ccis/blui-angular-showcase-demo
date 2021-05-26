@@ -6,6 +6,15 @@
 >
     <showcase-drawer pxb-drawer></showcase-drawer>
     <div pxb-content>
+
+        <pxb-app-bar [scrollContainerClassName]="scrollContainerClass"
+                     [contentContainerClassName]="contentContainerClass"
+                     [scrollAnimationEndDistance]="200"
+        ></pxb-app-bar>
+
+        <!--
+
+
         <pxb-dropdown-toolbar class="toolbar" title="Showcase" [subtitle]="dropdownToolbarSubtitle">
             <button
                 *ngIf="isMobile()"
@@ -62,6 +71,7 @@
                 </button>
             </ng-container>
         </pxb-dropdown-toolbar>
+        -->
         <router-outlet></router-outlet>
     </div>
 </pxb-drawer-layout>

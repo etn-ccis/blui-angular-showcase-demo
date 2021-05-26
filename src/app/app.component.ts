@@ -19,6 +19,9 @@ export class AppComponent {
     variant: DrawerLayoutVariantType = 'persistent';
     dropdownToolbarSubtitle = 'Language';
 
+    scrollContainerClass = {name: 'mat-sidenav-content', index: 0};
+    contentContainerClass = { name: 'pxb-drawer-layout-nav-content', index: 0}
+
     userMenuOpen = false;
     menuGroups = [
         {
