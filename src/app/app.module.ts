@@ -13,9 +13,10 @@ import {
     InfoListItemModule,
     DrawerModule,
     ListItemTagModule,
+    AppBarModule,
     DropdownToolbarModule,
     UserMenuModule,
-    MobileStepperModule, AppBarModule,
+    MobileStepperModule,
 } from '@pxblue/angular-components';
 
 //material modules
@@ -97,7 +98,6 @@ import { TypographyComponent } from './typography/typography.component';
         MatProgressBarModule,
         MatSnackBarModule,
         //pxblue
-        AppBarModule,
         UserMenuModule,
         NgProgressIconsModule,
         ChannelValueModule,
