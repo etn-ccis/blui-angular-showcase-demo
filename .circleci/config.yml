@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+    codecov: codecov/codecov@1.1.3
 jobs:
   build_demo:
     docker:
@@ -26,16 +28,39 @@ jobs:
           command: |
             yarn lint
       - run:
-          name: Test
+          name: Unit Test
           command: |
-            yarn test:ci
-      # - run:
-      #       name: Build Demo
-      #       command: |
-      #           yarn build
+            yarn test --no-watch --code-coverage
+      - run:
+            name: Build Demo
+            command: |
+                yarn build
+      # Save the coverage folder for codecov report upload.
+      - persist_to_workspace:
+            root: .
+            paths:
+                - coverage
+  coverage_report:
+        working_directory: ~/angular-showcase-demo
+        docker:
+            - image: circleci/node:12.9.1-browsers
+        steps:
+            - checkout
+            - attach_workspace:
+                at: .
+            - codecov/upload:
+                file: './coverage/'
+                token: ada08486-24b4-40c1-bfed-fce890fe22be
 
 workflows:
   version: 2
   angular_demo:
     jobs:
       - build_demo
+      - coverage_report:
+                requires:
+                    - build_demo
+                # filters:
+                #     branches:
+                #         only:
+                #             - master
