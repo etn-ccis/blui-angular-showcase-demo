@@ -49,7 +49,7 @@ jobs:
             - attach_workspace:
                 at: .
             - codecov/upload:
-                file: './coverage/index.html'
+                file: './coverage/lcov.info'
                 token: ada08486-24b4-40c1-bfed-fce890fe22be
 
 workflows:
