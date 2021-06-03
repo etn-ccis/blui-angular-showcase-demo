@@ -5,16 +5,13 @@
     [class.rtl]="isRtl"
 >
     <showcase-drawer pxb-drawer></showcase-drawer>
+
     <div pxb-content>
+        <pxb-app-bar mode="dynamic" [scrollContainerClassName]="scrollContainerClass">
+            <div>tada!</div>
+        </pxb-app-bar>
 
-        <pxb-app-bar [scrollContainerClassName]="scrollContainerClass"
-                     [scrollAnimationEndDistance]="200"
-        ></pxb-app-bar>
-
-        <!--
-
-
-        <pxb-dropdown-toolbar class="toolbar" title="Showcase" [subtitle]="dropdownToolbarSubtitle">
+        <!-- <pxb-dropdown-toolbar class="toolbar" title="Showcase" [subtitle]="dropdownToolbarSubtitle">
             <button
                 *ngIf="isMobile()"
                 mat-icon-button
