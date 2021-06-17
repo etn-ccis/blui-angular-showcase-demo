@@ -15,6 +15,7 @@ import { StateService } from './services/state.service';
 export class AppComponent {
     isDarkMode = false;
     isRtl = false;
+    isCollapsed = false;
     colors: Record<string, any>;
     variant: DrawerLayoutVariantType = 'persistent';
     dropdownToolbarSubtitle = 'Language';

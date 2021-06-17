@@ -7,19 +7,13 @@
     <showcase-drawer pxb-drawer></showcase-drawer>
 
     <div pxb-content>
-        <pxb-app-bar mode="dynamic" [scrollContainerClassName]="scrollContainerClass">
-            <!--<pxb-dropdown-toolbar class="toolbar" title="Showcase" [subtitle]="dropdownToolbarSubtitle">
-                <button
-                        *ngIf="isMobile()"
-                        mat-icon-button
-                        pxb-nav-icon
-                        class="menu-icon"
-                        [class.rtl]="isRtl"
-                        (click)="openDrawer()"
-                >
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <pxb-spacer></pxb-spacer>
+        <pxb-app-bar variant="snap" [(isCollapsed)]="isCollapsed" [scrollContainerClassName]="scrollContainerClass">
+            <button pxb-icon mat-icon-button style="margin-right: 24px">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <pxb-three-liner [style.top.px]="isCollapsed ? 0 : 80" title="title" subtitle="subtitle" info="info">
+            </pxb-three-liner>
+            <div pxb-actions style="display: flex">
                 <button mat-icon-button style="margin: 0px 4px" (click)="toggleTheme()">
                     <mat-icon>invert_colors</mat-icon>
                 </button>
@@ -27,12 +21,12 @@
                     <mat-icon>compare_arrows</mat-icon>
                 </button>
                 <pxb-user-menu
-                        class="user-menu"
-                        [class.rtl]="isRtl"
-                        avatarValue="MS"
-                        menuTitle="Marshall Sutter"
-                        menuSubtitle="msutter@acmesteel.com"
-                        [(open)]="userMenuOpen"
+                    class="user-menu"
+                    [class.rtl]="isRtl"
+                    avatarValue="MS"
+                    menuTitle="Marshall Sutter"
+                    menuSubtitle="msutter@acmesteel.com"
+                    [(open)]="userMenuOpen"
                 >
                     <mat-nav-list pxb-menu-body [style.paddingTop.px]="0">
                         <div *ngFor="let group of menuGroups">
@@ -42,9 +36,9 @@
                                 <mat-divider></mat-divider>
                             </ng-container>
                             <pxb-info-list-item
-                                    *ngFor="let item of group.items"
-                                    [dense]="true"
-                                    (click)="userMenuOpen = false"
+                                *ngFor="let item of group.items"
+                                [dense]="true"
+                                (click)="userMenuOpen = false"
                             >
                                 <mat-icon pxb-icon>{{ item.icon }}</mat-icon>
                                 <div pxb-title>{{ item.title }}</div>
@@ -52,30 +46,8 @@
                         </div>
                     </mat-nav-list>
                 </pxb-user-menu>
-                <ng-container pxb-toolbar-menu>
-                    <button mat-menu-item (click)="updateDropdownToolbarSubtitle('English')">
-                        <span>English</span>
-                    </button>
-                    <button mat-menu-item (click)="updateDropdownToolbarSubtitle('French')">
-                        <span>French</span>
-                    </button>
-                    <button mat-menu-item (click)="updateDropdownToolbarSubtitle('Arabic')">
-                        <span>Arabic</span>
-                    </button>
-                </ng-container>
-            </pxb-dropdown-toolbar> -->
-            <button pxb-icon mat-icon-button style="margin-right: 24px">
-                <mat-icon>menu</mat-icon>
-            </button>
-            <pxb-app-bar-dynamic-content title='title' subtitle='subtitle' info='info'>
-            </pxb-app-bar-dynamic-content>
-            <div pxb-actions>
-                <mat-icon style="margin: 0 8px">light</mat-icon>
-                <mat-icon style="margin: 0 8px">face</mat-icon>
-                <mat-icon style="margin: 0 8px">home</mat-icon>
             </div>
         </pxb-app-bar>
-
 
         <router-outlet></router-outlet>
     </div>
