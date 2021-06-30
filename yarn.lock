@@ -1379,10 +1379,10 @@
     node-gyp "^7.1.0"
     read-package-json-fast "^2.0.1"
 
-"@pxblue/angular-components@^4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/angular-components/-/angular-components-4.4.0.tgz#4bc0ce09b8996a6fd67923912d27483e8936c990"
-  integrity sha512-O8zZLcg7LlJTweeBoqdJ3+m8moRUeUpMONbf3dDOjr+iBVy2EurzgnvQyG92gxSpa7EWMtrGHMbb/2dbNYZyZQ==
+"@pxblue/angular-components@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@pxblue/angular-components/-/angular-components-4.5.0.tgz#c76d7cf99a1d7d35c0c77f551673b5160cd5b494"
+  integrity sha512-W68Mu1aZaPnsriXeHViyiP2OjrWlG32tO/G4NlaOON68quF76qQPkuNddHE40hNn/d1ZGubE2ZjR/RBvqCUVdg==
   dependencies:
     tslib "^2.0.0"
 

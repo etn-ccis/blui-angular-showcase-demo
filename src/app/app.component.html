@@ -5,63 +5,54 @@
     [class.rtl]="isRtl"
 >
     <showcase-drawer pxb-drawer></showcase-drawer>
+
     <div pxb-content>
-        <pxb-dropdown-toolbar class="toolbar" title="Showcase" [subtitle]="dropdownToolbarSubtitle">
-            <button
-                *ngIf="isMobile()"
-                mat-icon-button
-                pxb-nav-icon
-                class="menu-icon"
-                [class.rtl]="isRtl"
-                (click)="openDrawer()"
-            >
+        <pxb-app-bar
+            variant="snap"
+            (collapsedChange)="isCollapsed = $event"
+            [scrollContainerClassName]="scrollContainerClass"
+        >
+            <button pxb-icon mat-icon-button style="margin-right: 24px">
                 <mat-icon>menu</mat-icon>
             </button>
-            <pxb-spacer></pxb-spacer>
-            <button mat-icon-button style="margin: 0px 4px" (click)="toggleTheme()">
-                <mat-icon>invert_colors</mat-icon>
-            </button>
-            <button mat-icon-button style="margin: 0px 4px" (click)="toggleDirectionality()">
-                <mat-icon>compare_arrows</mat-icon>
-            </button>
-            <pxb-user-menu
-                class="user-menu"
-                [class.rtl]="isRtl"
-                avatarValue="MS"
-                menuTitle="Marshall Sutter"
-                menuSubtitle="msutter@acmesteel.com"
-                [(open)]="userMenuOpen"
-            >
-                <mat-nav-list pxb-menu-body [style.paddingTop.px]="0">
-                    <div *ngFor="let group of menuGroups">
-                        <ng-container *ngIf="group.title">
-                            <mat-divider></mat-divider>
-                            <div style="padding: 8px 16px 8px 16px; font-weight: 600">{{ group.title }}</div>
-                            <mat-divider></mat-divider>
-                        </ng-container>
-                        <pxb-info-list-item
-                            *ngFor="let item of group.items"
-                            [dense]="true"
-                            (click)="userMenuOpen = false"
-                        >
-                            <mat-icon pxb-icon>{{ item.icon }}</mat-icon>
-                            <div pxb-title>{{ item.title }}</div>
-                        </pxb-info-list-item>
-                    </div>
-                </mat-nav-list>
-            </pxb-user-menu>
-            <ng-container pxb-toolbar-menu>
-                <button mat-menu-item (click)="updateDropdownToolbarSubtitle('English')">
-                    <span>English</span>
+            <pxb-three-liner [style.top.px]="isCollapsed ? 0 : 80" title="title" subtitle="subtitle" info="info">
+            </pxb-three-liner>
+            <div pxb-actions style="display: flex">
+                <button mat-icon-button style="margin: 0px 4px" (click)="toggleTheme()">
+                    <mat-icon>invert_colors</mat-icon>
                 </button>
-                <button mat-menu-item (click)="updateDropdownToolbarSubtitle('French')">
-                    <span>French</span>
+                <button mat-icon-button style="margin: 0px 4px" (click)="toggleDirectionality()">
+                    <mat-icon>compare_arrows</mat-icon>
                 </button>
-                <button mat-menu-item (click)="updateDropdownToolbarSubtitle('Arabic')">
-                    <span>Arabic</span>
-                </button>
-            </ng-container>
-        </pxb-dropdown-toolbar>
+                <pxb-user-menu
+                    class="user-menu"
+                    [class.rtl]="isRtl"
+                    avatarValue="MS"
+                    menuTitle="Marshall Sutter"
+                    menuSubtitle="msutter@acmesteel.com"
+                    [(open)]="userMenuOpen"
+                >
+                    <mat-nav-list pxb-menu-body [style.paddingTop.px]="0">
+                        <div *ngFor="let group of menuGroups">
+                            <ng-container *ngIf="group.title">
+                                <mat-divider></mat-divider>
+                                <div style="padding: 8px 16px 8px 16px; font-weight: 600">{{ group.title }}</div>
+                                <mat-divider></mat-divider>
+                            </ng-container>
+                            <pxb-info-list-item
+                                *ngFor="let item of group.items"
+                                [dense]="true"
+                                (click)="userMenuOpen = false"
+                            >
+                                <mat-icon pxb-icon>{{ item.icon }}</mat-icon>
+                                <div pxb-title>{{ item.title }}</div>
+                            </pxb-info-list-item>
+                        </div>
+                    </mat-nav-list>
+                </pxb-user-menu>
+            </div>
+        </pxb-app-bar>
+
         <router-outlet></router-outlet>
     </div>
 </pxb-drawer-layout>
