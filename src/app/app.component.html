@@ -7,7 +7,7 @@
     <showcase-drawer pxb-drawer></showcase-drawer>
 
     <div pxb-content>
-        <pxb-app-bar variant="snap" [(isCollapsed)]="isCollapsed" [scrollContainerClassName]="scrollContainerClass">
+        <pxb-app-bar variant="snap" (collapsedChange)="isCollapsed = $event" [scrollContainerClassName]="scrollContainerClass">
             <button pxb-icon mat-icon-button style="margin-right: 24px">
                 <mat-icon>menu</mat-icon>
             </button>
