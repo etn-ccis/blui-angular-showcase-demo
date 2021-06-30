@@ -27,7 +27,7 @@
         "@angular/platform-browser": "~11",
         "@angular/platform-browser-dynamic": "~11",
         "@angular/router": "~11",
-        "@pxblue/angular-components": "^4.5.0",
+        "@pxblue/angular-components": "^5.0.0",
         "@pxblue/angular-themes": "^6.1.0",
         "@pxblue/colors": "^3.0.1",
         "@pxblue/icons-svg": "^1.2.0",
