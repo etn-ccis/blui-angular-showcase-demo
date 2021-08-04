@@ -7,17 +7,13 @@
     <showcase-drawer pxb-drawer></showcase-drawer>
 
     <div pxb-content>
-        <pxb-app-bar
-            variant="snap"
-            (collapsedChange)="isCollapsed = $event"
-            [scrollContainerClassName]="scrollContainerClass"
-        >
+        <mat-toolbar color="primary">
             <button pxb-icon mat-icon-button style="margin-right: 24px">
                 <mat-icon>menu</mat-icon>
             </button>
-            <pxb-three-liner [style.top.px]="isCollapsed ? 0 : 80" title="title" subtitle="subtitle" info="info">
-            </pxb-three-liner>
-            <div pxb-actions style="display: flex">
+            <div class="mat-headline">TODO: Dynamic title</div>
+            <pxb-spacer></pxb-spacer>
+            <div style="display: flex">
                 <button mat-icon-button style="margin: 0px 4px" (click)="toggleTheme()">
                     <mat-icon>invert_colors</mat-icon>
                 </button>
@@ -51,7 +47,7 @@
                     </mat-nav-list>
                 </pxb-user-menu>
             </div>
-        </pxb-app-bar>
+        </mat-toolbar>
 
         <router-outlet></router-outlet>
     </div>

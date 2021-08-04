@@ -62,6 +62,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TypographyComponent } from './typography/typography.component';
+import {PxblueModule} from "./pages/pxblue/pxblue.module";
 
 @NgModule({
     declarations: [
@@ -121,6 +122,7 @@ import { TypographyComponent } from './typography/typography.component';
         DropdownToolbarModule,
         RouterModule,
         AppBarModule,
+        PxblueModule
     ],
     providers: [],
     bootstrap: [AppComponent],

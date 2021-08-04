@@ -11,8 +11,7 @@ import { Router } from '@angular/router';
     template: `
         <pxb-drawer [open]="isOpen()">
             <pxb-drawer-header
-                title="PX Blue Drawer"
-                subtitle="Organize your menu items here"
+                title="Showcase App"
                 class="test-background-image"
             >
                 <button mat-icon-button pxb-icon (click)="clickMenuButton()">
@@ -58,6 +57,21 @@ export class DrawerComponent {
     ) {}
 
     navItems: DrawerNavItem[] = [
+        {
+            title: 'PX Blue Components',
+            onSelect: (): void => {},
+            items: [
+                {
+                    title: 'Display Data',
+                    onSelect: (): void => this.navigate('/pxblue-components/data-display-components'),
+                },
+                {
+                    title: 'Surfaces',
+                    onSelect: (): void => this.navigate('/pxblue-components/surface-components'),
+                },
+            ],
+
+        },
         {
             title: 'Contextual',
             subtitle: 'components in an app setting',
