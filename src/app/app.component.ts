@@ -5,6 +5,7 @@ import * as PXBColors from '@pxblue/colors';
 import { ViewportService } from './services/viewport.service';
 import { DrawerLayoutVariantType } from '@pxblue/angular-components';
 import { StateService } from './services/state.service';
+import { RtlService } from './services/rtl.service';
 
 @Component({
     selector: 'app-root',
@@ -15,11 +16,9 @@ import { StateService } from './services/state.service';
 export class AppComponent {
     isDarkMode = false;
     isRtl = false;
-    isCollapsed = false;
     colors: Record<string, any>;
     variant: DrawerLayoutVariantType = 'persistent';
     dropdownToolbarSubtitle = 'Language';
-    scrollContainerClass = { name: 'mat-sidenav-content', index: 0 };
     userMenuOpen = false;
     menuGroups = [
         {
@@ -52,7 +51,8 @@ export class AppComponent {
         private readonly _stateService: StateService,
         private readonly _matIconRegistry: MatIconRegistry,
         private readonly _domSanitizer: DomSanitizer,
-        private readonly _viewportService: ViewportService
+        private readonly _viewportService: ViewportService,
+        private readonly _rtlService: RtlService
     ) {
         this.colors = PXBColors;
         this._matIconRegistry.addSvgIconSetInNamespace(
@@ -111,5 +111,6 @@ export class AppComponent {
 
     toggleDirectionality(): void {
         this.isRtl = !this.isRtl;
+        this._rtlService.setRTL(this.isRtl);
     }
 }

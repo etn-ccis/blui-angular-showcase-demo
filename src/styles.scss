@@ -10,3 +10,36 @@ body {
 [dir='rtl'] .invert-rtl {
     transform: scaleX(-1);
 }
+
+.showcase-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+
+    .mat-card-header-text {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    mat-card.ng-comp-card {
+        width: 100%;
+        max-width: 400px;
+        min-width: 350px;
+        box-sizing: border-box;
+        margin: 8px 8px;
+        padding: 16px;
+    }
+    .story-title {
+        font-size: 1rem;
+        margin: 2rem 0 1rem 0;
+    }
+    .multi-line-example {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        div {
+            flex: 1;
+        }
+    }
+}

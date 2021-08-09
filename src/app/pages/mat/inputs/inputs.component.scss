@@ -1,0 +1,49 @@
+.button-demo-showcase {
+    display: flex;
+    button,
+    a {
+        width: 150px;
+    }
+    div {
+        margin: 8px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.icon-button-demo {
+    div div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+}
+
+.fab-demo {
+    div {
+        display: flex;
+        justify-content: space-around;
+        margin: 16px;
+    }
+}
+
+.mat-checkbox {
+    display: flex;
+}
+.checkbox-demo,
+.radio-demo {
+    div {
+        margin-top: 16px;
+    }
+}
+
+.mat-select-demo {
+    > div {
+        margin: 16px 0;
+        width: 100%;
+        mat-form-field {
+            width: 100%;
+        }
+    }
+}

@@ -10,10 +10,7 @@ import { Router } from '@angular/router';
     styleUrls: ['./drawer.component.scss'],
     template: `
         <pxb-drawer [open]="isOpen()">
-            <pxb-drawer-header
-                title="Showcase App"
-                class="test-background-image"
-            >
+            <pxb-drawer-header title="Showcase App" class="test-background-image">
                 <button mat-icon-button pxb-icon (click)="clickMenuButton()">
                     <mat-icon>menu</mat-icon>
                 </button>
@@ -66,39 +63,40 @@ export class DrawerComponent {
                     onSelect: (): void => this.navigate('/pxblue-components/data-display-components'),
                 },
                 {
+                    title: 'Navigation',
+                    onSelect: (): void => this.navigate('/pxblue-components/navigation-components'),
+                },
+                {
                     title: 'Surfaces',
                     onSelect: (): void => this.navigate('/pxblue-components/surface-components'),
                 },
             ],
-
         },
         {
-            title: 'Contextual',
-            subtitle: 'components in an app setting',
-            icon: 'layers',
+            title: 'Material Components',
             onSelect: (): void => {},
             items: [
                 {
-                    title: 'Dashboard',
-                    onSelect: (): void => this.navigate('/dashboard'),
+                    title: 'Display Data',
+                    onSelect: (): void => this.navigate('/material-components/data-display-components'),
                 },
                 {
-                    title: 'Timeline',
-                    onSelect: (): void => this.navigate('/timeline'),
+                    title: 'Feedback',
+                    onSelect: (): void => this.navigate('/material-components/feedback-components'),
+                },
+                {
+                    title: 'Inputs',
+                    onSelect: (): void => this.navigate('/material-components/input-components'),
+                },
+                {
+                    title: 'Navigation',
+                    onSelect: (): void => this.navigate('/material-components/navigation-components'),
+                },
+                {
+                    title: 'Surfaces',
+                    onSelect: (): void => this.navigate('/material-components/surface-components'),
                 },
             ],
-        },
-        {
-            title: 'Kitchen Sink',
-            subtitle: 'components at a glance',
-            onSelect: (): void => this.navigate('/kitchen-sink'),
-            icon: 'kitchen',
-        },
-        {
-            title: 'Typography',
-            subtitle: 'see all font sizes and variants',
-            onSelect: (): void => this.navigate('/typography'),
-            icon: 'text_fields',
         },
     ];
 

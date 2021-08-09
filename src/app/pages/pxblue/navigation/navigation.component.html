@@ -1,0 +1,74 @@
+<div class="showcase-container">
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Mobile Stepper
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="mobile-stepper-section-desc">Dots (default)</div>
+            <pxb-mobile-stepper [steps]="4" [activeStep]="mobileStepperStep">
+                <button
+                    pxb-back-button
+                    mat-stroked-button
+                    color="primary"
+                    [disabled]="mobileStepperStep === 0"
+                    (click)="mobileStepperStep = mobileStepperStep - 1"
+                >
+                    Back
+                </button>
+                <button
+                    pxb-next-button
+                    mat-flat-button
+                    color="primary"
+                    [disabled]="mobileStepperStep === 4 - 1"
+                    (click)="mobileStepperStep = mobileStepperStep + 1"
+                >
+                    Next
+                </button>
+            </pxb-mobile-stepper>
+            <div class="mobile-stepper-section-desc">Progress</div>
+            <pxb-mobile-stepper [steps]="4" [activeStep]="mobileStepperStep" variant="progress">
+                <button
+                    pxb-back-button
+                    mat-stroked-button
+                    color="primary"
+                    [disabled]="mobileStepperStep === 0"
+                    (click)="mobileStepperStep = mobileStepperStep - 1"
+                >
+                    Back
+                </button>
+                <button
+                    pxb-next-button
+                    mat-flat-button
+                    color="primary"
+                    [disabled]="mobileStepperStep === 4 - 1"
+                    (click)="mobileStepperStep = mobileStepperStep + 1"
+                >
+                    Next
+                </button>
+            </pxb-mobile-stepper>
+            <div class="mobile-stepper-section-desc">Text</div>
+            <pxb-mobile-stepper [steps]="4" [activeStep]="mobileStepperStep" variant="text">
+                <button
+                    pxb-back-button
+                    mat-stroked-button
+                    color="primary"
+                    [disabled]="mobileStepperStep === 0"
+                    (click)="mobileStepperStep = mobileStepperStep - 1"
+                >
+                    Back
+                </button>
+                <button
+                    pxb-next-button
+                    mat-flat-button
+                    color="primary"
+                    [disabled]="mobileStepperStep === 4 - 1"
+                    (click)="mobileStepperStep = mobileStepperStep + 1"
+                >
+                    Next
+                </button>
+            </pxb-mobile-stepper>
+        </mat-card-content>
+    </mat-card>
+</div>

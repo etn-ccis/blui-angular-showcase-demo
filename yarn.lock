@@ -1423,6 +1423,11 @@
   resolved "https://registry.yarnpkg.com/@pxblue/icons-svg/-/icons-svg-1.2.0.tgz#574d9a1f478265fc23f23e6706ecf524331a8cdf"
   integrity sha512-tjpgdwRmY+5ikUI3Ur3g7QqvpSwSNM6Jwwuwp1K4K367LxKV1UVOQDdsa4gavN3ulZ3sYCZb9vyheSBcYx1VrA==
 
+"@pxblue/icons@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@pxblue/icons/-/icons-1.4.0.tgz#aa56a182b7a9358381eca0ae35a3ed3f957ec689"
+  integrity sha512-ZTY8fkRelBgyY7zViuwBpmj+E2QwXaPUPtrC/Q4rK3jLzrDTyKOFslza9jg/J/VrLawGd+DCFZaP5Sutqk+DcQ==
+
 "@pxblue/ng-progress-icons@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@pxblue/ng-progress-icons/-/ng-progress-icons-1.2.1.tgz#2a512107d774e7bc22cdaecf2718cd42094ccd78"
