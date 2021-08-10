@@ -1,5 +1,10 @@
 @import '~@pxblue/colors/palette.scss';
 
+.app-alarms {
+    display: flex;
+    justify-content: center;
+}
+
 /* RTL styles */
 [dir='rtl'] {
     pxb-list-item-tag {
@@ -11,17 +16,11 @@
         margin-right: 8px;
     }
 }
-
-.host {
-    display: flex;
-    justify-content: center;
-}
-
 .mat-list-base {
     padding-top: 0 !important;
 }
 
-.timeline-root {
+.alarms-root {
     box-sizing: border-box;
     max-width: 1200px;
     width: 100%;
@@ -32,9 +31,6 @@
         padding: 0;
         margin-top: 16px;
         overflow: hidden;
-    }
-    mat-card:first-child {
-        margin-top: 8px;
     }
     mat-card-header {
         .mat-card-header-text {

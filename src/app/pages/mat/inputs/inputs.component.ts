@@ -1,6 +1,13 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
-import { AlwaysErrorState } from '../../../kitchen-sink/kitchen-sink.component';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+
+export class AlwaysErrorState implements ErrorStateMatcher {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+        return true;
+    }
+}
 
 @Component({
     selector: 'app-mat-inputs',

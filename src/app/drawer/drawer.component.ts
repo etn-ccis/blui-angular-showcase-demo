@@ -98,6 +98,24 @@ export class DrawerComponent {
                 },
             ],
         },
+        {
+            title: 'Page Templates',
+            onSelect: (): void => {},
+            items: [
+                {
+                    title: 'Alarms',
+                    onSelect: (): void => this.navigate('/templates/alarms'),
+                },
+                {
+                    title: 'Dashboard',
+                    onSelect: (): void => this.navigate('/templates/dashboard'),
+                },
+                {
+                    title: 'Settings',
+                    onSelect: (): void => this.navigate('/templates/settings'),
+                },
+            ],
+        },
     ];
 
     navigate(url: string): void {

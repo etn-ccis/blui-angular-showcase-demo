@@ -2,12 +2,15 @@ import { AfterViewInit, ChangeDetectorRef, Component, ViewEncapsulation } from '
 import * as PXBColors from '@pxblue/colors';
 
 @Component({
-    selector: 'app-dashboard',
-    templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.scss'],
+    selector: 'app-template-alarms',
+    templateUrl: './alarms.component.html',
+    styleUrls: ['./alarms.component.scss'],
     encapsulation: ViewEncapsulation.None,
+    host: {
+        class: 'app-alarms',
+    },
 })
-export class DashboardComponent implements AfterViewInit {
+export class AlarmsComponent implements AfterViewInit {
     colors = PXBColors;
 
     constructor(private readonly _ref: ChangeDetectorRef) {}

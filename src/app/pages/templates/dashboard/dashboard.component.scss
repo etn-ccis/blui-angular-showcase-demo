@@ -1,5 +1,10 @@
 @import '~@pxblue/colors/palette.scss';
 
+.app-dashboard {
+    display: flex;
+    justify-content: center;
+}
+
 [dir='rtl'] {
     button mat-icon,
     .scorecard-chevron {
@@ -14,25 +19,20 @@
         margin-right: 0;
     }
 }
-
 .dashboard-root {
+    max-width: 1000px;
     padding: 16px;
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    .left-side {
-        margin-bottom: 24px;
-    }
-    .center {
-        margin-left: 24px;
-        margin-right: 24px;
-        margin-bottom: 24px;
-    }
 
-    .data-panel mat-expansion-panel,
-    .data-card,
-    pxb-score-card {
+    .pxb-score-card {
+        margin-top: 8px;
         width: 400px;
+    }
+    .red-score-card {
+        margin-right: 8px;
+        &.pxb-score-card .pxb-score-card-header {
+            background-color: map-get($pxb-red, 500);
+        }
     }
 
     .data-panel {
@@ -72,7 +72,7 @@
 
     pxb-score-card {
         .pxb-score-card-header-background {
-            background-image: url('../../assets/topology_40.png');
+            background-image: url('../../../../assets/topology_40.png');
         }
         .mat-list-base {
             padding: 16px 0px !important;
