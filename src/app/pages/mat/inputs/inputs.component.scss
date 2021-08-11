@@ -1,5 +1,4 @@
 .button-demo-showcase {
-    display: flex;
     button,
     a {
         width: 150px;
@@ -45,5 +44,25 @@
         mat-form-field {
             width: 100%;
         }
+    }
+}
+
+.slider-subtype {
+    font-size: 14px;
+}
+.slider-demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 8px 0px 16px 0px;
+    > div {
+        font-size: 14px;
+        margin: 8px 0;
+        text-align: center;
     }
 }

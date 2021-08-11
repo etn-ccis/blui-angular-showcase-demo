@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatSurfacesComponent } from './surfaces/surfaces.component';
 import { MatDisplayComponent } from './data-display/display.component';
-import { MatFeedackComponent } from './feedback/feedback.component';
+import { FeedbackBottomSheetExample, FeedbackDialogExample, MatFeedackComponent } from './feedback/feedback.component';
 import { MatInputsComponent } from './inputs/inputs.component';
 import { MatNavigationComponent } from './navigation/navigation.component';
 import { CommonModule } from '@angular/common';
@@ -23,6 +23,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
     declarations: [
@@ -31,6 +39,8 @@ import { MatSliderModule } from '@angular/material/slider';
         MatFeedackComponent,
         MatInputsComponent,
         MatNavigationComponent,
+        FeedbackDialogExample,
+        FeedbackBottomSheetExample,
     ],
     imports: [
         CommonModule,
@@ -40,6 +50,7 @@ import { MatSliderModule } from '@angular/material/slider';
         MatCheckboxModule,
         MatRadioModule,
         MatDatepickerModule,
+        MatDialogModule,
         MatCardModule,
         MatExpansionModule,
         MatFormFieldModule,
@@ -52,6 +63,13 @@ import { MatSliderModule } from '@angular/material/slider';
         MatToolbarModule,
         ReactiveFormsModule,
         MatSliderModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatListModule,
+        MatSlideToggleModule,
+        MatChipsModule,
+        MatTableModule,
+        MatTooltipModule,
     ],
     exports: [
         MatSurfacesComponent,
@@ -59,6 +77,8 @@ import { MatSliderModule } from '@angular/material/slider';
         MatFeedackComponent,
         MatInputsComponent,
         MatNavigationComponent,
+        FeedbackDialogExample,
+        FeedbackBottomSheetExample,
     ],
 })
 export class MatModule {}

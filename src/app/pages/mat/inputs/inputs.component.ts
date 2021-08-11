@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
 export class AlwaysErrorState implements ErrorStateMatcher {
@@ -14,9 +14,6 @@ export class AlwaysErrorState implements ErrorStateMatcher {
     templateUrl: './inputs.component.html',
     styleUrls: ['./inputs.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    host: {
-        class: 'host',
-    },
 })
 export class MatInputsComponent {
     errorMatcher = new AlwaysErrorState();

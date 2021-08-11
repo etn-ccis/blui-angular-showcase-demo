@@ -406,65 +406,229 @@
             </div>
         </mat-card-header>
         <mat-card-content class="slider-demo-content">
-            Basic: <br />
-            <mat-slider style="width: 100%" thumbLabel tickInterval="10" min="1" max="100"></mat-slider>
-            With Value: <br />
-            <mat-slider style="width: 100%" value="50" thumbLabel tickInterval="10" min="1" max="100"></mat-slider>
-            Disabled <br />
-            <mat-slider style="width: 100%" disabled="true" thumbLabel tickInterval="10" min="1" max="100"></mat-slider>
+            Default: <br />
+            <div>
+                <div class="slider-subtype">Active</div>
+                <div class="slider-demo">
+                    <mat-icon>volume_down</mat-icon>
+                    <mat-slider
+                        style="width: 100%"
+                        thumbLabel
+                        value="50"
+                        tickInterval="10"
+                        min="1"
+                        max="100"
+                    ></mat-slider>
+                    <mat-icon>volume_up</mat-icon>
+                </div>
+                <div class="slider-subtype">Disabled</div>
+                <div class="slider-demo">
+                    <mat-icon>volume_down</mat-icon>
+                    <mat-slider
+                        style="width: 100%"
+                        value="50"
+                        disabled
+                        thumbLabel
+                        tickInterval="10"
+                        min="1"
+                        max="100"
+                    ></mat-slider>
+                    <mat-icon>volume_up</mat-icon>
+                </div>
+            </div>
+            <div style="margin: 16px 0">Primary</div>
+            <div>
+                <div class="slider-subtype">Active</div>
+                <div class="slider-demo">
+                    <mat-icon>volume_down</mat-icon>
+                    <mat-slider
+                        color="primary"
+                        value="50"
+                        style="width: 100%"
+                        thumbLabel
+                        tickInterval="10"
+                        min="1"
+                        max="100"
+                    ></mat-slider>
+                    <mat-icon>volume_up</mat-icon>
+                </div>
+                <div class="slider-subtype">Disabled</div>
+                <div class="slider-demo">
+                    <mat-icon>volume_down</mat-icon>
+                    <mat-slider
+                        color="primary"
+                        value="50"
+                        style="width: 100%"
+                        disabled
+                        thumbLabel
+                        tickInterval="10"
+                        min="1"
+                        max="100"
+                    ></mat-slider>
+                    <mat-icon>volume_up</mat-icon>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Switch
+            </div>
+        </mat-card-header>
+        <mat-card-content class="switch-demo-content">
+            <div>Default</div>
+            <div class="slide-row">
+                <div>
+                    <div>Active</div>
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <div>
+                    <div>Disabled</div>
+                    <mat-slide-toggle disabled></mat-slide-toggle>
+                </div>
+                <div>
+                    <div>Disabled Checked</div>
+                    <mat-slide-toggle disabled checked="true"></mat-slide-toggle>
+                </div>
+            </div>
+            <div>Primary</div>
+            <div class="slide-row">
+                <div>
+                    <div>Active</div>
+                    <mat-slide-toggle color="primary"></mat-slide-toggle>
+                </div>
+                <div>
+                    <div>Disabled</div>
+                    <mat-slide-toggle disabled color="primary"></mat-slide-toggle>
+                </div>
+                <div>
+                    <div>Disabled Checked</div>
+                    <mat-slide-toggle disabled checked="true" color="primary"></mat-slide-toggle>
+                </div>
+            </div>
+            <div>Secondary</div>
+            <div class="slide-row">
+                <div>
+                    <div>Active</div>
+                    <mat-slide-toggle color="accent"></mat-slide-toggle>
+                </div>
+                <div>
+                    <div>Disabled</div>
+                    <mat-slide-toggle disabled color="accent"></mat-slide-toggle>
+                </div>
+                <div>
+                    <div>Disabled Checked</div>
+                    <mat-slide-toggle disabled checked="true" color="accent"></mat-slide-toggle>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Standard Text Field
+            </div>
+        </mat-card-header>
+        <mat-card-content class="mat-select-demo">
+            <div>
+                <mat-form-field appearance="standard">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="standard">
+                    <input disabled matInput placeholder="Placeholder" />
+                    <mat-label>Disabled</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="standard">
+                    <mat-label>Required</mat-label>
+                    <input
+                        matInput
+                        placeholder="Placeholder"
+                        [formControl]="errorControl"
+                        [errorStateMatcher]="errorMatcher"
+                    />
+                    <mat-error>Hint</mat-error>
+                </mat-form-field>
+            </div>
         </mat-card-content>
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
             <div mat-card-title>
-                Input
+                Filled Text Field
             </div>
         </mat-card-header>
-        <mat-card-content>
-            <mat-form-field appearance="legacy" color="warn">
-                <mat-label>Legacy form field</mat-label>
-                <input
-                    matInput
-                    placeholder="Placeholder"
-                    [formControl]="errorControl"
-                    [errorStateMatcher]="errorMatcher"
-                />
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                <mat-error>Hint</mat-error>
-            </mat-form-field>
-            <mat-form-field appearance="standard" color="warn">
-                <mat-label>Standard form field</mat-label>
-                <input
-                    matInput
-                    placeholder="Placeholder"
-                    [formControl]="errorControl"
-                    [errorStateMatcher]="errorMatcher"
-                />
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                <mat-error>Hint</mat-error>
-            </mat-form-field>
-            <mat-form-field appearance="fill" color="warn">
-                <mat-label>Fill form field</mat-label>
-                <input
-                    matInput
-                    placeholder="Placeholder"
-                    [formControl]="errorControl"
-                    [errorStateMatcher]="errorMatcher"
-                />
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                <mat-error>Hint</mat-error>
-            </mat-form-field>
-            <mat-form-field appearance="outline" color="warn">
-                <mat-label>Outline form field</mat-label>
-                <input
-                    matInput
-                    placeholder="Placeholder"
-                    [formControl]="errorControl"
-                    [errorStateMatcher]="errorMatcher"
-                />
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                <mat-error>Hint</mat-error>
-            </mat-form-field>
+        <mat-card-content class="mat-select-demo">
+            <div>
+                <mat-form-field appearance="fill">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <input disabled matInput placeholder="Placeholder" />
+                    <mat-label>Disabled</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Required</mat-label>
+                    <input
+                        matInput
+                        placeholder="Placeholder"
+                        [formControl]="errorControl"
+                        [errorStateMatcher]="errorMatcher"
+                    />
+                    <mat-error>Hint</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Outlined Text Field
+            </div>
+        </mat-card-header>
+        <mat-card-content class="mat-select-demo">
+            <div>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <input disabled matInput placeholder="Placeholder" />
+                    <mat-label>Disabled</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Required</mat-label>
+                    <input
+                        matInput
+                        placeholder="Placeholder"
+                        [formControl]="errorControl"
+                        [errorStateMatcher]="errorMatcher"
+                    />
+                    <mat-error>Hint</mat-error>
+                </mat-form-field>
+            </div>
         </mat-card-content>
     </mat-card>
 </div>
