@@ -30,7 +30,8 @@ import { Router } from '@angular/router';
                             [selected]="selectedItemId === navItem.title+nestedItem.title"
                             (select)="nestedItem.onSelect(); setActive(navItem.title,nestedItem.title)"
                         ></pxb-drawer-nav-item>
-                        <mat-icon pxb-icon>{{ navItem.icon }}</mat-icon>
+                        <i pxb-icon *ngIf="navItem.icon === 'pxblue'" class="pxb-pxblue_small"></i>
+                        <mat-icon pxb-icon *ngIf="navItem.icon !== 'pxblue'">{{ navItem.icon }}</mat-icon>
                     </pxb-drawer-nav-item>
                 </pxb-drawer-nav-group>
             </pxb-drawer-body>
@@ -55,6 +56,7 @@ export class DrawerComponent {
     navItems: DrawerNavItem[] = [
         {
             title: 'PX Blue Components',
+            icon: 'pxblue',
             items: [
                 {
                     title: 'Display Data',
@@ -72,6 +74,7 @@ export class DrawerComponent {
         },
         {
             title: 'Material Components',
+            icon: 'category',
             items: [
                 {
                     title: 'Display Data',
@@ -97,6 +100,7 @@ export class DrawerComponent {
         },
         {
             title: 'Page Templates',
+            icon: 'layers',
             onSelect: (): void => {},
             items: [
                 {
