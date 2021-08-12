@@ -6,11 +6,12 @@ import { Component, ViewEncapsulation } from '@angular/core';
     styleUrls: ['./settings.component.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        class: 'app-settings',
+        class: 'app-template-settings',
     },
 })
 export class SettingsComponent {
     notifications = true;
     textNotifications = true;
     autoLogout = true;
+    nickname = "Marsh Mellow";
 }

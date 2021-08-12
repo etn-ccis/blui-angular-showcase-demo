@@ -7,7 +7,7 @@ import * as PXBColors from '@pxblue/colors';
     styleUrls: ['./alarms.component.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        class: 'app-alarms',
+        class: 'app-template-alarms',
     },
 })
 export class AlarmsComponent implements AfterViewInit {

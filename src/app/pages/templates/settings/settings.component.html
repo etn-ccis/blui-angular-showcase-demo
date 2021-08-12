@@ -1,4 +1,4 @@
-<div class="settings-root">
+<div class="settings-root template-root">
     <mat-card>
         <mat-card-header>Organization</mat-card-header>
         <mat-divider></mat-divider>
@@ -27,8 +27,14 @@
             </pxb-info-list-item>
             <pxb-info-list-item iconAlign="center" divider="full">
                 <mat-icon pxb-icon>account_circle</mat-icon>
-                <div pxb-title>Marshall Mellow</div>
+                <div pxb-title>{{nickname}}</div>
                 <div pxb-subtitle>Nickname</div>
+                <div pxb-right-content style="display: flex; justify-content: center;">
+                    <mat-form-field appearance="outline" style="height: 72px">
+                        <input matInput placeholder="Nickname" [(ngModel)]="nickname" />
+                        <mat-label>Nickname</mat-label>
+                    </mat-form-field>
+                </div>
             </pxb-info-list-item>
             <pxb-info-list-item iconAlign="center" divider="full">
                 <mat-icon pxb-icon>email</mat-icon>

@@ -1,6 +1,7 @@
 @import '~@pxblue/colors/palette.scss';
 
-.app-alarms {
+
+.app-template-alarms {
     display: flex;
     justify-content: center;
 }
@@ -21,11 +22,6 @@
 }
 
 .alarms-root {
-    box-sizing: border-box;
-    max-width: 1200px;
-    width: 100%;
-    padding: 16px;
-    justify-content: center;
     mat-card {
         width: 100%;
         padding: 0;
