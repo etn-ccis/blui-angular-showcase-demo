@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ViewportService } from '../../../services/viewport.service';
 
 @Component({
     selector: 'app-mat-navigation',
