@@ -9,3 +9,8 @@
         justify-content: center;
     }
 }
+.user-menu-custom-colors-body {
+    mat-icon {
+        color: map-get($pxb-blue, 800);
+    }
+}
