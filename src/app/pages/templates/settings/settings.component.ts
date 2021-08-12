@@ -13,5 +13,5 @@ export class SettingsComponent {
     notifications = true;
     textNotifications = true;
     autoLogout = true;
-    nickname = "Marsh Mellow";
+    nickname = 'Marsh Mellow';
 }

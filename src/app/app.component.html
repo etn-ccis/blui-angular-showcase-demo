@@ -9,13 +9,13 @@
     <div pxb-content>
         <mat-toolbar color="primary">
             <button
-                    *ngIf="isMobile()"
-                    mat-icon-button
-                    pxb-icon
-                    [class.rtl]="isRtl"
-                    (click)="openDrawer()"
-                    [style.marginLeft.px]="isRtl ? 12 : 0"
-                    [style.marginRight.px]="isRtl ? 0 : 12"
+                *ngIf="isMobile()"
+                mat-icon-button
+                pxb-icon
+                [class.rtl]="isRtl"
+                (click)="openDrawer()"
+                [style.marginLeft.px]="isRtl ? 12 : 0"
+                [style.marginRight.px]="isRtl ? 0 : 12"
             >
                 <mat-icon>menu</mat-icon>
             </button>
