@@ -23,13 +23,12 @@ import { Router } from '@angular/router';
                         [subtitle]="navItem.subtitle"
                         [divider]="true"
                         [selected]="selectedItemId === navItem.title"
-                        (select)="navItem.onSelect(); setActive(navItem.title)"
                     >
                         <pxb-drawer-nav-item
                             *ngFor="let nestedItem of navItem.items"
                             [title]="nestedItem.title"
-                            [selected]="selectedItemId === nestedItem.title"
-                            (select)="nestedItem.onSelect(); setActive(nestedItem.title)"
+                            [selected]="selectedItemId === navItem.title+nestedItem.title"
+                            (select)="nestedItem.onSelect(); setActive(navItem.title,nestedItem.title)"
                         ></pxb-drawer-nav-item>
                         <mat-icon pxb-icon>{{ navItem.icon }}</mat-icon>
                     </pxb-drawer-nav-item>
@@ -56,7 +55,6 @@ export class DrawerComponent {
     navItems: DrawerNavItem[] = [
         {
             title: 'PX Blue Components',
-            onSelect: (): void => {},
             items: [
                 {
                     title: 'Display Data',
@@ -74,7 +72,6 @@ export class DrawerComponent {
         },
         {
             title: 'Material Components',
-            onSelect: (): void => {},
             items: [
                 {
                     title: 'Display Data',
@@ -126,8 +123,11 @@ export class DrawerComponent {
         return this._stateService.getDrawerOpen();
     }
 
-    setActive(id: string): void {
-        this.selectedItemId = id;
+    setActive(groupId: string, itemId: string): void {
+        if (!groupId) {
+            return;
+        }
+        this.selectedItemId = groupId+itemId;
         if (this._viewportService.isSmall()) {
             this._stateService.setDrawerOpen(false);
         }
