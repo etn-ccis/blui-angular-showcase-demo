@@ -1,8 +1,15 @@
 .button-demo-showcase {
-    div {
+    > div {
         margin: 8px;
+    }
+    div {
         display: flex;
         justify-content: space-around;
+    }
+}
+.button-demo-showcase.uniform-size {
+    button, a {
+        width: 150px;
     }
 }
 .icon-button-demo {
