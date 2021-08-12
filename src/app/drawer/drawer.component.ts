@@ -27,8 +27,8 @@ import { Router } from '@angular/router';
                         <pxb-drawer-nav-item
                             *ngFor="let nestedItem of navItem.items"
                             [title]="nestedItem.title"
-                            [selected]="selectedItemId === navItem.title+nestedItem.title"
-                            (select)="nestedItem.onSelect(); setActive(navItem.title,nestedItem.title)"
+                            [selected]="selectedItemId === navItem.title + nestedItem.title"
+                            (select)="nestedItem.onSelect(); setActive(navItem.title, nestedItem.title)"
                         ></pxb-drawer-nav-item>
                         <i pxb-icon *ngIf="navItem.icon === 'pxblue'" class="pxb-pxblue_small"></i>
                         <mat-icon pxb-icon *ngIf="navItem.icon !== 'pxblue'">{{ navItem.icon }}</mat-icon>
@@ -131,7 +131,7 @@ export class DrawerComponent {
         if (!groupId) {
             return;
         }
-        this.selectedItemId = groupId+itemId;
+        this.selectedItemId = groupId + itemId;
         if (this._viewportService.isSmall()) {
             this._stateService.setDrawerOpen(false);
         }
