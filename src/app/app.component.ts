@@ -5,6 +5,8 @@ import * as PXBColors from '@pxblue/colors';
 import { ViewportService } from './services/viewport.service';
 import { DrawerLayoutVariantType } from '@pxblue/angular-components';
 import { StateService } from './services/state.service';
+import { RtlService } from './services/rtl.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -15,12 +17,10 @@ import { StateService } from './services/state.service';
 export class AppComponent {
     isDarkMode = false;
     isRtl = false;
-    isCollapsed = false;
     colors: Record<string, any>;
     variant: DrawerLayoutVariantType = 'persistent';
-    dropdownToolbarSubtitle = 'Language';
-    scrollContainerClass = { name: 'mat-sidenav-content', index: 0 };
     userMenuOpen = false;
+    title: string;
     menuGroups = [
         {
             items: [
@@ -52,9 +52,12 @@ export class AppComponent {
         private readonly _stateService: StateService,
         private readonly _matIconRegistry: MatIconRegistry,
         private readonly _domSanitizer: DomSanitizer,
-        private readonly _viewportService: ViewportService
+        private readonly _viewportService: ViewportService,
+        private readonly _rtlService: RtlService,
+        private readonly _router: Router
     ) {
         this.colors = PXBColors;
+        this.listenForRouteChanges();
         this._matIconRegistry.addSvgIconSetInNamespace(
             'px-icons',
             /* **Note to PX Blue Users:
@@ -68,6 +71,61 @@ export class AppComponent {
                 'https://raw.githubusercontent.com/pxblue/icons/dev/svg/icons.svg'
             )
         );
+    }
+
+    listenForRouteChanges(): void {
+        this._router.events.subscribe((route) => {
+            if (route instanceof NavigationEnd) {
+                switch (route.urlAfterRedirects.split('?')[0]) {
+                    case `/pxblue-components/data-display-components`: {
+                        this.title = 'PX Blue Data Display';
+                        break;
+                    }
+                    case `/pxblue-components/navigation-components`: {
+                        this.title = 'PX Blue Navigation';
+                        break;
+                    }
+                    case `/pxblue-components/surface-components`: {
+                        this.title = 'PX Blue Surfaces';
+                        break;
+                    }
+                    case `/material-components/data-display-components`: {
+                        this.title = 'Material Data Display';
+                        break;
+                    }
+                    case `/material-components/feedback-components`: {
+                        this.title = 'Material Feedback';
+                        break;
+                    }
+                    case `/material-components/input-components`: {
+                        this.title = 'Material Inputs';
+                        break;
+                    }
+                    case `/material-components/navigation-components`: {
+                        this.title = 'Material Navigation';
+                        break;
+                    }
+                    case `/material-components/surface-components`: {
+                        this.title = 'Material Surfaces';
+                        break;
+                    }
+                    case `/templates/alarms`: {
+                        this.title = 'Alarms';
+                        break;
+                    }
+                    case `/templates/settings`: {
+                        this.title = 'Settings';
+                        break;
+                    }
+                    case `/templates/dashboard`: {
+                        this.title = 'Dashboard';
+                        break;
+                    }
+                    default:
+                        return;
+                }
+            }
+        });
     }
 
     isMobile(): boolean {
@@ -93,10 +151,6 @@ export class AppComponent {
         this._stateService.setDrawerOpen(true);
     }
 
-    updateDropdownToolbarSubtitle(string: string): void {
-        this.dropdownToolbarSubtitle = string;
-    }
-
     toggleTheme(): void {
         const body = document.querySelector('body') as HTMLElement;
         if (this.isDarkMode) {
@@ -111,5 +165,6 @@ export class AppComponent {
 
     toggleDirectionality(): void {
         this.isRtl = !this.isRtl;
+        this._rtlService.setRTL(this.isRtl);
     }
 }

@@ -52,26 +52,20 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
+import { DashboardComponent } from './pages/templates/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
-import { TimelineComponent } from './timeline/timeline.component';
+import { AlarmsComponent } from './pages/templates/alarms/alarms.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { TypographyComponent } from './typography/typography.component';
+import { PxblueModule } from './pages/pxblue/pxblue.module';
+import { MatModule } from './pages/mat/mat.module';
+import { SettingsComponent } from './pages/templates/settings/settings.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        DashboardComponent,
-        DrawerComponent,
-        KitchenSinkComponent,
-        TimelineComponent,
-        TypographyComponent,
-    ],
+    declarations: [AppComponent, DashboardComponent, DrawerComponent, AlarmsComponent, SettingsComponent],
     imports: [
         MatRippleModule,
         AppRoutingModule,
@@ -121,6 +115,8 @@ import { TypographyComponent } from './typography/typography.component';
         DropdownToolbarModule,
         RouterModule,
         AppBarModule,
+        PxblueModule,
+        MatModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

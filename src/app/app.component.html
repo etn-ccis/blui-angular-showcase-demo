@@ -7,17 +7,21 @@
     <showcase-drawer pxb-drawer></showcase-drawer>
 
     <div pxb-content>
-        <pxb-app-bar
-            variant="snap"
-            (collapsedChange)="isCollapsed = $event"
-            [scrollContainerClassName]="scrollContainerClass"
-        >
-            <button pxb-icon mat-icon-button style="margin-right: 24px">
+        <mat-toolbar color="primary" style="position: sticky; top: 0; z-index: 1000">
+            <button
+                *ngIf="isMobile()"
+                mat-icon-button
+                pxb-icon
+                [class.rtl]="isRtl"
+                (click)="openDrawer()"
+                [style.marginLeft.px]="isRtl ? 12 : 0"
+                [style.marginRight.px]="isRtl ? 0 : 12"
+            >
                 <mat-icon>menu</mat-icon>
             </button>
-            <pxb-three-liner [style.top.px]="isCollapsed ? 0 : 80" title="title" subtitle="subtitle" info="info">
-            </pxb-three-liner>
-            <div pxb-actions style="display: flex">
+            <div class="mat-headline">{{ title }}</div>
+            <pxb-spacer></pxb-spacer>
+            <div style="display: flex">
                 <button mat-icon-button style="margin: 0px 4px" (click)="toggleTheme()">
                     <mat-icon>invert_colors</mat-icon>
                 </button>
@@ -51,7 +55,7 @@
                     </mat-nav-list>
                 </pxb-user-menu>
             </div>
-        </pxb-app-bar>
+        </mat-toolbar>
 
         <router-outlet></router-outlet>
     </div>

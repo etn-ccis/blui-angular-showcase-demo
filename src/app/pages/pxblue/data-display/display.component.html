@@ -1,0 +1,366 @@
+<div class="showcase-container pxb-data-display-container">
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Channel Value
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="story-title">Basic Usage</div>
+            <pxb-channel-value [value]="123"></pxb-channel-value>
+            <div class="story-title">W/ Units</div>
+            <pxb-channel-value [value]="123" units="hz"></pxb-channel-value>
+            <div class="story-title">W/ Icon</div>
+            <pxb-channel-value [value]="123" units="hz">
+                <mat-icon [style.color]="colors.red[500]" [style.transform]="rtl.invertRTL()">trending_up</mat-icon>
+            </pxb-channel-value>
+            <div class="story-title">W/ Custom Font Size</div>
+            <pxb-channel-value [value]="123" units="hz" style="font-size: 24px">
+                <mat-icon [style.color]="colors.red[500]" [style.transform]="rtl.invertRTL()">trending_up</mat-icon>
+            </pxb-channel-value>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Empty State
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="story-title">Basic Usage</div>
+            <pxb-empty-state title="Location Unknown">
+                <mat-icon pxb-empty-icon [style.transform]="rtl.invertRTL()">not_listed_location</mat-icon>
+            </pxb-empty-state>
+            <div class="story-title">W/ Description</div>
+            <pxb-empty-state
+                title="Location Unknown"
+                description="Enable Location Services via Settings to receive GPS information"
+            >
+                <mat-icon pxb-empty-icon [style.transform]="rtl.invertRTL()">not_listed_location</mat-icon>
+            </pxb-empty-state>
+            <div class="story-title">W/ Actions</div>
+            <pxb-empty-state
+                title="Location Unknown"
+                description="Enable Location Services via Settings to receive GPS information"
+            >
+                <mat-icon pxb-empty-icon>devices</mat-icon>
+                <button pxb-actions mat-stroked-button color="primary">
+                    <mat-icon
+                        style="height: 20px; width: 20px; font-size: 20px;"
+                        [style.marginRight.px]="rtl.isRtl() ? -4 : 8"
+                        [style.marginLeft.px]="rtl.isRtl() ? 8 : -4"
+                    >
+                        add
+                    </mat-icon>
+                    Add Device
+                </button>
+            </pxb-empty-state>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Hero
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="multi-line-example">
+                <div>
+                    <div class="story-title">Basic Usage</div>
+                    <pxb-hero label="Efficiency">
+                        <i pxb-primary class="pxb-grade_a"></i>
+                    </pxb-hero>
+                </div>
+                <div>
+                    <div class="story-title">w/ Value and Units</div>
+                    <pxb-hero label="Efficiency" value="88" units="%">
+                        <i pxb-primary class="pxb-grade_b"></i>
+                    </pxb-hero>
+                </div>
+            </div>
+
+            <div class="multi-line-example">
+                <div>
+                    <div class="story-title">w/ Channel Value Children</div>
+                    <pxb-hero label="Efficiency">
+                        <mat-icon pxb-primary>schedule</mat-icon>
+                        <pxb-channel-value value="1" units="h"></pxb-channel-value>
+                        <pxb-channel-value value="27" units="m"></pxb-channel-value>
+                    </pxb-hero>
+                </div>
+                <div>
+                    <div class="story-title">w/ Icon Colors</div>
+                    <pxb-hero label="Temperature" value="38" units="°C" [iconBackgroundColor]="colors.red[500]">
+                        <i pxb-primary class="pxb-temp" [style.color]="colors.white[50]"></i>
+                    </pxb-hero>
+                </div>
+            </div>
+            <div class="story-title" style="text-align: center">Within a HeroBanner</div>
+            <pxb-hero-banner [style.borderColor]="colors.gray[50]" style="border: solid 1px; border-radius: 4px">
+                <pxb-hero label="Health" value="96" units="/100">
+                    <i pxb-primary class="pxb-grade_a"></i>
+                </pxb-hero>
+                <pxb-hero label="Load" value="90" units="%">
+                    <i pxb-primary class="pxb-grade_b"></i>
+                </pxb-hero>
+                <pxb-hero label="Temp" value="96" units="C">
+                    <mat-icon pxb-primary>schedule</mat-icon>
+                </pxb-hero>
+                <pxb-hero label="Battery" value="96" units="/100" [iconBackgroundColor]="colors.red[500]">
+                    <i pxb-primary class="pxb-temp" [style.color]="colors.white[50]"></i>
+                </pxb-hero>
+            </pxb-hero-banner>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Info List Item
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <pxb-info-list-item>
+                <span pxb-title>Basic Usage</span>
+            </pxb-info-list-item>
+            <pxb-info-list-item>
+                <span pxb-title>Info List Item</span>
+                <span pxb-subtitle>with a Subtitle</span>
+            </pxb-info-list-item>
+            <pxb-info-list-item>
+                <span pxb-title>Info List Item</span>
+                <span pxb-subtitle>with an icon</span>
+                <mat-icon pxb-icon>alarm</mat-icon>
+            </pxb-info-list-item>
+            <pxb-info-list-item [divider]="'partial'">
+                <span pxb-title>Info List Item</span>
+                <span pxb-subtitle>with a partial divider</span>
+            </pxb-info-list-item>
+            <pxb-info-list-item [divider]="'full'">
+                <span pxb-title>Info List Item</span>
+                <span pxb-subtitle>with a full divider</span>
+            </pxb-info-list-item>
+            <mat-nav-list>
+                <pxb-info-list-item (click)="handleInfoListItemClick()">
+                    <span pxb-title>Info List Item</span>
+                    <span pxb-subtitle>that is clickable</span>
+                </pxb-info-list-item>
+            </mat-nav-list>
+            <pxb-info-list-item [statusColor]="colors.green[700]" [avatar]="true">
+                <div pxb-title>Info List Item</div>
+                <div pxb-subtitle>with a status indicator</div>
+                <mat-icon pxb-icon [style.backgroundColor]="colors.green[700]" [style.color]="colors.white[50]"
+                    >offline_bolt</mat-icon
+                >
+            </pxb-info-list-item>
+            <pxb-info-list-item [style.backgroundColor]="colors.yellow[500]">
+                <div pxb-title>Info List Item</div>
+                <div pxb-subtitle>with a background color</div>
+                <mat-icon pxb-icon>eco</mat-icon>
+            </pxb-info-list-item>
+            <pxb-info-list-item>
+                <div pxb-title>Info List Item</div>
+                <div pxb-subtitle>with a left component</div>
+                <mat-icon [style.color]="colors.blue[500]" pxb-icon>battery_charging_full</mat-icon>
+                <div
+                    pxb-left-content
+                    style="display: flex; flex-direction: column"
+                    [style.marginRight.px]="rtl.isRtl() ? 0 : 48"
+                    [style.marginLeft.px]="rtl.isRtl() ? 48 : 0"
+                >
+                    <div class="mat-body-2">8:32 <strong>AM</strong></div>
+                    <div class="mat-body-2" style="margin-top: -4px">11/21/21</div>
+                </div>
+            </pxb-info-list-item>
+            <pxb-info-list-item>
+                <div pxb-title>Info List Item</div>
+                <div pxb-subtitle>with a right component</div>
+                <mat-icon [style.color]="colors.blue[500]" pxb-icon>battery_charging_full</mat-icon>
+                <pxb-channel-value [value]="15" units="A" pxb-right-content></pxb-channel-value>
+            </pxb-info-list-item>
+            <pxb-info-list-item [statusColor]="colors.blue[500]">
+                <div pxb-title>Info List Item</div>
+                <div pxb-subtitle>with all properties</div>
+                <div pxb-info>more information here</div>
+                <mat-icon pxb-icon>devices</mat-icon>
+            </pxb-info-list-item>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                List Item Tag
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="multi-line-example">
+                <div>
+                    <div class="story-title">Basic Usage</div>
+                    <pxb-list-item-tag label="Active"></pxb-list-item-tag>
+                </div>
+                <div>
+                    <div class="story-title" style="text-align: center">w/ Custom Colors</div>
+                    <pxb-list-item-tag
+                        label="Active"
+                        [backgroundColor]="colors.red[500]"
+                        [fontColor]="colors.white[50]"
+                    ></pxb-list-item-tag>
+                </div>
+            </div>
+            <div class="story-title" style="text-align: center">Within an InfoListItem</div>
+            <pxb-info-list-item>
+                <div pxb-title>Info List Item</div>
+                <div pxb-subtitle>with a ListItemTag component to the right</div>
+                <mat-icon pxb-icon [style.color]="colors.blue[500]">battery_charging_full</mat-icon>
+                <div pxb-right-content>
+                    <pxb-list-item-tag
+                        label="Build Passing"
+                        [style.marginRight.px]="rtl.isRtl() ? 0 : 16"
+                        [style.marginLeft.px]="rtl.isRtl() ? 16 : 0"
+                        [backgroundColor]="colors.green[300]"
+                        [fontColor]="colors.black[900]"
+                    >
+                    </pxb-list-item-tag>
+                    <pxb-list-item-tag
+                        label="5 Bugs"
+                        [backgroundColor]="colors.red[300]"
+                        [fontColor]="colors.black[900]"
+                    >
+                    </pxb-list-item-tag>
+                </div>
+            </pxb-info-list-item>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Three Liner
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <pxb-three-liner
+                title="Three Liner Component"
+                subtitle="with basic usage"
+                info="...and a third line"
+                style="margin: 1rem 0 2rem 0"
+            >
+            </pxb-three-liner>
+            <pxb-three-liner title="Three Liner Component" subtitle="with custom content">
+                <pxb-channel-value [value]="123" units="hz" pxb-info>
+                    <mat-icon [style.color]="colors.red[500]" [style.transform]="rtl.invertRTL()">trending_up</mat-icon>
+                </pxb-channel-value>
+            </pxb-three-liner>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                User Menu
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="multi-line-example">
+                <div>
+                    <div class="story-title">Basic Usage</div>
+                    <pxb-user-menu avatarValue="PX" [(open)]="userMenuOpen1">
+                        <mat-nav-list pxb-menu-body [style.paddingTop.px]="0">
+                            <pxb-info-list-item
+                                *ngFor="let item of userMenuItems"
+                                [dense]="true"
+                                (click)="userMenuOpen1 = false"
+                            >
+                                <mat-icon pxb-icon [style.transform]="rtl.invertRTL()">{{ item.icon }}</mat-icon>
+                                <div pxb-title>{{ item.title }}</div>
+                            </pxb-info-list-item>
+                        </mat-nav-list>
+                    </pxb-user-menu>
+                </div>
+                <div>
+                    <div class="story-title">w/ Custom Colors</div>
+                    <pxb-user-menu avatarValue="PX" [(open)]="userMenuOpen2" class="user-menu-with-custom-colors">
+                        <mat-nav-list pxb-menu-body [style.paddingTop.px]="0" class="user-menu-custom-colors-body">
+                            <pxb-info-list-item
+                                *ngFor="let item of userMenuItems"
+                                [dense]="true"
+                                (click)="userMenuOpen2 = false"
+                            >
+                                <mat-icon pxb-icon [style.transform]="rtl.invertRTL()">{{ item.icon }}</mat-icon>
+                                <div pxb-title>{{ item.title }}</div>
+                            </pxb-info-list-item>
+                        </mat-nav-list>
+                    </pxb-user-menu>
+                </div>
+            </div>
+            <div class="multi-line-example">
+                <div>
+                    <div class="story-title">w/ Non-Text Avatar</div>
+                    <pxb-user-menu [(open)]="userMenuOpen3">
+                        <mat-icon pxb-avatar>pets</mat-icon>
+                        <mat-nav-list pxb-menu-body [style.paddingTop.px]="0">
+                            <pxb-info-list-item
+                                *ngFor="let item of userMenuItems"
+                                [dense]="true"
+                                (click)="userMenuOpen3 = false"
+                            >
+                                <mat-icon pxb-icon [style.transform]="rtl.invertRTL()">{{ item.icon }}</mat-icon>
+                                <div pxb-title>{{ item.title }}</div>
+                            </pxb-info-list-item>
+                        </mat-nav-list>
+                    </pxb-user-menu>
+                </div>
+                <div>
+                    <div class="story-title">w/ a Menu Header</div>
+                    <pxb-user-menu
+                        [(open)]="userMenuOpen4"
+                        avatarValue="PX"
+                        menuTitle="Menu Title"
+                        menuSubtitle="Menu Subtitle"
+                    >
+                        <mat-nav-list pxb-menu-body [style.paddingTop.px]="0">
+                            <pxb-info-list-item
+                                *ngFor="let item of userMenuItems"
+                                [dense]="true"
+                                (click)="userMenuOpen4 = false"
+                            >
+                                <mat-icon pxb-icon [style.transform]="rtl.invertRTL()">{{ item.icon }}</mat-icon>
+                                <div pxb-title>{{ item.title }}</div>
+                            </pxb-info-list-item>
+                        </mat-nav-list>
+                    </pxb-user-menu>
+                </div>
+            </div>
+            <mat-toolbar style="padding: 0 16px; margin-top: 2rem; height: 4rem;" color="primary">
+                <div class="mat-title">UserMenu with a Toolbar</div>
+                <pxb-spacer></pxb-spacer>
+                <pxb-user-menu menuTitle="Jane Doe" menuSubtitle="Account Manager" [(open)]="userMenuOpen5">
+                    <mat-icon pxb-avatar>person</mat-icon>
+                    <mat-icon pxb-menu-avatar [style.color]="colors.blue[500]">person</mat-icon>
+                    <div pxb-menu-body>
+                        <mat-nav-list [style.paddingTop.px]="0" [style.width.rem]="12">
+                            <pxb-info-list-item
+                                *ngFor="let item of userMenuItems"
+                                [dense]="true"
+                                (click)="userMenuOpen5 = false"
+                            >
+                                <mat-icon pxb-icon [style.transform]="rtl.invertRTL()">{{ item.icon }}</mat-icon>
+                                <div pxb-title>{{ item.title }}</div>
+                            </pxb-info-list-item>
+                        </mat-nav-list>
+                        <mat-divider></mat-divider>
+                        <div
+                            style="padding: 0 16px; font-size: 12px; line-height: 40px; height: 40px"
+                            [style.textAlign]="rtl.isRtl() ? 'left' : 'right'"
+                        >
+                            v1.03.54
+                        </div>
+                    </div>
+                </pxb-user-menu>
+            </mat-toolbar>
+        </mat-card-content>
+    </mat-card>
+</div>

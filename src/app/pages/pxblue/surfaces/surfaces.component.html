@@ -1,0 +1,189 @@
+<div class="showcase-container">
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Channel Value
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div id="app-bar-basic" class="app-bar-container">
+                <pxb-app-bar
+                    expandedHeight="200"
+                    collapsedHeight="64"
+                    scrollThreshold="100"
+                    scrollContainerId="app-bar-basic"
+                    variant="snap"
+                >
+                    <div>Content</div>
+                </pxb-app-bar>
+                {{ loremIpsum }}
+            </div>
+            <div id="app-bar-dynamic" class="app-bar-container" style="margin-top: 2rem;">
+                <pxb-app-bar
+                    expandedHeight="200"
+                    collapsedHeight="64"
+                    scrollThreshold="100"
+                    (collapsedChange)="isDynamicCollapsed = $event"
+                    scrollContainerId="app-bar-dynamic"
+                    variant="snap"
+                >
+                    <pxb-three-liner
+                        title="W/ Dynamic Content"
+                        subtitle="Subtitle"
+                        info="Info"
+                        [style.top.px]="isDynamicCollapsed ? 0 : 80"
+                    >
+                    </pxb-three-liner>
+                </pxb-app-bar>
+                {{ loremIpsum }}
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Dropdown Toolbar
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <pxb-dropdown-toolbar title="Basic Usage" [subtitle]="subtitle1">
+                <ng-container pxb-toolbar-menu>
+                    <button mat-menu-item (click)="subtitle1 = 'Item 1'">Item 1</button>
+                    <button mat-menu-item (click)="subtitle1 = 'Item 2'">Item 2</button>
+                    <button mat-menu-item (click)="subtitle1 = 'Item 3'">Item 3</button>
+                </ng-container>
+            </pxb-dropdown-toolbar>
+            <pxb-dropdown-toolbar title="W/ Nav Icon" [subtitle]="subtitle2">
+                <button mat-icon-button pxb-nav-icon>
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <ng-container pxb-toolbar-menu>
+                    <button mat-menu-item (click)="subtitle2 = 'Item 1'">Item 1</button>
+                    <button mat-menu-item (click)="subtitle2 = 'Item 2'">Item 2</button>
+                    <button mat-menu-item (click)="subtitle2 = 'Item 3'">Item 3</button>
+                </ng-container>
+            </pxb-dropdown-toolbar>
+            <pxb-dropdown-toolbar title="W/ Nav Icon" [subtitle]="subtitle3">
+                <button mat-icon-button pxb-nav-icon>
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <ng-container pxb-toolbar-menu>
+                    <div class="mat-overline" style="padding: 16px">menugroup 1</div>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="subtitle3 = 'Item 1'">Item 1</button>
+                    <button mat-menu-item (click)="subtitle3 = 'Item 2'">Item 2</button>
+                    <div class="mat-overline" style="padding: 16px">menugroup 2</div>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="subtitle3 = 'Item 3'">Item 3</button>
+                    <button mat-menu-item (click)="subtitle3 = 'Item 4'">Item 4</button>
+                </ng-container>
+            </pxb-dropdown-toolbar>
+            <pxb-dropdown-toolbar title="W/ Custom Menu" [subtitle]="subtitle4">
+                <button mat-icon-button pxb-nav-icon>
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <mat-nav-list pxb-toolbar-menu [style.paddingTop.px]="0">
+                    <pxb-info-list-item [dense]="true" (click)="subtitle4 = 'Atlanta'">
+                        <mat-icon pxb-icon [style.color]="colors.blue[500]" style="transform: unset">business</mat-icon>
+                        <span pxb-title>Atlanta</span>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item
+                        [dense]="true"
+                        (click)="subtitle4 = 'Pittsburgh'"
+                        [statusColor]="colors.red[500]"
+                    >
+                        <mat-icon pxb-icon [style.color]="colors.red[500]" style="transform: unset">house</mat-icon>
+                        <span pxb-title>Pittsburgh</span>
+                    </pxb-info-list-item>
+                    <pxb-info-list-item [dense]="true" (click)="subtitle4 = 'New York'">
+                        <mat-icon pxb-icon [style.color]="colors.blue[500]" style="transform: unset"
+                            >apartment</mat-icon
+                        >
+                        <span pxb-title>New York</span>
+                    </pxb-info-list-item>
+                </mat-nav-list>
+            </pxb-dropdown-toolbar>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Score Card
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <pxb-score-card headerTitle="Basic Usage">
+                <mat-list pxb-body>
+                    <mat-list-item>Body Content</mat-list-item>
+                </mat-list>
+            </pxb-score-card>
+            <pxb-score-card headerTitle="Custom Header" headerSubtitle="Subtitle" headerInfo="4 Devices">
+                <mat-list pxb-body>
+                    <mat-list-item>Body Content</mat-list-item>
+                </mat-list>
+            </pxb-score-card>
+            <pxb-score-card headerTitle="W/ Actions" headerSubtitle="High Humidity Alarm" headerInfo="4 Devices">
+                <ng-container pxb-action-items>
+                    <ng-container *ngFor="let action of actions">
+                        <mat-icon>{{ action }}</mat-icon>
+                    </ng-container>
+                </ng-container>
+                <mat-list pxb-body>
+                    <mat-list-item>Body Content</mat-list-item>
+                </mat-list>
+                <ng-template [ngTemplateOutlet]="viewLocation" pxb-action-row></ng-template>
+            </pxb-score-card>
+            <pxb-score-card headerTitle="Substation 3" headerSubtitle="High Humidity Alarm" headerInfo="4 Devices">
+                <mat-icon pxb-action-items>more_vert</mat-icon>
+                <mat-list pxb-body>
+                    <mat-list-item>
+                        <p mat-line>Body Content</p>
+                    </mat-list-item>
+                </mat-list>
+                <pxb-hero-banner pxb-badge>
+                    <pxb-hero label="Temperature" value="98" units="°F" [iconSize]="36">
+                        <i pxb-primary class="pxb-temp"></i>
+                    </pxb-hero>
+                    <pxb-hero label="Humidity" value="54" units="%" [iconSize]="36">
+                        <i pxb-primary [style.color]="colors.blue[300]" class="pxb-moisture"></i>
+                    </pxb-hero>
+                </pxb-hero-banner>
+                <ng-template [ngTemplateOutlet]="viewLocation" pxb-action-row></ng-template>
+            </pxb-score-card>
+            <pxb-score-card
+                headerTitle="Substation 3"
+                headerSubtitle="High Humidity Alarm"
+                headerInfo="4 Devices"
+                [badgeOffset]="-74"
+            >
+                <mat-icon pxb-action-items>more_vert</mat-icon>
+                <mat-list pxb-body class="score-badge-example-content" [class.rtl]="rtl.isRtl()">
+                    <mat-list-item>
+                        <p mat-line style="font-weight: 400">0 Alarms</p>
+                        <mat-icon mat-list-icon>notifications</mat-icon>
+                    </mat-list-item>
+                    <mat-list-item [style.color]="colors.blue[500]">
+                        <p mat-line style="font-weight: 600">1 Event</p>
+                        <mat-icon mat-list-icon>list_alt</mat-icon>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <p mat-line style="font-weight: 400">Online</p>
+                        <mat-icon mat-list-icon>cloud</mat-icon>
+                    </mat-list-item>
+                </mat-list>
+                <pxb-hero pxb-badge label="Grade" value="98" units="/100" [iconSize]="72">
+                    <i pxb-primary [style.color]="colors.green[500]" class="pxb-grade_a"></i>
+                </pxb-hero>
+                <ng-template [ngTemplateOutlet]="viewLocation" pxb-action-row></ng-template>
+            </pxb-score-card>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<ng-template #viewLocation>
+    <pxb-info-list-item chevron="true" hidePadding="true" dense="true">
+        <div pxb-title>View Location</div>
+    </pxb-info-list-item>
+</ng-template>

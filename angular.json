@@ -30,7 +30,8 @@
             "styles": [
               "src/styles.scss",
               "./node_modules/@pxblue/angular-themes/open-sans.scss",
-              "./node_modules/@pxblue/angular-themes/theme.scss"
+              "./node_modules/@pxblue/angular-themes/theme.scss",
+              "./node_modules/@pxblue/icons/iconfont/PXBlueIcons.css"
             ],
             "scripts": []
           },

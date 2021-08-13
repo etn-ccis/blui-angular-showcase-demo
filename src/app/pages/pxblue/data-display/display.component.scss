@@ -1,0 +1,16 @@
+@import '~@pxblue/colors/palette.scss';
+
+.pxb-data-display-container {
+    .user-menu-with-custom-colors .pxb-user-menu-avatar {
+        color: map-get($pxb-white, 50);
+        background-color: map-get($pxb-blue, 800);
+    }
+    .pxb-user-menu {
+        justify-content: center;
+    }
+}
+.user-menu-custom-colors-body {
+    mat-icon {
+        color: map-get($pxb-blue, 800);
+    }
+}

@@ -1,14 +1,14 @@
-<div class="timeline-root">
+<div class="alarms-root template-root">
     <mat-card>
-        <mat-card-header>Today</mat-card-header>
+        <mat-card-header>Alarms</mat-card-header>
         <mat-divider></mat-divider>
         <mat-nav-list>
             <pxb-info-list-item
                 style="overflow: hidden"
                 [statusColor]="colors.red[500]"
                 avatar="true"
-                chevron="true"
                 iconAlign="center"
+                divider="partial"
             >
                 <mat-icon pxb-icon [style.backgroundColor]="colors.red[500]" [style.color]="colors.white[50]"
                     >notifications</mat-icon
@@ -25,14 +25,7 @@
                     [backgroundColor]="colors.red[500]"
                 ></pxb-list-item-tag>
             </pxb-info-list-item>
-        </mat-nav-list>
-    </mat-card>
-
-    <mat-card>
-        <mat-card-header>Yesterday</mat-card-header>
-        <mat-divider></mat-divider>
-        <mat-nav-list>
-            <pxb-info-list-item divider="full" chevron="true" iconAlign="center">
+            <pxb-info-list-item divider="partial" iconAlign="center">
                 <mat-icon pxb-icon [style.color]="colors.red[500]">notifications</mat-icon>
                 <div pxb-left-content>
                     <div>12:00 <span class="ampm">PM</span></div>
@@ -49,7 +42,7 @@
                     [backgroundColor]="colors.blue[50]"
                 ></pxb-list-item-tag>
             </pxb-info-list-item>
-            <pxb-info-list-item chevron="true" iconAlign="center">
+            <pxb-info-list-item iconAlign="center" divider="partial">
                 <mat-icon pxb-icon>notifications</mat-icon>
                 <div pxb-left-content>
                     <div>8:05 <span class="ampm">PM</span></div>
@@ -66,14 +59,7 @@
                     [backgroundColor]="colors.white[50]"
                 ></pxb-list-item-tag>
             </pxb-info-list-item>
-        </mat-nav-list>
-    </mat-card>
-
-    <mat-card>
-        <mat-card-header>Last Week</mat-card-header>
-        <mat-divider></mat-divider>
-        <mat-nav-list>
-            <pxb-info-list-item chevron="true" iconAlign="center">
+            <pxb-info-list-item iconAlign="center" divider="partial">
                 <mat-icon pxb-icon [style.color]="colors.red[500]">notifications</mat-icon>
                 <div pxb-left-content>
                     <div>12:00 <span class="ampm">PM</span></div>
@@ -90,14 +76,7 @@
                     [backgroundColor]="colors.white[50]"
                 ></pxb-list-item-tag>
             </pxb-info-list-item>
-        </mat-nav-list>
-    </mat-card>
-
-    <mat-card>
-        <mat-card-header>Earlier</mat-card-header>
-        <mat-divider></mat-divider>
-        <mat-nav-list>
-            <pxb-info-list-item divider="full" chevron="true" iconAlign="center">
+            <pxb-info-list-item divider="partial" iconAlign="center">
                 <mat-icon pxb-icon>notifications</mat-icon>
                 <div pxb-left-content>
                     <div>11:21 <span class="ampm">AM</span></div>
@@ -114,7 +93,7 @@
                     [backgroundColor]="colors.white[50]"
                 ></pxb-list-item-tag>
             </pxb-info-list-item>
-            <pxb-info-list-item divider="full" chevron="true" iconAlign="center">
+            <pxb-info-list-item divider="partial" iconAlign="center">
                 <mat-icon pxb-icon [style.color]="colors.red[500]">notifications</mat-icon>
                 <div pxb-left-content>
                     <div>8:05 <span class="ampm">AM</span></div>
@@ -131,7 +110,7 @@
                     [backgroundColor]="colors.blue[50]"
                 ></pxb-list-item-tag>
             </pxb-info-list-item>
-            <pxb-info-list-item divider="full" chevron="true" iconAlign="center">
+            <pxb-info-list-item divider="partial" iconAlign="center">
                 <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
                 <div pxb-left-content>
                     <div>8:05 <span class="ampm">AM</span></div>
@@ -142,7 +121,7 @@
                     Substation 4 <mat-icon class="station-chevron">chevron_left</mat-icon>Gary Steelworks
                 </div>
             </pxb-info-list-item>
-            <pxb-info-list-item [statusColor]="colors.red[500]" avatar="true" chevron="true" iconAlign="center">
+            <pxb-info-list-item [statusColor]="colors.red[500]" avatar="true" iconAlign="center" divider="partial">
                 <mat-icon pxb-icon [style.backgroundColor]="colors.red[500]" [style.color]="colors.white[50]"
                     >notifications</mat-icon
                 >
@@ -159,11 +138,5 @@
                 ></pxb-list-item-tag>
             </pxb-info-list-item>
         </mat-nav-list>
-        <mat-divider></mat-divider>
-        <div style="height: 72px">
-            <button mat-button [style.color]="colors.blue[500]" style="height: 100%; width: 100%">
-                Load 100 More Events
-            </button>
-        </div>
     </mat-card>
 </div>
