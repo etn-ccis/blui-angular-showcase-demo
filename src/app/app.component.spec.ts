@@ -4,14 +4,14 @@ import { AppModule } from './app.module';
 import { APP_BASE_HREF } from '@angular/common';
 
 describe('AppComponent', () => {
-    beforeEach(waitForAsync(() => {
-        void TestBed.configureTestingModule({
-            providers: [
-                { provide: APP_BASE_HREF, useValue : '/' }
-            ],
-            imports: [AppModule],
-        }).compileComponents();
-    }));
+    beforeEach(
+        waitForAsync(() => {
+            void TestBed.configureTestingModule({
+                providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+                imports: [AppModule],
+            }).compileComponents();
+        })
+    );
 
     it('should create the app', () => {
         const fixture = TestBed.createComponent(AppComponent);
