@@ -1,10 +1,14 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
+import { APP_BASE_HREF } from '@angular/common';
 
 describe('AppComponent', () => {
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
         void TestBed.configureTestingModule({
+            providers: [
+                { provide: APP_BASE_HREF, useValue : '/' }
+            ],
             imports: [AppModule],
         }).compileComponents();
     }));

@@ -5,7 +5,8 @@
         "ng": "ng",
         "start": "ng serve --aot=true",
         "build": "ng build --aot=true",
-        "test": "ng test",
+        "test": "jest",
+        "test:coverage": "jest --coverage",
         "test:ci": "ng test --watch=false",
         "lint": "eslint \"src/**/**.ts\"",
         "lint:fix": "eslint \"src/**/**.ts\" --fix",
@@ -47,8 +48,7 @@
         "@angular/language-service": "~8.2.14",
         "@pxblue/eslint-config": "^2.0.5",
         "@pxblue/prettier-config": "^1.0.3",
-        "@types/jasmine": "~3.5.0",
-        "@types/jasminewd2": "~2.0.3",
+        "@types/jest": "^27.0.1",
         "@types/node": "^14.11.2",
         "@typescript-eslint/eslint-plugin": "^4.4.0",
         "@typescript-eslint/parser": "^4.4.0",
@@ -56,17 +56,28 @@
         "codelyzer": "^6.0.0",
         "eslint": "^7.10.0",
         "eslint-config-prettier": "^6.12.0",
-        "jasmine-core": "~3.6.0",
-        "jasmine-spec-reporter": "~5.0.0",
-        "karma": "~6.3.2",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage": "~2.0.3",
-        "karma-jasmine": "~4.0.0",
-        "karma-jasmine-html-reporter": "^1.6.0",
+        "jest": "^27.0.6",
+        "jest-preset-angular": "^9.0.6",
         "prettier": "^1.19.1",
         "protractor": "~7.0.0",
         "ts-node": "~8.3.0",
         "tslint": "~6.1.0",
         "typescript": "~4.0.2"
+    },
+    "jest": {
+        "preset": "jest-preset-angular",
+        "setupFilesAfterEnv": [
+          "<rootDir>/setupjest.ts"
+        ],
+        "testPathIgnorePatterns": [
+          "<rootDir>/node_modules/",
+          "<rootDir>/dist/"
+        ],
+        "globals": {
+          "ts-jest": {
+            "tsconfig": "<rootDir>/tsconfig.spec.json",
+            "stringifyContentPathRegex": "\\.html$"
+          }
+        }
     }
 }
