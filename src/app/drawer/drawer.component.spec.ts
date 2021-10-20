@@ -20,8 +20,6 @@ describe('DrawerComponent', () => {
     });
 
     it('should create', () => {
-        // const fixture = TestBed.createComponent(DrawerComponent);
-        // const component = fixture.componentInstance;
         void expect(component).toBeTruthy();
     });
 });

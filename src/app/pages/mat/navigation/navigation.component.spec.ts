@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatNavigationComponent } from './navigation.component';
-
+import { MatMenuModule } from '@angular/material/menu';
 describe('MatNavigationComponent', () => {
     let component: MatNavigationComponent;
     let fixture: ComponentFixture<MatNavigationComponent>;
@@ -8,6 +8,7 @@ describe('MatNavigationComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [MatNavigationComponent],
+            imports: [MatMenuModule],
         }).compileComponents();
     });
 
