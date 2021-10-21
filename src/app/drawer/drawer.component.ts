@@ -64,10 +64,12 @@ export class DrawerComponent {
     ) {
         this._router.events.subscribe((route) => {
             if (route instanceof NavigationEnd && !this.selectedItemId) {
+                console.log('Nikhil Ekta', route)
                 switch (route.urlAfterRedirects.split('?')[0]) {
                     case `/pxblue-components/data-display-components`: {
                         this.selectedItemId = `${this.pxblueGroupId}${this.dataDisplay}`;
                         this.navItems[0].expanded = true;
+                        console.log('Nikhil Ekta selectedItemId', this.selectedItemId)
                         break;
                     }
                     case `/pxblue-components/navigation-components`: {
