@@ -122,7 +122,7 @@
             </div>
         </mat-card-header>
         <mat-card-content class="dialog-demo">
-            <button mat-stroked-button color="primary" (click)="openDialog()">Open dialog</button>
+            <button mat-stroked-button class="dialog-button" color="primary" (click)="openDialog()">Open dialog</button>
         </mat-card-content>
     </mat-card>
 
@@ -133,7 +133,9 @@
             </div>
         </mat-card-header>
         <mat-card-content class="dialog-demo">
-            <button mat-stroked-button color="primary" (click)="openBottomSheet()">Open Bottom Sheet</button>
+            <button mat-stroked-button class="bottom-sheet-button" color="primary" (click)="openBottomSheet()">
+                Open Bottom Sheet
+            </button>
         </mat-card-content>
     </mat-card>
 
@@ -144,7 +146,12 @@
             </div>
         </mat-card-header>
         <mat-card-content class="snackbar-demo">
-            <button mat-stroked-button color="primary" (click)="openSnackBar('There there! I\'m a snackbar!', 'CLOSE')">
+            <button
+                mat-stroked-button
+                class="snackbar-button"
+                color="primary"
+                (click)="openSnackBar('There there! I\'m a snackbar!', 'CLOSE')"
+            >
                 Show Simple Snackbar
             </button>
         </mat-card-content>
