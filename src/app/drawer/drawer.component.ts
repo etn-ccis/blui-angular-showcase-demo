@@ -9,9 +9,9 @@ import { NavigationEnd, Router } from '@angular/router';
     selector: 'showcase-drawer',
     styleUrls: ['./drawer.component.scss'],
     template: `
-        <pxb-drawer [open]="isOpen()">
+        <pxb-drawer class="showcase-demo-drawer" [open]="isOpen()">
             <pxb-drawer-header title="Showcase App" class="test-background-image">
-                <button mat-icon-button pxb-icon (click)="clickMenuButton()">
+                <button class="showcase-menu-button" mat-icon-button pxb-icon (click)="clickMenuButton()">
                     <mat-icon>menu</mat-icon>
                 </button>
             </pxb-drawer-header>
@@ -25,6 +25,7 @@ import { NavigationEnd, Router } from '@angular/router';
                     >
                         <pxb-drawer-nav-item
                             *ngFor="let nestedItem of navItem.items"
+                            [class]="'nav-menu' + nestedItem.title"
                             [title]="nestedItem.title"
                             [selected]="selectedItemId === navItem.title + nestedItem.title"
                             (select)="nestedItem.onSelect(); setActive(navItem.title, nestedItem.title)"
@@ -64,12 +65,10 @@ export class DrawerComponent {
     ) {
         this._router.events.subscribe((route) => {
             if (route instanceof NavigationEnd && !this.selectedItemId) {
-                console.log('Nikhil Ekta', route)
                 switch (route.urlAfterRedirects.split('?')[0]) {
                     case `/pxblue-components/data-display-components`: {
                         this.selectedItemId = `${this.pxblueGroupId}${this.dataDisplay}`;
                         this.navItems[0].expanded = true;
-                        console.log('Nikhil Ekta selectedItemId', this.selectedItemId)
                         break;
                     }
                     case `/pxblue-components/navigation-components`: {

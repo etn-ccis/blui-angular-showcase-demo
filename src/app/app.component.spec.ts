@@ -13,15 +13,13 @@ describe('AppComponent', () => {
     const routerMock = {
         navigate: jasmine.createSpy('navigate'),
         events: eventSubject.asObservable(),
-        url: 'test/url'
+        url: 'test/url',
     };
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [AppComponent],
-            providers: [
-                {provide: Router, useValue: routerMock}
-            ]
+            providers: [{ provide: Router, useValue: routerMock }],
         });
 
         fixture = TestBed.createComponent(AppComponent);
@@ -29,7 +27,6 @@ describe('AppComponent', () => {
     });
 
     it('should create the app', () => {
-        const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.debugElement.componentInstance;
         void expect(app).toBeTruthy();
     });
@@ -40,42 +37,70 @@ describe('AppComponent', () => {
     });
 
     it('should display title PX Blue Data Display in toolbar', () => {
-        eventSubject.next(new NavigationEnd(1, '/pxblue-components/data-display-components', '/pxblue-components/data-display-components'));
+        eventSubject.next(
+            new NavigationEnd(
+                1,
+                '/pxblue-components/data-display-components',
+                '/pxblue-components/data-display-components'
+            )
+        );
         void expect(component.title).toBe('PX Blue Data Display');
     });
 
     it('should display title PX Blue Navigation in toolbar', () => {
-        eventSubject.next(new NavigationEnd(1, '/pxblue-components/navigation-components', '/pxblue-components/navigation-components'));
+        eventSubject.next(
+            new NavigationEnd(1, '/pxblue-components/navigation-components', '/pxblue-components/navigation-components')
+        );
         void expect(component.title).toBe('PX Blue Navigation');
     });
 
     it('should display title PX Blue Surfaces in toolbar', () => {
-        eventSubject.next(new NavigationEnd(1, '/pxblue-components/surface-components', '/pxblue-components/surface-components'));
+        eventSubject.next(
+            new NavigationEnd(1, '/pxblue-components/surface-components', '/pxblue-components/surface-components')
+        );
         void expect(component.title).toBe('PX Blue Surfaces');
     });
 
     it('should display title Material Data Display in toolbar', () => {
-        eventSubject.next(new NavigationEnd(1, '/material-components/data-display-components', '/material-components/data-display-components'));
+        eventSubject.next(
+            new NavigationEnd(
+                1,
+                '/material-components/data-display-components',
+                '/material-components/data-display-components'
+            )
+        );
         void expect(component.title).toBe('Material Data Display');
     });
 
     it('should display title Material Feedback in toolbar', () => {
-        eventSubject.next(new NavigationEnd(1, '/material-components/feedback-components', '/material-components/feedback-components'));
+        eventSubject.next(
+            new NavigationEnd(1, '/material-components/feedback-components', '/material-components/feedback-components')
+        );
         void expect(component.title).toBe('Material Feedback');
     });
 
     it('should display title Material Inputs in toolbar', () => {
-        eventSubject.next(new NavigationEnd(1, '/material-components/input-components', '/material-components/input-components'));
+        eventSubject.next(
+            new NavigationEnd(1, '/material-components/input-components', '/material-components/input-components')
+        );
         void expect(component.title).toBe('Material Inputs');
     });
 
     it('should display title Material Navigation in toolbar', () => {
-        eventSubject.next(new NavigationEnd(1, '/material-components/navigation-components', '/material-components/navigation-components'));
+        eventSubject.next(
+            new NavigationEnd(
+                1,
+                '/material-components/navigation-components',
+                '/material-components/navigation-components'
+            )
+        );
         void expect(component.title).toBe('Material Navigation');
     });
 
     it('should display title Material Surfaces in toolbar', () => {
-        eventSubject.next(new NavigationEnd(1, '/material-components/surface-components', '/material-components/surface-components'));
+        eventSubject.next(
+            new NavigationEnd(1, '/material-components/surface-components', '/material-components/surface-components')
+        );
         void expect(component.title).toBe('Material Surfaces');
     });
 
@@ -90,12 +115,12 @@ describe('AppComponent', () => {
     });
 
     it('should return isMobile', () => {
-        let isMobile = component.isMobile();
+        const isMobile = component.isMobile();
         void expect(isMobile).toBe(false);
     });
 
     it('should return persistent variant for desktop', () => {
-        let variant = component.getVariant();
+        const variant = component.getVariant();
         void expect(variant).toBe('persistent');
     });
 

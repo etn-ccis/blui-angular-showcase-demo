@@ -3,8 +3,9 @@ import { DrawerComponent } from './drawer.component';
 import { Router, NavigationEnd, RouterEvent } from '@angular/router';
 import { ReplaySubject } from 'rxjs';
 import { By } from '@angular/platform-browser';
+import { StateService } from '../services/state.service';
 
-fdescribe('DrawerComponent', () => {
+describe('DrawerComponent', () => {
     let component: DrawerComponent;
     let fixture: ComponentFixture<DrawerComponent>;
 
@@ -12,16 +13,24 @@ fdescribe('DrawerComponent', () => {
 
     const routerMock = {
         navigate: jasmine.createSpy('navigate'),
+        navigateByUrl: jasmine.createSpy('navigateByUrl'),
         events: eventSubject.asObservable(),
-        url: 'test/url'
+        url: 'test/url',
+    };
+
+    const StateServiceMock = {
+        setDrawerOpen: jasmine.createSpy('setDrawerOpen'),
+        getDrawerOpen: jasmine.createSpy('getDrawerOpen'),
+        drawerOpen: true,
     };
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [DrawerComponent],
             providers: [
-                {provide: Router, useValue: routerMock}
-            ]
+                { provide: Router, useValue: routerMock },
+                { provide: StateService, useValue: StateServiceMock },
+            ],
         });
 
         fixture = TestBed.createComponent(DrawerComponent);
@@ -29,16 +38,9 @@ fdescribe('DrawerComponent', () => {
         fixture.detectChanges();
     });
 
-    // beforeEach(() => {
-    //     fixture = TestBed.createComponent(DrawerComponent);
-    //     component = fixture.componentInstance;
-    //     fixture.detectChanges();
-    // });
-
     it('should create', () => {
         void expect(component).toBeTruthy();
     });
-
 
     it('should set selectedItemId Page TemplatesDashboard', () => {
         eventSubject.next(new NavigationEnd(1, '/templates/dashboard', '/templates/dashboard'));
@@ -46,64 +48,101 @@ fdescribe('DrawerComponent', () => {
         void expect(component.selectedItemId).toBe('Page TemplatesDashboard');
     });
 
-    it('should set selectedItemId PX Blue ComponentsData Display', () => {
-        eventSubject.next(new NavigationEnd(2, '/pxblue-components/data-display-components', '/pxblue-components/data-display-components'));
+    it('should navigate to data display', () => {
         fixture.detectChanges();
-        void expect(component.selectedItemId).toBe('PX Blue ComponentsData Display');
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuData'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        void expect(navigateSpy).toHaveBeenCalled();
     });
 
-    // it('should display title PX Blue Data Display in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/pxblue-components/data-display-components', '/pxblue-components/data-display-components'));
-    //     void expect(component.title).toBe('PX Blue Data Display');
-    // });
+    it('should navigate to navigation', () => {
+        fixture.detectChanges();
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuNavigation'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        fixture.detectChanges();
+        void expect(navigateSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title PX Blue Navigation in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/pxblue-components/navigation-components', '/pxblue-components/navigation-components'));
-    //     void expect(component.title).toBe('PX Blue Navigation');
-    // });
+    it('should navigate to Surfaces', () => {
+        fixture.detectChanges();
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuSurfaces'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        fixture.detectChanges();
+        void expect(navigateSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title PX Blue Surfaces in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/pxblue-components/surface-components', '/pxblue-components/surface-components'));
-    //     void expect(component.title).toBe('PX Blue Surfaces');
-    // });
+    it('should navigate to Surfaces', () => {
+        fixture.detectChanges();
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuSurfaces'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        fixture.detectChanges();
+        void expect(navigateSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title Material Data Display in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/material-components/data-display-components', '/material-components/data-display-components'));
-    //     void expect(component.title).toBe('Material Data Display');
-    // });
+    it('should navigate to Feedback', () => {
+        fixture.detectChanges();
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuFeedback'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        fixture.detectChanges();
+        void expect(navigateSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title Material Feedback in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/material-components/feedback-components', '/material-components/feedback-components'));
-    //     void expect(component.title).toBe('Material Feedback');
-    // });
+    it('should navigate to Inputs', () => {
+        fixture.detectChanges();
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuInputs'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        fixture.detectChanges();
+        void expect(navigateSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title Material Inputs in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/material-components/input-components', '/material-components/input-components'));
-    //     void expect(component.title).toBe('Material Inputs');
-    // });
+    it('should navigate to Alarms', () => {
+        fixture.detectChanges();
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuAlarms'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        fixture.detectChanges();
+        void expect(navigateSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title Material Navigation in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/material-components/navigation-components', '/material-components/navigation-components'));
-    //     void expect(component.title).toBe('Material Navigation');
-    // });
+    it('should navigate to Dashboard', () => {
+        fixture.detectChanges();
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuDashboard'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        fixture.detectChanges();
+        void expect(navigateSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title Material Surfaces in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/material-components/surface-components', '/material-components/surface-components'));
-    //     void expect(component.title).toBe('Material Surfaces');
-    // });
+    it('should navigate to Settings', () => {
+        fixture.detectChanges();
+        const navMenuItem = fixture.debugElement.query(By.css('.nav-menuSettings'));
+        const navigateSpy = spyOn(component, 'navigate').and.stub();
+        navMenuItem.triggerEventHandler('select', undefined);
+        fixture.detectChanges();
+        void expect(navigateSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title Alarms in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/templates/alarms', '/templates/alarms'));
-    //     void expect(component.title).toBe('Alarms');
-    // });
+    it('should call isOpen method', () => {
+        fixture.detectChanges();
+        const pxbDrawer = fixture.debugElement.query(By.css('.showcase-demo-drawer'));
+        const openDrawerSpy = spyOn(component, 'isOpen').and.stub();
+        pxbDrawer.triggerEventHandler('open', undefined);
+        fixture.detectChanges();
+        void expect(openDrawerSpy).toHaveBeenCalled();
+    });
 
-    // it('should display title Settings in toolbar', () => {
-    //     eventSubject.next(new NavigationEnd(1, '/templates/settings', '/templates/settings'));
-    //     void expect(component.title).toBe('Settings');
-    // });
-
-    // it('should return isMobile', () => {
-    //     let isMobile = component.isMobile();
-    //     void expect(isMobile).toBe(false);
-    // });
+    it('should call clickMenuButton method', () => {
+        fixture.detectChanges();
+        const menuButton = fixture.debugElement.query(By.css('.showcase-menu-button'));
+        const clickMenuButtonSpy = spyOn(component, 'clickMenuButton').and.stub();
+        menuButton.triggerEventHandler('click', undefined);
+        fixture.detectChanges();
+        void expect(clickMenuButtonSpy).toHaveBeenCalled();
+    });
 });
