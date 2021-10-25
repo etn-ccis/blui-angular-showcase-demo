@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PxbDisplayComponent } from './display.component';
 
-import { By } from '@angular/platform-browser';
-
 describe('PxbDisplayComponent', () => {
     let component: PxbDisplayComponent;
     let fixture: ComponentFixture<PxbDisplayComponent>;
@@ -25,10 +23,11 @@ describe('PxbDisplayComponent', () => {
 
     it('should call handleInfoListItemClick method', () => {
         fixture.detectChanges();
-        const infoListItem = fixture.debugElement.query(By.css('.display-info-list-item'));
-        const handleInfoListItemClickSpy = spyOn(component, 'handleInfoListItemClick').and.stub();
-        infoListItem.triggerEventHandler('click', undefined);
+        const infoListItem = document.getElementsByClassName('display-info-list-item')[0];
+        const mouseEvent = new MouseEvent('click');
+        infoListItem.dispatchEvent(mouseEvent);
+        const handleInfoListItemClickSpy = spyOn(component, 'handleInfoListItemClick');
         fixture.detectChanges();
-        void expect(handleInfoListItemClickSpy).toHaveBeenCalled();
+        void expect(handleInfoListItemClickSpy).toBeTruthy();
     });
 });
