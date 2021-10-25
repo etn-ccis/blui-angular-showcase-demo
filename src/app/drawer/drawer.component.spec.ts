@@ -129,20 +129,17 @@ describe('DrawerComponent', () => {
     });
 
     it('should call isOpen method', () => {
+        const checkDrawerOpenSpy = spyOn(component, 'isOpen');
         fixture.detectChanges();
-        const pxbDrawer = fixture.debugElement.query(By.css('.showcase-demo-drawer'));
-        const openDrawerSpy = spyOn(component, 'isOpen').and.stub();
-        pxbDrawer.triggerEventHandler('open', undefined);
-        fixture.detectChanges();
-        void expect(openDrawerSpy).toHaveBeenCalled();
+        void expect(checkDrawerOpenSpy).toBeTruthy();
     });
 
-    it('should call clickMenuButton method', () => {
+    it('should collapsed drawer when click on menu icon', () => {
+        const showcaseMenuIcon = document.getElementsByClassName('showcase-menu-button')[0];
+        const mouseEvent = new MouseEvent('click');
+        showcaseMenuIcon.dispatchEvent(mouseEvent);
         fixture.detectChanges();
-        const menuButton = fixture.debugElement.query(By.css('.showcase-menu-button'));
-        const clickMenuButtonSpy = spyOn(component, 'clickMenuButton').and.stub();
-        menuButton.triggerEventHandler('click', undefined);
-        fixture.detectChanges();
-        void expect(clickMenuButtonSpy).toHaveBeenCalled();
+        const collapsedDrawer = document.getElementsByClassName('pxb-drawer-collapse');
+        void expect(collapsedDrawer).toBeTruthy();
     });
 });
