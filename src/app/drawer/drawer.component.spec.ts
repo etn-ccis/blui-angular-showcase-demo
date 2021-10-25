@@ -142,4 +142,51 @@ describe('DrawerComponent', () => {
         const collapsedDrawer = document.getElementsByClassName('pxb-drawer-collapse');
         void expect(collapsedDrawer).toBeTruthy();
     });
+
+    describe('nav group expansion', () => {
+        it('should expand px blue components nav group', () => {
+            fixture.detectChanges();
+            component.navItems[0].expanded = false;
+            component.determineRoute('/pxblue-components/data-display-components');
+            void expect(component.navItems[0].expanded).toBe(true);
+            component.navItems[0].expanded = false;
+            component.determineRoute('/pxblue-components/navigation-components');
+            void expect(component.navItems[0].expanded).toBe(true);
+            component.navItems[0].expanded = false;
+            component.determineRoute('/pxblue-components/surface-components');
+            void expect(component.navItems[0].expanded).toBe(true);
+        });
+        it('should expand material components nav group', () => {
+            fixture.detectChanges();
+            component.navItems[0].expanded = false;
+            component.determineRoute('/material-components/data-display-components');
+            void expect(component.navItems[1].expanded).toBe(true);
+            component.navItems[1].expanded = false;
+            component.determineRoute('/material-components/feedback-components');
+            void expect(component.navItems[1].expanded).toBe(true);
+            component.navItems[1].expanded = false;
+            component.determineRoute('/material-components/input-components');
+            void expect(component.navItems[1].expanded).toBe(true);
+            component.navItems[1].expanded = false;
+            component.determineRoute('/material-components/navigation-components');
+            void expect(component.navItems[1].expanded).toBe(true);
+            component.navItems[1].expanded = false;
+            component.determineRoute('/material-components/surface-components');
+            void expect(component.navItems[1].expanded).toBe(true);
+            component.navItems[1].expanded = false;
+        });
+        it('should expand material components nav group', () => {
+            fixture.detectChanges();
+            component.navItems[0].expanded = false;
+            component.determineRoute('/templates/alarms');
+            void expect(component.navItems[2].expanded).toBe(true);
+            component.navItems[2].expanded = false;
+            component.determineRoute('/templates/dashboard');
+            void expect(component.navItems[2].expanded).toBe(true);
+            component.navItems[2].expanded = false;
+            component.determineRoute('/templates/settings');
+            void expect(component.navItems[2].expanded).toBe(true);
+            component.navItems[2].expanded = false;
+        });
+    });
 });
