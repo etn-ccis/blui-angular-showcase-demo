@@ -9,9 +9,9 @@ import { NavigationEnd, Router } from '@angular/router';
     selector: 'showcase-drawer',
     styleUrls: ['./drawer.component.scss'],
     template: `
-        <pxb-drawer [open]="isOpen()">
+        <pxb-drawer class="showcase-demo-drawer" [open]="isOpen()">
             <pxb-drawer-header title="Showcase App" class="test-background-image">
-                <button mat-icon-button pxb-icon (click)="clickMenuButton()">
+                <button class="showcase-menu-button" mat-icon-button pxb-icon (click)="clickMenuButton()">
                     <mat-icon>menu</mat-icon>
                 </button>
             </pxb-drawer-header>
@@ -25,6 +25,7 @@ import { NavigationEnd, Router } from '@angular/router';
                     >
                         <pxb-drawer-nav-item
                             *ngFor="let nestedItem of navItem.items"
+                            [class]="'nav-menu' + nestedItem.title"
                             [title]="nestedItem.title"
                             [selected]="selectedItemId === navItem.title + nestedItem.title"
                             (select)="nestedItem.onSelect(); setActive(navItem.title, nestedItem.title)"
@@ -64,65 +65,7 @@ export class DrawerComponent {
     ) {
         this._router.events.subscribe((route) => {
             if (route instanceof NavigationEnd && !this.selectedItemId) {
-                switch (route.urlAfterRedirects.split('?')[0]) {
-                    case `/pxblue-components/data-display-components`: {
-                        this.selectedItemId = `${this.pxblueGroupId}${this.dataDisplay}`;
-                        this.navItems[0].expanded = true;
-                        break;
-                    }
-                    case `/pxblue-components/navigation-components`: {
-                        this.selectedItemId = `${this.pxblueGroupId}${this.navigation}`;
-                        this.navItems[0].expanded = true;
-                        break;
-                    }
-                    case `/pxblue-components/surface-components`: {
-                        this.selectedItemId = `${this.pxblueGroupId}${this.surfaces}`;
-                        this.navItems[0].expanded = true;
-                        break;
-                    }
-                    case `/material-components/data-display-components`: {
-                        this.selectedItemId = `${this.materialComponentsGroupId}${this.dataDisplay}`;
-                        this.navItems[1].expanded = true;
-                        break;
-                    }
-                    case `/material-components/feedback-components`: {
-                        this.selectedItemId = `${this.materialComponentsGroupId}${this.feedback}`;
-                        this.navItems[1].expanded = true;
-                        break;
-                    }
-                    case `/material-components/input-components`: {
-                        this.selectedItemId = `${this.materialComponentsGroupId}${this.inputs}`;
-                        this.navItems[1].expanded = true;
-                        break;
-                    }
-                    case `/material-components/navigation-components`: {
-                        this.selectedItemId = `${this.materialComponentsGroupId}${this.navigation}`;
-                        this.navItems[1].expanded = true;
-                        break;
-                    }
-                    case `/material-components/surface-components`: {
-                        this.selectedItemId = `${this.materialComponentsGroupId}${this.surfaces}`;
-                        this.navItems[1].expanded = true;
-                        break;
-                    }
-                    case `/templates/alarms`: {
-                        this.selectedItemId = `${this.pageTemplatesGroupId}${this.alarms}`;
-                        this.navItems[2].expanded = true;
-                        break;
-                    }
-                    case `/templates/settings`: {
-                        this.selectedItemId = `${this.pageTemplatesGroupId}${this.settings}`;
-                        this.navItems[2].expanded = true;
-                        break;
-                    }
-                    case `/templates/dashboard`: {
-                        this.selectedItemId = `${this.pageTemplatesGroupId}${this.dashboard}`;
-                        this.navItems[2].expanded = true;
-                        break;
-                    }
-                    default:
-                        return;
-                }
+                this.determineRoute(route.urlAfterRedirects.split('?')[0]);
             }
         });
     }
@@ -215,5 +158,67 @@ export class DrawerComponent {
 
     clickMenuButton(): void {
         this._stateService.setDrawerOpen(!this._stateService.getDrawerOpen());
+    }
+
+    determineRoute(route: string): void {
+        switch (route) {
+            case `/pxblue-components/data-display-components`: {
+                this.selectedItemId = `${this.pxblueGroupId}${this.dataDisplay}`;
+                this.navItems[0].expanded = true;
+                break;
+            }
+            case `/pxblue-components/navigation-components`: {
+                this.selectedItemId = `${this.pxblueGroupId}${this.navigation}`;
+                this.navItems[0].expanded = true;
+                break;
+            }
+            case `/pxblue-components/surface-components`: {
+                this.selectedItemId = `${this.pxblueGroupId}${this.surfaces}`;
+                this.navItems[0].expanded = true;
+                break;
+            }
+            case `/material-components/data-display-components`: {
+                this.selectedItemId = `${this.materialComponentsGroupId}${this.dataDisplay}`;
+                this.navItems[1].expanded = true;
+                break;
+            }
+            case `/material-components/feedback-components`: {
+                this.selectedItemId = `${this.materialComponentsGroupId}${this.feedback}`;
+                this.navItems[1].expanded = true;
+                break;
+            }
+            case `/material-components/input-components`: {
+                this.selectedItemId = `${this.materialComponentsGroupId}${this.inputs}`;
+                this.navItems[1].expanded = true;
+                break;
+            }
+            case `/material-components/navigation-components`: {
+                this.selectedItemId = `${this.materialComponentsGroupId}${this.navigation}`;
+                this.navItems[1].expanded = true;
+                break;
+            }
+            case `/material-components/surface-components`: {
+                this.selectedItemId = `${this.materialComponentsGroupId}${this.surfaces}`;
+                this.navItems[1].expanded = true;
+                break;
+            }
+            case `/templates/alarms`: {
+                this.selectedItemId = `${this.pageTemplatesGroupId}${this.alarms}`;
+                this.navItems[2].expanded = true;
+                break;
+            }
+            case `/templates/settings`: {
+                this.selectedItemId = `${this.pageTemplatesGroupId}${this.settings}`;
+                this.navItems[2].expanded = true;
+                break;
+            }
+            case `/templates/dashboard`: {
+                this.selectedItemId = `${this.pageTemplatesGroupId}${this.dashboard}`;
+                this.navItems[2].expanded = true;
+                break;
+            }
+            default:
+                return;
+        }
     }
 }
