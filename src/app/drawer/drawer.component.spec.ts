@@ -61,7 +61,6 @@ describe('DrawerComponent', () => {
         const navMenuItem = fixture.debugElement.query(By.css('.nav-menuNavigation'));
         const navigateSpy = spyOn(component, 'navigate').and.stub();
         navMenuItem.triggerEventHandler('select', undefined);
-        fixture.detectChanges();
         void expect(navigateSpy).toHaveBeenCalled();
     });
 
@@ -70,7 +69,6 @@ describe('DrawerComponent', () => {
         const navMenuItem = fixture.debugElement.query(By.css('.nav-menuSurfaces'));
         const navigateSpy = spyOn(component, 'navigate').and.stub();
         navMenuItem.triggerEventHandler('select', undefined);
-        fixture.detectChanges();
         void expect(navigateSpy).toHaveBeenCalled();
     });
 
@@ -79,7 +77,6 @@ describe('DrawerComponent', () => {
         const navMenuItem = fixture.debugElement.query(By.css('.nav-menuSurfaces'));
         const navigateSpy = spyOn(component, 'navigate').and.stub();
         navMenuItem.triggerEventHandler('select', undefined);
-        fixture.detectChanges();
         void expect(navigateSpy).toHaveBeenCalled();
     });
 
@@ -97,7 +94,6 @@ describe('DrawerComponent', () => {
         const navMenuItem = fixture.debugElement.query(By.css('.nav-menuInputs'));
         const navigateSpy = spyOn(component, 'navigate').and.stub();
         navMenuItem.triggerEventHandler('select', undefined);
-        fixture.detectChanges();
         void expect(navigateSpy).toHaveBeenCalled();
     });
 
@@ -106,7 +102,6 @@ describe('DrawerComponent', () => {
         const navMenuItem = fixture.debugElement.query(By.css('.nav-menuAlarms'));
         const navigateSpy = spyOn(component, 'navigate').and.stub();
         navMenuItem.triggerEventHandler('select', undefined);
-        fixture.detectChanges();
         void expect(navigateSpy).toHaveBeenCalled();
     });
 
@@ -115,7 +110,6 @@ describe('DrawerComponent', () => {
         const navMenuItem = fixture.debugElement.query(By.css('.nav-menuDashboard'));
         const navigateSpy = spyOn(component, 'navigate').and.stub();
         navMenuItem.triggerEventHandler('select', undefined);
-        fixture.detectChanges();
         void expect(navigateSpy).toHaveBeenCalled();
     });
 
@@ -124,7 +118,6 @@ describe('DrawerComponent', () => {
         const navMenuItem = fixture.debugElement.query(By.css('.nav-menuSettings'));
         const navigateSpy = spyOn(component, 'navigate').and.stub();
         navMenuItem.triggerEventHandler('select', undefined);
-        fixture.detectChanges();
         void expect(navigateSpy).toHaveBeenCalled();
     });
 

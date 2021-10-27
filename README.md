@@ -1,6 +1,6 @@
 # Angular Showcase Demo
 
-[![](https://img.shields.io/circleci/project/github/pxblue/angular-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/pxblue/angular-showcase-demo/tree/master)
+[![](https://img.shields.io/circleci/project/github/pxblue/angular-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/pxblue/angular-showcase-demo/tree/master)[![codecov](https://codecov.io/gh/pxblue/angular-showcase-demo/branch/master/graph/badge.svg?token=K87B6K67G5)](https://codecov.io/gh/pxblue/angular-showcase-demo)
 
 This applications is a demo applications that is used to demonstrate and test various PX Blue components, resources, etc.
 
