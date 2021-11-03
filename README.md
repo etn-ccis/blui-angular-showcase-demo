@@ -1,21 +1,21 @@
 # Angular Showcase Demo
 
-[![](https://img.shields.io/circleci/project/github/pxblue/angular-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/pxblue/angular-showcase-demo/tree/master)[![codecov](https://codecov.io/gh/pxblue/angular-showcase-demo/branch/master/graph/badge.svg?token=K87B6K67G5)](https://codecov.io/gh/pxblue/angular-showcase-demo)
+[![](https://img.shields.io/circleci/project/github/brightlayer-ui/angular-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/brightlayer-ui/angular-showcase-demo/tree/master)[![codecov](https://codecov.io/gh/brightlayer-ui/angular-showcase-demo/branch/master/graph/badge.svg?token=K87B6K67G5)](https://codecov.io/gh/brightlayer-ui/angular-showcase-demo)
 
-This applications is a demo applications that is used to demonstrate and test various PX Blue components, resources, etc.
+This applications is a demo applications that is used to demonstrate and test various Brightlayer UI components, resources, etc.
 
 It is used as a git submodule for:
 
--   [angular-component-library](https://github.com/pxblue/angular-component-library)
--   [themes](https://github.com/pxblue/themes)
+-   [angular-component-library](https://github.com/brightlayer-ui/angular-component-library)
+-   [themes](https://github.com/brightlayer-ui/themes)
 
 It can also be run as a standalone application or used as a starting point for your own applications.
 
 It includes:
 
--   PX Blue themes and typography
+-   Brightlayer UI themes and typography
 -   Material UI components
--   PX Blue components
+-   Brightlayer UI components
 -   Right-to-Left support
 
 ## To run the project
@@ -23,7 +23,7 @@ It includes:
 Clone the repository:
 
 ```
-git clone https://github.com/pxblue/angular-showcase-demo
+git clone https://github.com/brightlayer-ui/angular-showcase-demo
 ```
 
 Install the dependencies:

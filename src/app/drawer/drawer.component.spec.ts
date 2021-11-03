@@ -137,16 +137,16 @@ describe('DrawerComponent', () => {
     });
 
     describe('nav group expansion', () => {
-        it('should expand px blue components nav group', () => {
+        it('should expand blui components nav group', () => {
             fixture.detectChanges();
             component.navItems[0].expanded = false;
-            component.determineRoute('/pxblue-components/data-display-components');
+            component.determineRoute('/blui-components/data-display-components');
             void expect(component.navItems[0].expanded).toBe(true);
             component.navItems[0].expanded = false;
-            component.determineRoute('/pxblue-components/navigation-components');
+            component.determineRoute('/blui-components/navigation-components');
             void expect(component.navItems[0].expanded).toBe(true);
             component.navItems[0].expanded = false;
-            component.determineRoute('/pxblue-components/surface-components');
+            component.determineRoute('/blui-components/surface-components');
             void expect(component.navItems[0].expanded).toBe(true);
         });
         it('should expand material components nav group', () => {

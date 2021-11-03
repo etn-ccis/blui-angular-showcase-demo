@@ -1,4 +1,4 @@
-@import '~@pxblue/colors/palette.scss';
+@import '~@brightlayer-ui/colors/palette.scss';
 
 .elevation-example {
     height: 100px;
@@ -9,14 +9,14 @@
     justify-content: center;
     align-items: center;
     &.outlined {
-        border: solid 1px map-get($pxb-gray, 100);
+        border: solid 1px map-get($blui-gray, 100);
         border-radius: 4px;
     }
 }
 
 .card-example {
     .word-of-day {
-        color: map-get($pxb-black, 300);
+        color: map-get($blui-black, 300);
         font-size: 14px;
         margin-bottom: 4px;
     }
@@ -24,7 +24,7 @@
         font-size: 24px;
     }
     .type {
-        color: map-get($pxb-black, 300);
+        color: map-get($blui-black, 300);
         margin-bottom: 12px;
         font-size: 14px;
     }
@@ -37,7 +37,7 @@
     }
     .outlined {
         margin-top: 16px;
-        border: solid 1px map-get($pxb-gray, 100);
+        border: solid 1px map-get($blui-gray, 100);
         box-shadow: none !important;
     }
 }

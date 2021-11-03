@@ -1,15 +1,15 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import * as PXBColors from '@pxblue/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 import { RtlService } from '../../../services/rtl.service';
 
 @Component({
-    selector: 'app-pxb-display',
+    selector: 'app-blui-display',
     templateUrl: './display.component.html',
     styleUrls: ['./display.component.scss'],
     encapsulation: ViewEncapsulation.None,
 })
-export class PxbDisplayComponent {
-    colors = PXBColors;
+export class BluiDisplayComponent {
+    colors = BLUIColors;
     userMenuOpen1 = false;
     userMenuOpen2 = false;
     userMenuOpen3 = false;

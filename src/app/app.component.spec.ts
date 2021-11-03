@@ -36,29 +36,25 @@ describe('AppComponent', () => {
         void expect(component.title).toBe('Dashboard');
     });
 
-    it('should display title PX Blue Data Display in toolbar', () => {
+    it('should display title Brightlayer UI Data Display in toolbar', () => {
         eventSubject.next(
-            new NavigationEnd(
-                1,
-                '/pxblue-components/data-display-components',
-                '/pxblue-components/data-display-components'
-            )
+            new NavigationEnd(1, '/blui-components/data-display-components', '/blui-components/data-display-components')
         );
-        void expect(component.title).toBe('PX Blue Data Display');
+        void expect(component.title).toBe('Brightlayer UI Data Display');
     });
 
-    it('should display title PX Blue Navigation in toolbar', () => {
+    it('should display title Brightlayer UI Navigation in toolbar', () => {
         eventSubject.next(
-            new NavigationEnd(1, '/pxblue-components/navigation-components', '/pxblue-components/navigation-components')
+            new NavigationEnd(1, '/blui-components/navigation-components', '/blui-components/navigation-components')
         );
-        void expect(component.title).toBe('PX Blue Navigation');
+        void expect(component.title).toBe('Brightlayer UI Navigation');
     });
 
-    it('should display title PX Blue Surfaces in toolbar', () => {
+    it('should display title Brightlayer UI Surfaces in toolbar', () => {
         eventSubject.next(
-            new NavigationEnd(1, '/pxblue-components/surface-components', '/pxblue-components/surface-components')
+            new NavigationEnd(1, '/blui-components/surface-components', '/blui-components/surface-components')
         );
-        void expect(component.title).toBe('PX Blue Surfaces');
+        void expect(component.title).toBe('Brightlayer UI Surfaces');
     });
 
     it('should display title Material Data Display in toolbar', () => {

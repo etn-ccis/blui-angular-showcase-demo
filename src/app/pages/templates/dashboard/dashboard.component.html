@@ -1,164 +1,164 @@
 <div class="dashboard-root template-root">
     <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; ">
-        <pxb-score-card
+        <blui-score-card
             class="red-score-card"
             [headerTitle]="'Substation 3'"
             [headerSubtitle]="'High Humidity Alarm'"
             [headerInfo]="'4 Devices'"
         >
-            <mat-icon pxb-action-items>more_vert</mat-icon>
-            <mat-list pxb-body>
-                <pxb-info-list-item dense="true" class="card-body-item">
-                    <div pxb-title [style.color]="colors.red[500]">1 Alarm</div>
-                    <mat-icon pxb-icon [style.color]="colors.red[500]">notifications</mat-icon>
-                </pxb-info-list-item>
-                <pxb-info-list-item dense="true" [style.color]="colors.blue[500]" class="card-body-item">
-                    <div pxb-title [style.color]="colors.blue[500]">1 Event</div>
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]" class="invert-rtl">list_alt</mat-icon>
-                </pxb-info-list-item>
-                <pxb-info-list-item dense="true" class="card-body-item">
-                    <div pxb-title style="font-weight: 400">Online</div>
-                    <mat-icon pxb-icon>cloud</mat-icon>
-                </pxb-info-list-item>
+            <mat-icon blui-action-items>more_vert</mat-icon>
+            <mat-list blui-body>
+                <blui-info-list-item dense="true" class="card-body-item">
+                    <div blui-title [style.color]="colors.red[500]">1 Alarm</div>
+                    <mat-icon blui-icon [style.color]="colors.red[500]">notifications</mat-icon>
+                </blui-info-list-item>
+                <blui-info-list-item dense="true" [style.color]="colors.blue[500]" class="card-body-item">
+                    <div blui-title [style.color]="colors.blue[500]">1 Event</div>
+                    <mat-icon blui-icon [style.color]="colors.blue[500]" class="invert-rtl">list_alt</mat-icon>
+                </blui-info-list-item>
+                <blui-info-list-item dense="true" class="card-body-item">
+                    <div blui-title style="font-weight: 400">Online</div>
+                    <mat-icon blui-icon>cloud</mat-icon>
+                </blui-info-list-item>
             </mat-list>
-            <pxb-hero-banner pxb-badge>
-                <pxb-hero [label]="'Temperature'" [value]="98" [units]="'°F'" [iconSize]="36">
-                    <mat-icon svgIcon="px-icons:temp" pxb-primary></mat-icon>
-                </pxb-hero>
-                <pxb-hero [label]="'Humidity'" [value]="'54'" [units]="'%'" [iconSize]="36">
-                    <mat-icon svgIcon="px-icons:moisture" pxb-primary [style.color]="colors.blue[300]"> </mat-icon>
-                </pxb-hero>
-            </pxb-hero-banner>
-            <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row mat-ripple>
-                <div pxb-title>View Location</div>
-                <mat-icon mat-list-icon pxb-right-content class="scorecard-chevron">chevron_right</mat-icon>
-            </pxb-info-list-item>
-        </pxb-score-card>
+            <blui-hero-banner blui-badge>
+                <blui-hero [label]="'Temperature'" [value]="98" [units]="'°F'" [iconSize]="36">
+                    <mat-icon svgIcon="blui-icons:temp" blui-primary></mat-icon>
+                </blui-hero>
+                <blui-hero [label]="'Humidity'" [value]="'54'" [units]="'%'" [iconSize]="36">
+                    <mat-icon svgIcon="blui-icons:moisture" blui-primary [style.color]="colors.blue[300]"> </mat-icon>
+                </blui-hero>
+            </blui-hero-banner>
+            <blui-info-list-item hidePadding="true" dense="true" blui-action-row mat-ripple>
+                <div blui-title>View Location</div>
+                <mat-icon mat-list-icon blui-right-content class="scorecard-chevron">chevron_right</mat-icon>
+            </blui-info-list-item>
+        </blui-score-card>
 
-        <pxb-score-card
+        <blui-score-card
             [headerTitle]="'Substation 3'"
             [headerSubtitle]="'Normal'"
             [headerInfo]="'4 Devices'"
             [badgeOffset]="-92"
         >
-            <mat-icon pxb-action-items>more_vert</mat-icon>
-            <mat-list pxb-body>
-                <pxb-info-list-item dense="true" class="card-body-item">
-                    <div pxb-title style="font-weight: 400">0 Alarms</div>
-                    <mat-icon pxb-icon>notifications</mat-icon>
-                </pxb-info-list-item>
-                <pxb-info-list-item dense="true" class="card-body-item">
-                    <div pxb-title [style.color]="colors.blue[500]">1 Event</div>
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]" class="invert-rtl">list_alt</mat-icon>
-                </pxb-info-list-item>
-                <pxb-info-list-item dense="true" class="card-body-item">
-                    <div pxb-title style="font-weight: 400">Online</div>
-                    <mat-icon pxb-icon>cloud</mat-icon>
-                </pxb-info-list-item>
+            <mat-icon blui-action-items>more_vert</mat-icon>
+            <mat-list blui-body>
+                <blui-info-list-item dense="true" class="card-body-item">
+                    <div blui-title style="font-weight: 400">0 Alarms</div>
+                    <mat-icon blui-icon>notifications</mat-icon>
+                </blui-info-list-item>
+                <blui-info-list-item dense="true" class="card-body-item">
+                    <div blui-title [style.color]="colors.blue[500]">1 Event</div>
+                    <mat-icon blui-icon [style.color]="colors.blue[500]" class="invert-rtl">list_alt</mat-icon>
+                </blui-info-list-item>
+                <blui-info-list-item dense="true" class="card-body-item">
+                    <div blui-title style="font-weight: 400">Online</div>
+                    <mat-icon blui-icon>cloud</mat-icon>
+                </blui-info-list-item>
             </mat-list>
-            <pxb-hero pxb-badge label="Health" value="98" units="%" [iconSize]="72">
-                <mat-icon svgIcon="px-icons:grade_a" pxb-primary [style.color]="colors.green[500]"></mat-icon>
-            </pxb-hero>
-            <pxb-info-list-item hidePadding="true" dense="true" pxb-action-row mat-ripple>
-                <div pxb-title>View Location</div>
-                <mat-icon mat-list-icon pxb-right-content class="scorecard-chevron">chevron_right</mat-icon>
-            </pxb-info-list-item>
-        </pxb-score-card>
+            <blui-hero blui-badge label="Health" value="98" units="%" [iconSize]="72">
+                <mat-icon svgIcon="blui-icons:grade_a" blui-primary [style.color]="colors.green[500]"></mat-icon>
+            </blui-hero>
+            <blui-info-list-item hidePadding="true" dense="true" blui-action-row mat-ripple>
+                <div blui-title>View Location</div>
+                <mat-icon mat-list-icon blui-right-content class="scorecard-chevron">chevron_right</mat-icon>
+            </blui-info-list-item>
+        </blui-score-card>
     </div>
 
     <mat-card class="data-card" style="margin-bottom: 16px;">
         <mat-list style="padding: 0; height: 125px">
-            <pxb-hero-banner [divider]="true">
-                <pxb-hero label="Healthy" value="96" units="/100" style="cursor: pointer" [iconSize]="36">
-                    <mat-icon svgIcon="px-icons:grade_a" pxb-primary [style.color]="colors.green[500]"> </mat-icon>
-                </pxb-hero>
+            <blui-hero-banner [divider]="true">
+                <blui-hero label="Healthy" value="96" units="/100" style="cursor: pointer" [iconSize]="36">
+                    <mat-icon svgIcon="blui-icons:grade_a" blui-primary [style.color]="colors.green[500]"> </mat-icon>
+                </blui-hero>
 
-                <pxb-hero label="Load">
-                    <pie-progress class="progress-icon" percent="65" size="36" pxb-primary></pie-progress>
-                    <pxb-channel-value value="65" units="%">
+                <blui-hero label="Load">
+                    <pie-progress class="progress-icon" percent="65" size="36" blui-primary></pie-progress>
+                    <blui-channel-value value="65" units="%">
                         <mat-icon [style.color]="colors.red['500']" class="invert-rtl">trending_up</mat-icon>
-                    </pxb-channel-value>
-                </pxb-hero>
+                    </blui-channel-value>
+                </blui-hero>
 
-                <pxb-hero label="Estimated">
-                    <mat-icon pxb-primary>timer</mat-icon>
-                    <pxb-channel-value value="1" units="h"></pxb-channel-value>
-                    <pxb-channel-value value="26" units="m"></pxb-channel-value>
-                </pxb-hero>
+                <blui-hero label="Estimated">
+                    <mat-icon blui-primary>timer</mat-icon>
+                    <blui-channel-value value="1" units="h"></blui-channel-value>
+                    <blui-channel-value value="26" units="m"></blui-channel-value>
+                </blui-hero>
 
-                <pxb-hero label="Battery" value="Full">
-                    <battery-progress class="progress-icon" percent="90" size="36" pxb-primary> </battery-progress>
-                </pxb-hero>
-            </pxb-hero-banner>
+                <blui-hero label="Battery" value="Full">
+                    <battery-progress class="progress-icon" percent="90" size="36" blui-primary> </battery-progress>
+                </blui-hero>
+            </blui-hero-banner>
         </mat-list>
 
         <mat-divider></mat-divider>
 
-        <pxb-info-list-item
+        <blui-info-list-item
             divider="full"
             dense="true"
             [style.color]="colors.green[500]"
             [statusColor]="colors.green[500]"
             iconAlign="center"
         >
-            <div pxb-title>Status</div>
-            <mat-icon pxb-icon svgIcon="px-icons:leaf" [style.color]="colors.green[500]"></mat-icon>
-            <pxb-channel-value pxb-right-content value="Online, ESS+"></pxb-channel-value>
-        </pxb-info-list-item>
+            <div blui-title>Status</div>
+            <mat-icon blui-icon svgIcon="blui-icons:leaf" [style.color]="colors.green[500]"></mat-icon>
+            <blui-channel-value blui-right-content value="Online, ESS+"></blui-channel-value>
+        </blui-info-list-item>
 
-        <pxb-info-list-item divider="full" [avatar]="true">
-            <div pxb-title>Input Voltage</div>
-            <div pxb-subtitle>Phase A · Phase B · Phase C</div>
+        <blui-info-list-item divider="full" [avatar]="true">
+            <div blui-title>Input Voltage</div>
+            <div blui-subtitle>Phase A · Phase B · Phase C</div>
             <mat-icon
-                pxb-icon
-                svgIcon="px-icons:voltage_circled"
+                blui-icon
+                svgIcon="blui-icons:voltage_circled"
                 [style.backgroundColor]="colors.black[500]"
                 [style.color]="colors.white[50]"
             ></mat-icon>
-            <div pxb-right-content>
-                <pxb-channel-value value="478" units="V"></pxb-channel-value>,
-                <pxb-channel-value value="479" units="V"></pxb-channel-value>,
-                <pxb-channel-value value="473" units="V"></pxb-channel-value>
+            <div blui-right-content>
+                <blui-channel-value value="478" units="V"></blui-channel-value>,
+                <blui-channel-value value="479" units="V"></blui-channel-value>,
+                <blui-channel-value value="473" units="V"></blui-channel-value>
             </div>
-        </pxb-info-list-item>
+        </blui-info-list-item>
 
-        <pxb-info-list-item dense="true" iconAlign="center" divider="full">
-            <div pxb-title>Temperature</div>
-            <mat-icon pxb-icon svgIcon="px-icons:temp"></mat-icon>
-            <div pxb-right-content>
-                <pxb-list-item-tag
+        <blui-info-list-item dense="true" iconAlign="center" divider="full">
+            <div blui-title>Temperature</div>
+            <mat-icon blui-icon svgIcon="blui-icons:temp"></mat-icon>
+            <div blui-right-content>
+                <blui-list-item-tag
                     class="tag-label"
                     label="Overheat"
                     [fontColor]="colors.white[50]"
                     [backgroundColor]="colors.red[500]"
-                ></pxb-list-item-tag>
-                <pxb-channel-value value="68" units="°F">
+                ></blui-list-item-tag>
+                <blui-channel-value value="68" units="°F">
                     <mat-icon [style.color]="colors.red['500']">trending_up</mat-icon>
-                </pxb-channel-value>
+                </blui-channel-value>
             </div>
-        </pxb-info-list-item>
+        </blui-info-list-item>
 
-        <pxb-info-list-item divider="full" dense="true" iconAlign="center">
-            <div pxb-title>Output Voltage</div>
-            <mat-icon pxb-icon svgIcon="px-icons:current_circled"></mat-icon>
-            <div pxb-right-content>
-                <pxb-channel-value value="15" units="A"></pxb-channel-value>,
-                <pxb-channel-value value="15" units="A"></pxb-channel-value>,
-                <pxb-channel-value value="14.9" units="A"></pxb-channel-value>
+        <blui-info-list-item divider="full" dense="true" iconAlign="center">
+            <div blui-title>Output Voltage</div>
+            <mat-icon blui-icon svgIcon="blui-icons:current_circled"></mat-icon>
+            <div blui-right-content>
+                <blui-channel-value value="15" units="A"></blui-channel-value>,
+                <blui-channel-value value="15" units="A"></blui-channel-value>,
+                <blui-channel-value value="14.9" units="A"></blui-channel-value>
             </div>
-        </pxb-info-list-item>
+        </blui-info-list-item>
     </mat-card>
 
     <mat-card style="margin-top: 16px;">
-        <pxb-empty-state title="No Devices" description="Contact your local admin for details">
-            <mat-icon pxb-empty-icon>devices</mat-icon>
-            <button pxb-actions mat-flat-button color="primary">
+        <blui-empty-state title="No Devices" description="Contact your local admin for details">
+            <mat-icon blui-empty-icon>devices</mat-icon>
+            <button blui-actions mat-flat-button color="primary">
                 <mat-icon style="height: 20px; width: 20px; font-size: 20px;">
                     add
                 </mat-icon>
                 Add Device
             </button>
-        </pxb-empty-state>
+        </blui-empty-state>
     </mat-card>
 
     <br />
@@ -170,55 +170,55 @@
             </mat-expansion-panel-header>
             <mat-divider></mat-divider>
             <mat-nav-list style="padding-top: 0">
-                <pxb-info-list-item divider="full" chevron="true" iconAlign="center">
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
-                    <div pxb-left-content>
+                <blui-info-list-item divider="full" chevron="true" iconAlign="center">
+                    <mat-icon blui-icon [style.color]="colors.blue[500]">info</mat-icon>
+                    <div blui-left-content>
                         <div>8:05 <span class="ampm">AM</span></div>
                         <div>09/23/19</div>
                     </div>
-                    <div pxb-title>Connection Lost</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true" iconAlign="center">
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
-                    <div pxb-left-content>
+                    <div blui-title>Connection Lost</div>
+                </blui-info-list-item>
+                <blui-info-list-item divider="full" chevron="true" iconAlign="center">
+                    <mat-icon blui-icon [style.color]="colors.blue[500]">info</mat-icon>
+                    <div blui-left-content>
                         <div>8:05 <span class="ampm">AM</span></div>
                         <div>09/23/19</div>
                     </div>
-                    <div pxb-title>Back Online</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item divider="full" chevron="true" iconAlign="center">
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
-                    <div pxb-left-content>
+                    <div blui-title>Back Online</div>
+                </blui-info-list-item>
+                <blui-info-list-item divider="full" chevron="true" iconAlign="center">
+                    <mat-icon blui-icon [style.color]="colors.blue[500]">info</mat-icon>
+                    <div blui-left-content>
                         <div>12:12<span class="ampm">PM</span></div>
                         <div>07/19/19</div>
                     </div>
-                    <div pxb-title>Connection Lost</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item
+                    <div blui-title>Connection Lost</div>
+                </blui-info-list-item>
+                <blui-info-list-item
                     divider="full"
                     chevron="true"
                     [statusColor]="colors.red[500]"
                     avatar="true"
                     iconAlign="center"
                 >
-                    <mat-icon pxb-icon [style.color]="colors.white[50]" [style.backgroundColor]="colors.red[500]"
+                    <mat-icon blui-icon [style.color]="colors.white[50]" [style.backgroundColor]="colors.red[500]"
                         >alarms</mat-icon
                     >
-                    <div pxb-left-content>
+                    <div blui-left-content>
                         <div>2:12<span class="ampm">PM</span></div>
                         <div>07/13/19</div>
                     </div>
-                    <div pxb-title>Cabinet 5 Wire</div>
-                    <div pxb-subtitle>Exampo Device Model</div>
-                </pxb-info-list-item>
-                <pxb-info-list-item chevron="true" iconAlign="center">
-                    <mat-icon pxb-icon [style.color]="colors.blue[500]">info</mat-icon>
-                    <div pxb-left-content>
+                    <div blui-title>Cabinet 5 Wire</div>
+                    <div blui-subtitle>Exampo Device Model</div>
+                </blui-info-list-item>
+                <blui-info-list-item chevron="true" iconAlign="center">
+                    <mat-icon blui-icon [style.color]="colors.blue[500]">info</mat-icon>
+                    <div blui-left-content>
                         <div>12:12<span class="ampm">PM</span></div>
                         <div>07/19/19</div>
                     </div>
-                    <div pxb-title>Back Online</div>
-                </pxb-info-list-item>
+                    <div blui-title>Back Online</div>
+                </blui-info-list-item>
             </mat-nav-list>
         </mat-expansion-panel>
     </mat-accordion>

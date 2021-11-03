@@ -1,5 +1,5 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ViewEncapsulation } from '@angular/core';
-import * as PXBColors from '@pxblue/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 
 @Component({
     selector: 'app-template-alarms',
@@ -11,7 +11,7 @@ import * as PXBColors from '@pxblue/colors';
     },
 })
 export class AlarmsComponent implements AfterViewInit {
-    colors = PXBColors;
+    colors = BLUIColors;
 
     constructor(private readonly _ref: ChangeDetectorRef) {}
 
