@@ -1250,17 +1250,17 @@
     "@babel/helper-validator-identifier" "^7.14.0"
     to-fast-properties "^2.0.0"
 
-"@brightlayer-ui/angular-components@^6.0.0-beta.0":
-  version "6.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/angular-components/-/angular-components-6.0.0-beta.0.tgz#a4b9c1fd4372860ccf383c115a83358d7e7707fd"
-  integrity sha512-qy9K1V7rkSb/WxKTRsCTMQwQs+agqJnGGBlsJOt97einQ6B/FkFh9FMjUFQGa59+nkchMEHgwXLjqnE7mKE13A==
+"@brightlayer-ui/angular-components@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/angular-components/-/angular-components-6.0.0.tgz#510461d4c895e4ceee9f81cb0747953f9e772046"
+  integrity sha512-uk0LjQv+HOWvX80M2UhpfDMEcbTgJYXLRitsJU3fOUa/fhoKkg/MCQGputVXjJCaaKbTvZ75tGRxnKnEQn7VFg==
   dependencies:
     tslib "^2.0.0"
 
-"@brightlayer-ui/angular-themes@^6.3.0-beta.0":
-  version "6.3.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/angular-themes/-/angular-themes-6.3.0-beta.0.tgz#4891c67614d3bb30689502d8677f5546d8c93bb5"
-  integrity sha512-WCShhJvtb2fKpyeC8COjLmZ4V1KoRWabOyhbvdgT5dmeNEBmvyZeKqmpVNWxx/C2nj7FWPOvZaGoNnOCrWyu7g==
+"@brightlayer-ui/angular-themes@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/angular-themes/-/angular-themes-6.3.0.tgz#b15eba57e05fd39beff09435c99ae7892d1d0e72"
+  integrity sha512-lrCyQTBtaPvqb66kq1Bzwg3777zsVeyIQxPpn9MnzO9uzhlM/xLlkoZU2GCjhZYTxAUfGwxi22Ukxt7kNL8tGQ==
   dependencies:
     "@brightlayer-ui/colors" "^3.0.0"
     "@fontsource/open-sans" "^4.1.0"
@@ -1282,15 +1282,15 @@
   optionalDependencies:
     eslint-plugin-react "^7.16.0"
 
-"@brightlayer-ui/icons-svg@^1.7.0-beta.1":
-  version "1.7.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons-svg/-/icons-svg-1.7.0-beta.1.tgz#120e7cc5c8cb960e95c9eea296fee120cc507fcc"
-  integrity sha512-Zvnz1jEK3Yp955iBlRWSgDd27YvGTlkVhyGsCyQQhGX774ZWNweYIRHskn3pjZA34vLbWz7vJRJwHScTKt182A==
+"@brightlayer-ui/icons-svg@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons-svg/-/icons-svg-1.7.0.tgz#8e80ce276eaa1b9d6aa1f736f3857856d3e1179a"
+  integrity sha512-z6LZgr0XFJ+HSDR7PxEHXavClsfR8I7FQww53vmFU0jv4fW5e3m5z2iYQjTi5MddgZJDX1CHvsvX+Mls8Z9iow==
 
-"@brightlayer-ui/icons@^1.7.1-beta.1":
-  version "1.7.1-beta.1"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons/-/icons-1.7.1-beta.1.tgz#78851d7440ea3f837e8c85bc61800961cd25cd95"
-  integrity sha512-XPlG1ZjsHTFkW8QP2hLjvlysvMABe0zvj6aLzqNUvAC5aCoT+Lwgc6FdpOaV91och0qnT7eR78khIJtk4VPkBQ==
+"@brightlayer-ui/icons@^1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons/-/icons-1.7.1.tgz#9ac6c648f5e5c33d588dcb2fafa96abca6a515dc"
+  integrity sha512-Oh8iTXSXmchnU/FFDSgVUFW2H3w1sJbUoidMBE/aLKdKwUIX8+z4pxEhJoqxb9QG99PUT3A/Jz3B9NumiYoDjQ==
 
 "@brightlayer-ui/ng-progress-icons@^1.2.1":
   version "1.2.1"
