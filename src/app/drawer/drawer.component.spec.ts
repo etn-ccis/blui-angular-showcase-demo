@@ -4,7 +4,7 @@ import { Router, NavigationEnd, RouterEvent } from '@angular/router';
 import { ReplaySubject } from 'rxjs';
 import { By } from '@angular/platform-browser';
 import { StateService } from '../services/state.service';
-import {AppModule} from "../app.module";
+import { AppModule } from '../app.module';
 
 describe('DrawerComponent', () => {
     let component: DrawerComponent;
@@ -43,8 +43,7 @@ describe('DrawerComponent', () => {
         void expect(component).toBeTruthy();
     });
 
-    describe(('navigation') , () => {
-
+    describe('navigation', () => {
         it('should set correct selectedItemId on navigation', () => {
             eventSubject.next(new NavigationEnd(1, '/templates/dashboard', '/templates/dashboard'));
             fixture.detectChanges();
