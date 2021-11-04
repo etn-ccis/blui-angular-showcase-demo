@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import * as PXBColors from '@pxblue/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 import { RtlService } from '../../../services/rtl.service';
 
 @Component({
-    selector: 'app-pxb-surfaces',
+    selector: 'app-blui-surfaces',
     templateUrl: './surfaces.component.html',
     styleUrls: ['./surfaces.component.scss'],
     encapsulation: ViewEncapsulation.None,
@@ -11,8 +11,8 @@ import { RtlService } from '../../../services/rtl.service';
         class: 'host',
     },
 })
-export class PxbSurfacesComponent {
-    colors = PXBColors;
+export class BluiSurfacesComponent {
+    colors = BLUIColors;
     isDynamicCollapsed = false;
     subtitle1 = 'Item 1';
     subtitle2 = 'Item 1';

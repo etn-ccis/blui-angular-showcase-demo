@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import * as PXBColors from '@pxblue/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 import { ViewportService } from './services/viewport.service';
-import { DrawerLayoutVariantType } from '@pxblue/angular-components';
+import { DrawerLayoutVariantType } from '@brightlayer-ui/angular-components';
 import { StateService } from './services/state.service';
 import { RtlService } from './services/rtl.service';
 import { NavigationEnd, Router } from '@angular/router';
@@ -56,15 +56,15 @@ export class AppComponent {
         private readonly _rtlService: RtlService,
         private readonly _router: Router
     ) {
-        this.colors = PXBColors;
+        this.colors = BLUIColors;
         this.listenForRouteChanges();
         this._matIconRegistry.addSvgIconSetInNamespace(
-            'px-icons',
-            /* **Note to PX Blue Users:
+            'blui-icons',
+            /* **Note to Brightlayer UI Users:
                 Stackblitz has difficulty reading static assets found within the node_modules folder.
-                For this example to work inside Stackblitz, we use a https request to fetch the PX Blue icon set.
+                For this example to work inside Stackblitz, we use a https request to fetch the Brightlayer UI icon set.
                 In normal situations, we encourage you to import the iconSet directly from the node_modules folder like below:
-                    // const iconSet = require('@pxblue/icons-svg/icons.svg').default;
+                    // const iconSet = require('@brightlayer-ui/icons-svg/icons.svg').default;
                     // this._domSanitizer.bypassSecurityTrustResourceUrl('iconSet')
              */
             this._domSanitizer.bypassSecurityTrustResourceUrl(
@@ -77,16 +77,16 @@ export class AppComponent {
         this._router.events.subscribe((route) => {
             if (route instanceof NavigationEnd) {
                 switch (route.urlAfterRedirects.split('?')[0]) {
-                    case `/pxblue-components/data-display-components`: {
-                        this.title = 'PX Blue Data Display';
+                    case `/blui-components/data-display-components`: {
+                        this.title = 'Brightlayer UI Data Display';
                         break;
                     }
-                    case `/pxblue-components/navigation-components`: {
-                        this.title = 'PX Blue Navigation';
+                    case `/blui-components/navigation-components`: {
+                        this.title = 'Brightlayer UI Navigation';
                         break;
                     }
-                    case `/pxblue-components/surface-components`: {
-                        this.title = 'PX Blue Surfaces';
+                    case `/blui-components/surface-components`: {
+                        this.title = 'Brightlayer UI Surfaces';
                         break;
                     }
                     case `/material-components/data-display-components`: {
@@ -154,11 +154,11 @@ export class AppComponent {
     toggleTheme(): void {
         const body = document.querySelector('body') as HTMLElement;
         if (this.isDarkMode) {
-            body.classList.remove('pxb-blue-dark');
-            body.classList.add('pxb-blue');
+            body.classList.remove('blui-blue-dark');
+            body.classList.add('blui-blue');
         } else {
-            body.classList.remove('pxb-blue');
-            body.classList.add('pxb-blue-dark');
+            body.classList.remove('blui-blue');
+            body.classList.add('blui-blue-dark');
         }
         this.isDarkMode = !this.isDarkMode;
     }

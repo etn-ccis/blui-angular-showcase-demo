@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { PxbSurfacesComponent } from './surfaces/surfaces.component';
-import { PxbDisplayComponent } from './data-display/display.component';
+import { BluiSurfacesComponent } from './surfaces/surfaces.component';
+import { BluiDisplayComponent } from './data-display/display.component';
 import { MatCardModule } from '@angular/material/card';
 import {
     AppBarModule,
@@ -14,16 +14,16 @@ import {
     ScoreCardModule,
     ThreeLinerModule,
     UserMenuModule,
-} from '@pxblue/angular-components';
+} from '@brightlayer-ui/angular-components';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
-import { PxbNavigationComponent } from './navigation/navigation.component';
+import { BluiNavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
-    declarations: [PxbSurfacesComponent, PxbDisplayComponent, PxbNavigationComponent],
+    declarations: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent],
     imports: [
         AppBarModule,
         CommonModule,
@@ -43,6 +43,6 @@ import { PxbNavigationComponent } from './navigation/navigation.component';
         ScoreCardModule,
         UserMenuModule,
     ],
-    exports: [PxbSurfacesComponent, PxbDisplayComponent, PxbNavigationComponent],
+    exports: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent],
 })
-export class PxblueModule {}
+export class BluiModule {}

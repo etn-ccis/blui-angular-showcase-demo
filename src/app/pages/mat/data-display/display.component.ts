@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import * as PXBColors from '@pxblue/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 import { RtlService } from '../../../services/rtl.service';
 
 const ELEMENT_DATA: any[] = [
@@ -22,7 +22,7 @@ const ELEMENT_DATA: any[] = [
     encapsulation: ViewEncapsulation.None,
 })
 export class MatDisplayComponent {
-    colors = PXBColors;
+    colors = BLUIColors;
     displayedColumns: string[] = ['position', 'name', 'symbol'];
     dataSource = ELEMENT_DATA;
     constructor(public rtl: RtlService) {}

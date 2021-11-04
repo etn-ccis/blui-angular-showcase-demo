@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PxbDisplayComponent } from './display.component';
+import { BluiDisplayComponent } from './display.component';
 
-describe('PxbDisplayComponent', () => {
-    let component: PxbDisplayComponent;
-    let fixture: ComponentFixture<PxbDisplayComponent>;
+describe('BluiDisplayComponent', () => {
+    let component: BluiDisplayComponent;
+    let fixture: ComponentFixture<BluiDisplayComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [PxbDisplayComponent],
+            declarations: [BluiDisplayComponent],
         }).compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(PxbDisplayComponent);
+        fixture = TestBed.createComponent(BluiDisplayComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

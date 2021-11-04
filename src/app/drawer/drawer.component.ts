@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, ViewEncapsulation } from '@angular/core';
-import * as PXBColors from '@pxblue/colors';
-import { DrawerNavItem } from '@pxblue/angular-components';
+import * as BLUIColors from '@brightlayer-ui/colors';
+import { DrawerNavItem } from '@brightlayer-ui/angular-components';
 import { ViewportService } from '../services/viewport.service';
 import { StateService } from '../services/state.service';
 import { NavigationEnd, Router } from '@angular/router';
@@ -9,43 +9,43 @@ import { NavigationEnd, Router } from '@angular/router';
     selector: 'showcase-drawer',
     styleUrls: ['./drawer.component.scss'],
     template: `
-        <pxb-drawer class="showcase-demo-drawer" [open]="isOpen()">
-            <pxb-drawer-header title="Showcase App" class="test-background-image">
-                <button class="showcase-menu-button" mat-icon-button pxb-icon (click)="clickMenuButton()">
+        <blui-drawer class="showcase-demo-drawer" [open]="isOpen()">
+            <blui-drawer-header title="Showcase App" class="test-background-image">
+                <button class="showcase-menu-button" mat-icon-button blui-icon (click)="clickMenuButton()">
                     <mat-icon>menu</mat-icon>
                 </button>
-            </pxb-drawer-header>
-            <pxb-drawer-body>
-                <pxb-drawer-nav-group>
-                    <pxb-drawer-nav-item
+            </blui-drawer-header>
+            <blui-drawer-body>
+                <blui-drawer-nav-group>
+                    <blui-drawer-nav-item
                         *ngFor="let navItem of navItems"
                         [title]="navItem.title"
                         [subtitle]="navItem.subtitle"
                         [divider]="true"
                     >
-                        <pxb-drawer-nav-item
+                        <blui-drawer-nav-item
                             *ngFor="let nestedItem of navItem.items"
                             [class]="'nav-menu' + nestedItem.title"
                             [title]="nestedItem.title"
                             [selected]="selectedItemId === navItem.title + nestedItem.title"
                             (select)="nestedItem.onSelect(); setActive(navItem.title, nestedItem.title)"
-                        ></pxb-drawer-nav-item>
-                        <i pxb-icon *ngIf="navItem.icon === 'pxblue'" class="pxb-pxblue_small"></i>
-                        <mat-icon pxb-icon *ngIf="navItem.icon !== 'pxblue'">{{ navItem.icon }}</mat-icon>
-                    </pxb-drawer-nav-item>
-                </pxb-drawer-nav-group>
-            </pxb-drawer-body>
-            <pxb-drawer-footer>
+                        ></blui-drawer-nav-item>
+                        <i blui-icon *ngIf="navItem.icon === 'blui'" class="blui-pxblue_small"></i>
+                        <mat-icon blui-icon *ngIf="navItem.icon !== 'blui'">{{ navItem.icon }}</mat-icon>
+                    </blui-drawer-nav-item>
+                </blui-drawer-nav-group>
+            </blui-drawer-body>
+            <blui-drawer-footer>
                 <img src="../assets/EatonLogo.svg" width="170" style="align-self: center; padding: 16px" />
-            </pxb-drawer-footer>
-        </pxb-drawer>
+            </blui-drawer-footer>
+        </blui-drawer>
     `,
     encapsulation: ViewEncapsulation.None,
 })
 export class DrawerComponent {
-    colors = PXBColors;
+    colors = BLUIColors;
     selectedItemId: string;
-    pxblueGroupId = 'PX Blue Components';
+    bluiGroupId = 'Brightlayer UI Components';
     materialComponentsGroupId = 'Material Components';
     pageTemplatesGroupId = 'Page Templates';
     dataDisplay = 'Data Display';
@@ -72,21 +72,21 @@ export class DrawerComponent {
 
     navItems: DrawerNavItem[] = [
         {
-            title: this.pxblueGroupId,
-            icon: 'pxblue',
+            title: this.bluiGroupId,
+            icon: 'blui',
             expanded: false,
             items: [
                 {
                     title: this.dataDisplay,
-                    onSelect: (): void => this.navigate('/pxblue-components/data-display-components'),
+                    onSelect: (): void => this.navigate('/blui-components/data-display-components'),
                 },
                 {
                     title: this.navigation,
-                    onSelect: (): void => this.navigate('/pxblue-components/navigation-components'),
+                    onSelect: (): void => this.navigate('/blui-components/navigation-components'),
                 },
                 {
                     title: this.surfaces,
-                    onSelect: (): void => this.navigate('/pxblue-components/surface-components'),
+                    onSelect: (): void => this.navigate('/blui-components/surface-components'),
                 },
             ],
         },
@@ -162,18 +162,18 @@ export class DrawerComponent {
 
     determineRoute(route: string): void {
         switch (route) {
-            case `/pxblue-components/data-display-components`: {
-                this.selectedItemId = `${this.pxblueGroupId}${this.dataDisplay}`;
+            case `/blui-components/data-display-components`: {
+                this.selectedItemId = `${this.bluiGroupId}${this.dataDisplay}`;
                 this.navItems[0].expanded = true;
                 break;
             }
-            case `/pxblue-components/navigation-components`: {
-                this.selectedItemId = `${this.pxblueGroupId}${this.navigation}`;
+            case `/blui-components/navigation-components`: {
+                this.selectedItemId = `${this.bluiGroupId}${this.navigation}`;
                 this.navItems[0].expanded = true;
                 break;
             }
-            case `/pxblue-components/surface-components`: {
-                this.selectedItemId = `${this.pxblueGroupId}${this.surfaces}`;
+            case `/blui-components/surface-components`: {
+                this.selectedItemId = `${this.bluiGroupId}${this.surfaces}`;
                 this.navItems[0].expanded = true;
                 break;
             }

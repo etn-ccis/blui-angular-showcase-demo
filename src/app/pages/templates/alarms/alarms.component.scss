@@ -1,4 +1,4 @@
-@import '~@pxblue/colors/palette.scss';
+@import '~@brightlayer-ui/colors/palette.scss';
 
 .app-template-alarms {
     display: flex;
@@ -7,11 +7,11 @@
 
 /* RTL styles */
 [dir='rtl'] {
-    pxb-list-item-tag {
+    blui-list-item-tag {
         margin-left: 16px;
         margin-right: 0;
     }
-    .pxb-info-list-item-left-content-wrapper {
+    .blui-info-list-item-left-content-wrapper {
         margin-left: 16px;
         margin-right: 8px;
     }
@@ -33,13 +33,13 @@
         }
         height: 48px;
         line-height: 48px;
-        color: map-get($pxb-blue, 500);
+        color: map-get($blui-blue, 500);
         font-weight: 600;
     }
-    pxb-list-item-tag {
+    blui-list-item-tag {
         margin-right: 16px;
     }
-    .pxb-info-list-item-left-content-wrapper {
+    .blui-info-list-item-left-content-wrapper {
         font-size: 12px;
         margin-left: 8px;
         margin-right: 16px;

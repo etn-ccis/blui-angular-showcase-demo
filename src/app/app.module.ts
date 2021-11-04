@@ -10,8 +10,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-//pxblue modules
-import { NgProgressIconsModule } from '@pxblue/ng-progress-icons';
+//brightlayer-ui modules
+import { NgProgressIconsModule } from '@brightlayer-ui/ng-progress-icons';
 import {
     HeroModule,
     ChannelValueModule,
@@ -25,7 +25,7 @@ import {
     UserMenuModule,
     MobileStepperModule,
     ThreeLinerModule,
-} from '@pxblue/angular-components';
+} from '@brightlayer-ui/angular-components';
 
 //material modules
 import { MatDividerModule } from '@angular/material/divider';
@@ -60,7 +60,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { PxblueModule } from './pages/pxblue/pxblue.module';
+import { BluiModule } from './pages/blui/blui.module';
 import { MatModule } from './pages/mat/mat.module';
 import { SettingsComponent } from './pages/templates/settings/settings.component';
 
@@ -100,7 +100,7 @@ import { SettingsComponent } from './pages/templates/settings/settings.component
         MatProgressBarModule,
         MatSnackBarModule,
         MatExpansionModule,
-        //pxblue
+        //blui
         UserMenuModule,
         NgProgressIconsModule,
         ChannelValueModule,
@@ -115,7 +115,7 @@ import { SettingsComponent } from './pages/templates/settings/settings.component
         DropdownToolbarModule,
         RouterModule,
         AppBarModule,
-        PxblueModule,
+        BluiModule,
         MatModule,
     ],
     providers: [],

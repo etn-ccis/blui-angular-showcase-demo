@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PxbNavigationComponent } from './navigation.component';
+import { BluiNavigationComponent } from './navigation.component';
 
-describe('PxbNavigationComponent', () => {
-    let component: PxbNavigationComponent;
-    let fixture: ComponentFixture<PxbNavigationComponent>;
+describe('BluiNavigationComponent', () => {
+    let component: BluiNavigationComponent;
+    let fixture: ComponentFixture<BluiNavigationComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [PxbNavigationComponent],
+            declarations: [BluiNavigationComponent],
         }).compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(PxbNavigationComponent);
+        fixture = TestBed.createComponent(BluiNavigationComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
