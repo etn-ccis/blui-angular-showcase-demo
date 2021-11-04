@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router, NavigationEnd, RouterEvent } from '@angular/router';
 import { ReplaySubject } from 'rxjs';
 import { By } from '@angular/platform-browser';
+import {AppModule} from "./app.module";
 
 describe('AppComponent', () => {
     let component: AppComponent;
@@ -18,7 +19,7 @@ describe('AppComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [AppComponent],
+            imports: [AppModule],
             providers: [{ provide: Router, useValue: routerMock }],
         });
 
