@@ -1,28 +1,20 @@
-@import '~@pxblue/colors/palette.scss';
+@import '~@brightlayer-ui/colors/palette.scss';
 
-.test-background-image mat-toolbar.pxb-drawer-header {
-    background-color: map-get($pxb-blue, 500);
+.test-background-image mat-toolbar.blui-drawer-header {
+    background-color: map-get($blui-blue, 500);
     background-size: cover;
     color: white;
 }
 
-.test-background-image .pxb-drawer-header-background {
+.test-background-image .blui-drawer-header-background {
     background-image: url('../assets/topology_40.png');
 }
 
-.toolbar {
-    position: sticky;
-    position: -webkit-sticky; /* For macOS/iOS Safari */
-    top: 0; /* Sets the sticky toolbar to be on top */
-    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
-    background-color: map-get($pxb-blue, 500) !important;
-    color: map-get($pxb-white, 50) !important;
-    .user-menu {
-        margin-left: 8px;
+.user-menu {
+    margin-left: 8px;
 
-        &.rtl {
-            margin-right: 8px;
-            margin-left: 0;
-        }
+    &.rtl {
+        margin-right: 8px;
+        margin-left: 0;
     }
 }

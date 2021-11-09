@@ -1,17 +1,17 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ViewEncapsulation } from '@angular/core';
-import * as PXBColors from '@pxblue/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 
 @Component({
-    selector: 'app-timeline',
-    templateUrl: './timeline.component.html',
-    styleUrls: ['./timeline.component.scss'],
+    selector: 'app-template-alarms',
+    templateUrl: './alarms.component.html',
+    styleUrls: ['./alarms.component.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        class: 'host',
+        class: 'app-template-alarms',
     },
 })
-export class TimelineComponent implements AfterViewInit {
-    colors = PXBColors;
+export class AlarmsComponent implements AfterViewInit {
+    colors = BLUIColors;
 
     constructor(private readonly _ref: ChangeDetectorRef) {}
 

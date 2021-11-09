@@ -29,8 +29,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/@pxblue/angular-themes/open-sans.scss",
-              "./node_modules/@pxblue/angular-themes/theme.scss"
+              "./node_modules/@brightlayer-ui/angular-themes/open-sans.scss",
+              "./node_modules/@brightlayer-ui/angular-themes/theme.scss",
+              "./node_modules/@brightlayer-ui/icons/iconfont/BrightlayerUIIcons.css"
             ],
             "scripts": []
           },
@@ -91,12 +92,12 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/@pxblue/angular-themes/open-sans.scss",
-              "./node_modules/@pxblue/angular-themes/theme.scss"
+              "./node_modules/@brightlayer-ui/angular-themes/open-sans.scss",
+              "./node_modules/@brightlayer-ui/angular-themes/theme.scss"
             ],
             "scripts": []
           }

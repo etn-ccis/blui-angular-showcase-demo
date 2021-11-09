@@ -1,10 +1,17 @@
+/**
+ Copyright (c) 2021-present, Eaton
+
+ All rights reserved.
+
+ This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
+ **/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-//pxblue modules
-import { NgProgressIconsModule } from '@pxblue/ng-progress-icons';
+//brightlayer-ui modules
+import { NgProgressIconsModule } from '@brightlayer-ui/ng-progress-icons';
 import {
     HeroModule,
     ChannelValueModule,
@@ -13,10 +20,12 @@ import {
     InfoListItemModule,
     DrawerModule,
     ListItemTagModule,
+    AppBarModule,
     DropdownToolbarModule,
     UserMenuModule,
     MobileStepperModule,
-} from '@pxblue/angular-components';
+    ThreeLinerModule,
+} from '@brightlayer-ui/angular-components';
 
 //material modules
 import { MatDividerModule } from '@angular/material/divider';
@@ -43,18 +52,20 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
+import { DashboardComponent } from './pages/templates/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
-import { TimelineComponent } from './timeline/timeline.component';
+import { AlarmsComponent } from './pages/templates/alarms/alarms.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BluiModule } from './pages/blui/blui.module';
+import { MatModule } from './pages/mat/mat.module';
+import { SettingsComponent } from './pages/templates/settings/settings.component';
 
 @NgModule({
-    declarations: [AppComponent, DashboardComponent, DrawerComponent, KitchenSinkComponent, TimelineComponent],
+    declarations: [AppComponent, DashboardComponent, DrawerComponent, AlarmsComponent, SettingsComponent],
     imports: [
         MatRippleModule,
         AppRoutingModule,
@@ -88,7 +99,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
         MatProgressSpinnerModule,
         MatProgressBarModule,
         MatSnackBarModule,
-        //pxblue
+        MatExpansionModule,
+        //blui
         UserMenuModule,
         NgProgressIconsModule,
         ChannelValueModule,
@@ -99,9 +111,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
         DrawerModule,
         MobileStepperModule,
         ListItemTagModule,
+        ThreeLinerModule,
         DropdownToolbarModule,
         RouterModule,
-        MatExpansionModule,
+        AppBarModule,
+        BluiModule,
+        MatModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
