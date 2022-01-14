@@ -221,7 +221,7 @@
     <mat-card class="ng-comp-card">
         <mat-card-header>
             <div mat-card-title>
-                Button Toggle Group
+                Button Toggle Group (default)
             </div>
         </mat-card-header>
         <mat-card-content>
@@ -229,6 +229,36 @@
                 <mat-button-toggle value="bold">Bold</mat-button-toggle>
                 <mat-button-toggle value="italic">Italic</mat-button-toggle>
                 <mat-button-toggle value="underline">Underline</mat-button-toggle>
+            </mat-button-toggle-group>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Button Toggle Group Outline
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-button-toggle-group variant="outline" name="fontStyle">
+                <mat-button-toggle value="bold">Red</mat-button-toggle>
+                <mat-button-toggle value="italic">Green</mat-button-toggle>
+                <mat-button-toggle value="underline">Yellow</mat-button-toggle>
+            </mat-button-toggle-group>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>
+                Button Toggle Group Filled
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-button-toggle-group variant="filled" name="fontStyle">
+                <mat-button-toggle value="bold">Drafts</mat-button-toggle>
+                <mat-button-toggle value="italic">Pending</mat-button-toggle>
+                <mat-button-toggle value="underline">Approved</mat-button-toggle>
             </mat-button-toggle-group>
         </mat-card-content>
     </mat-card>
