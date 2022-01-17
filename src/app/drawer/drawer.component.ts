@@ -21,6 +21,7 @@ import { NavigationEnd, Router } from '@angular/router';
                         *ngFor="let navItem of navItems"
                         [title]="navItem.title"
                         [subtitle]="navItem.subtitle"
+                        [expanded]="navItem.expanded"
                         [divider]="true"
                     >
                         <blui-drawer-nav-item
