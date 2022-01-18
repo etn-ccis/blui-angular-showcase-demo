@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@brightlayer-ui/angular-themes/theme.scss';
-@import '~@brightlayer-ui/colors/palette.scss';
+@use '~@brightlayer-ui/angular-themes/theme.scss';
+@use '~@brightlayer-ui/colors/palette.scss';
 
 body {
     margin: 0;
