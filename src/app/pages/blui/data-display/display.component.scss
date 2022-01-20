@@ -2,8 +2,8 @@
 
 .blui-data-display-container {
     .user-menu-with-custom-colors .blui-user-menu-avatar {
-        color: map-get($blui-white, 50);
-        background-color: map-get($blui-blue, 800);
+        color: map-get(palette.$blui-white, 50);
+        background-color: map-get(palette.$blui-blue, 800);
     }
     .blui-user-menu {
         justify-content: center;
@@ -11,6 +11,6 @@
 }
 .user-menu-custom-colors-body {
     mat-icon {
-        color: map-get($blui-blue, 800);
+        color: map-get(palette.$blui-blue, 800);
     }
 }
