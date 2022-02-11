@@ -4,7 +4,7 @@ orbs:
 jobs:
   build_demo:
     docker:
-      - image: circleci/node:12.9.1-browsers
+      - image: circleci/node:14.15.0-browsers
     steps:
       - checkout
       - restore_cache:
@@ -43,7 +43,7 @@ jobs:
   coverage_report:
         working_directory: ~/angular-showcase-demo
         docker:
-            - image: circleci/node:12.9.1-browsers
+            - image: circleci/node:14.15.0-browsers
         steps:
             - checkout
             - attach_workspace:
