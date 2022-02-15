@@ -6,6 +6,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+#type-table {
+    td, th {
+            border: solid 1px black;
+    }
+}
+
 [dir='rtl'] .invert-rtl {
     transform: scaleX(-1);
 }
