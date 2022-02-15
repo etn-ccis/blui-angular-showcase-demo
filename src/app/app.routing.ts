@@ -11,7 +11,7 @@ import { MatSurfacesComponent } from './pages/mat/surfaces/surfaces.component';
 import { BluiNavigationComponent } from './pages/blui/navigation/navigation.component';
 import { AlarmsComponent } from './pages/templates/alarms/alarms.component';
 import { SettingsComponent } from './pages/templates/settings/settings.component';
-import {BluiTypographyComponent} from "./pages/blui/typography.component";
+import { BluiTypographyComponent } from './pages/blui/typography.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'templates/dashboard', pathMatch: 'full' },

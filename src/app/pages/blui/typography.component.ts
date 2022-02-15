@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-blui-typography',
@@ -103,8 +103,7 @@ import {Component} from "@angular/core";
                 display: flex;
                 justify-content: space-around;
             }
-        `
-    ]
+        `,
+    ],
 })
-export class BluiTypographyComponent {
-}
+export class BluiTypographyComponent {}
