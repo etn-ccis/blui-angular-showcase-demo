@@ -21,9 +21,10 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { BluiNavigationComponent } from './navigation/navigation.component';
+import {BluiTypographyComponent} from "./typography.component";
 
 @NgModule({
-    declarations: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent],
+    declarations: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent, BluiTypographyComponent],
     imports: [
         AppBarModule,
         CommonModule,
@@ -43,6 +44,6 @@ import { BluiNavigationComponent } from './navigation/navigation.component';
         ScoreCardModule,
         UserMenuModule,
     ],
-    exports: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent],
+    exports: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent, BluiTypographyComponent],
 })
 export class BluiModule {}
