@@ -1,5 +1,5 @@
 <div class="dashboard-root template-root">
-    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; ">
+    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap">
         <blui-score-card
             class="red-score-card"
             [headerTitle]="'Substation 3'"
@@ -66,7 +66,7 @@
         </blui-score-card>
     </div>
 
-    <mat-card class="data-card" style="margin-bottom: 16px;">
+    <mat-card class="data-card" style="margin-bottom: 16px">
         <mat-list style="padding: 0; height: 125px">
             <blui-hero-banner [divider]="true">
                 <blui-hero label="Healthy" value="96" units="/100" style="cursor: pointer" [iconSize]="36">
@@ -149,13 +149,11 @@
         </blui-info-list-item>
     </mat-card>
 
-    <mat-card style="margin-top: 16px;">
+    <mat-card style="margin-top: 16px">
         <blui-empty-state title="No Devices" description="Contact your local admin for details">
             <mat-icon blui-empty-icon>devices</mat-icon>
             <button blui-actions mat-flat-button color="primary">
-                <mat-icon style="height: 20px; width: 20px; font-size: 20px;">
-                    add
-                </mat-icon>
+                <mat-icon style="height: 20px; width: 20px; font-size: 20px"> add </mat-icon>
                 Add Device
             </button>
         </blui-empty-state>
