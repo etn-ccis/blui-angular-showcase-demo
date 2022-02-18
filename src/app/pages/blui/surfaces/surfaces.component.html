@@ -40,16 +40,23 @@
 
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>Dropdown Toolbar</div>
+            <div mat-card-title>Toolbar Menu</div>
         </mat-card-header>
         <mat-card-content>
-            <blui-dropdown-toolbar title="Basic Usage" [subtitle]="subtitle1">
-                <ng-container blui-toolbar-menu>
-                    <button mat-menu-item (click)="subtitle1 = 'Item 1'">Item 1</button>
-                    <button mat-menu-item (click)="subtitle1 = 'Item 2'">Item 2</button>
-                    <button mat-menu-item (click)="subtitle1 = 'Item 3'">Item 3</button>
-                </ng-container>
-            </blui-dropdown-toolbar>
+            <mat-toolbar fxLayout="row" color="primary">
+                <blui-toolbar-menu [label]="subtitle1">
+                    <button mat-icon-button blui-icon>
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <ng-container blui-toolbar-menu-items>
+                        <button mat-menu-item (click)="subtitle1 = 'Item 1'">Item 1</button>
+                        <button mat-menu-item (click)="subtitle1 = 'Item 2'">Item 2</button>
+                        <button mat-menu-item (click)="subtitle1 = 'Item 3'">Item 3</button>
+                    </ng-container>
+                </blui-toolbar-menu>
+            </mat-toolbar>
+
+            <!--
             <blui-dropdown-toolbar title="W/ Nav Icon" [subtitle]="subtitle2">
                 <button mat-icon-button blui-nav-icon>
                     <mat-icon>menu</mat-icon>
@@ -102,6 +109,7 @@
                     </blui-info-list-item>
                 </mat-nav-list>
             </blui-dropdown-toolbar>
+            -->
         </mat-card-content>
     </mat-card>
 
