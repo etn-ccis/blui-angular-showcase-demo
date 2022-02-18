@@ -1,9 +1,7 @@
 <div class="showcase-container">
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Text Button
-            </div>
+            <div mat-card-title>Text Button</div>
         </mat-card-header>
         <mat-card-content class="button-demo-showcase uniform-size">
             <div>
@@ -30,9 +28,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Raised Button
-            </div>
+            <div mat-card-title>Raised Button</div>
         </mat-card-header>
         <mat-card-content class="button-demo-showcase uniform-size">
             <div>
@@ -58,9 +54,7 @@
         </mat-card-content> </mat-card
     ><mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Outlined Button
-            </div>
+            <div mat-card-title>Outlined Button</div>
         </mat-card-header>
         <mat-card-content class="button-demo-showcase uniform-size">
             <div>
@@ -87,9 +81,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Icon Button
-            </div>
+            <div mat-card-title>Icon Button</div>
         </mat-card-header>
         <mat-card-content class="button-demo-showcase icon-button-demo">
             <div>
@@ -152,9 +144,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Mini FAB
-            </div>
+            <div mat-card-title>Mini FAB</div>
         </mat-card-header>
         <mat-card-content class="fab-demo">
             <div>
@@ -186,9 +176,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                FAB
-            </div>
+            <div mat-card-title>FAB</div>
         </mat-card-header>
         <mat-card-content class="fab-demo">
             <div>
@@ -220,9 +208,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Button Toggle Group
-            </div>
+            <div mat-card-title>Button Toggle Group (default)</div>
         </mat-card-header>
         <mat-card-content>
             <mat-button-toggle-group name="fontStyle">
@@ -235,9 +221,33 @@
 
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Checkbox
-            </div>
+            <div mat-card-title>Button Toggle Group Outline</div>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-button-toggle-group variant="outline" name="fontStyle">
+                <mat-button-toggle value="bold">Red</mat-button-toggle>
+                <mat-button-toggle value="italic">Green</mat-button-toggle>
+                <mat-button-toggle value="underline">Yellow</mat-button-toggle>
+            </mat-button-toggle-group>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>Button Toggle Group Filled</div>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-button-toggle-group variant="filled" name="fontStyle">
+                <mat-button-toggle value="bold">Drafts</mat-button-toggle>
+                <mat-button-toggle value="italic">Pending</mat-button-toggle>
+                <mat-button-toggle value="underline">Approved</mat-button-toggle>
+            </mat-button-toggle-group>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>Checkbox</div>
         </mat-card-header>
         <mat-card-content class="checkbox-demo">
             <div class="check-item-line">
@@ -262,9 +272,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Radio Button
-            </div>
+            <div mat-card-title>Radio Button</div>
         </mat-card-header>
         <mat-card-content class="radio-demo">
             <mat-radio-group aria-label="Select an option">
@@ -288,9 +296,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Date Picker
-            </div>
+            <div mat-card-title>Date Picker</div>
         </mat-card-header>
         <mat-card-content>
             <mat-form-field>
@@ -302,9 +308,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Standard Select
-            </div>
+            <div mat-card-title>Standard Select</div>
         </mat-card-header>
         <mat-card-content class="mat-select-demo">
             <div>
@@ -312,7 +316,42 @@
                     <mat-label>Default</mat-label>
                     <mat-hint>Hint</mat-hint>
                     <mat-select>
-                        <mat-option>Test</mat-option>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field color="primary">
+                    <mat-label>Primary</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field color="accent">
+                    <mat-label>Accent</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field color="warn">
+                    <mat-label>Warn</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -338,9 +377,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Outline Select
-            </div>
+            <div mat-card-title>Outline Select</div>
         </mat-card-header>
         <mat-card-content class="mat-select-demo">
             <div>
@@ -348,7 +385,42 @@
                     <mat-label>Default</mat-label>
                     <mat-hint>Hint</mat-hint>
                     <mat-select>
-                        <mat-option>Test</mat-option>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Primary</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline" color="accent">
+                    <mat-label>Accent</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline" color="warn">
+                    <mat-label>Warn</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -374,9 +446,7 @@
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Fill Select
-            </div>
+            <div mat-card-title>Fill Select</div>
         </mat-card-header>
         <mat-card-content class="mat-select-demo">
             <div>
@@ -384,7 +454,42 @@
                     <mat-label>Default</mat-label>
                     <mat-hint>Hint</mat-hint>
                     <mat-select>
-                        <mat-option>Test</mat-option>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill" color="primary">
+                    <mat-label>Primary</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill" color="accent">
+                    <mat-label>Accent</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill" color="warn">
+                    <mat-label>Warn</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-select>
+                        <mat-option value="test1">Test 1</mat-option>
+                        <mat-option value="test2">Test 2</mat-option>
+                        <mat-option value="test3">Test 3</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -411,9 +516,7 @@
 
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Slider
-            </div>
+            <div mat-card-title>Slider</div>
         </mat-card-header>
         <mat-card-content class="slider-demo-content">
             Default: <br />
@@ -483,9 +586,7 @@
 
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Switch
-            </div>
+            <div mat-card-title>Switch</div>
         </mat-card-header>
         <mat-card-content class="switch-demo-content">
             <div>Default</div>
@@ -538,9 +639,72 @@
 
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Standard Text Field
+            <div mat-card-title>Legacy Text Field</div>
+        </mat-card-header>
+        <mat-card-content class="mat-select-demo">
+            <div>
+                <mat-form-field appearance="legacy">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                </mat-form-field>
             </div>
+            <div>
+                <mat-form-field appearance="legacy">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="legacy">
+                    <input disabled matInput placeholder="Placeholder" />
+                    <mat-label>Disabled</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="legacy">
+                    <input matInput placeholder="Prefix Suffix Buttons" />
+                    <mat-label>Buttons</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <button mat-icon-button matPrefix>
+                        <mat-icon>info</mat-icon>
+                    </button>
+                    <button mat-icon-button matSuffix>
+                        <mat-icon matPrefix>info</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Required</mat-label>
+                    <input
+                        matInput
+                        placeholder="Placeholder"
+                        [formControl]="errorControl"
+                        [errorStateMatcher]="errorMatcher"
+                    />
+                    <mat-error>Hint</mat-error>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>Standard Text Field</div>
         </mat-card-header>
         <mat-card-content class="mat-select-demo">
             <div>
@@ -548,6 +712,17 @@
                     <input matInput placeholder="Placeholder" />
                     <mat-label>Default</mat-label>
                     <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="standard">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
                 </mat-form-field>
             </div>
             <div>
@@ -555,6 +730,23 @@
                     <input disabled matInput placeholder="Placeholder" />
                     <mat-label>Disabled</mat-label>
                     <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="standard">
+                    <input matInput placeholder="Prefix Suffix Buttons" />
+                    <mat-label>Buttons</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <button mat-icon-button matPrefix>
+                        <mat-icon>info</mat-icon>
+                    </button>
+                    <button mat-icon-button matSuffix>
+                        <mat-icon matPrefix>info</mat-icon>
+                    </button>
                 </mat-form-field>
             </div>
             <div>
@@ -567,15 +759,15 @@
                         [errorStateMatcher]="errorMatcher"
                     />
                     <mat-error>Hint</mat-error>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
                 </mat-form-field>
             </div>
         </mat-card-content>
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Filled Text Field
-            </div>
+            <div mat-card-title>Filled Text Field</div>
         </mat-card-header>
         <mat-card-content class="mat-select-demo">
             <div>
@@ -583,6 +775,17 @@
                     <input matInput placeholder="Placeholder" />
                     <mat-label>Default</mat-label>
                     <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
                 </mat-form-field>
             </div>
             <div>
@@ -590,6 +793,23 @@
                     <input disabled matInput placeholder="Placeholder" />
                     <mat-label>Disabled</mat-label>
                     <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <input matInput placeholder="Prefix Suffix Buttons" />
+                    <mat-label>Buttons</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <button mat-icon-button matPrefix>
+                        <mat-icon>info</mat-icon>
+                    </button>
+                    <button mat-icon-button matSuffix>
+                        <mat-icon matPrefix>info</mat-icon>
+                    </button>
                 </mat-form-field>
             </div>
             <div>
@@ -602,15 +822,15 @@
                         [errorStateMatcher]="errorMatcher"
                     />
                     <mat-error>Hint</mat-error>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
                 </mat-form-field>
             </div>
         </mat-card-content>
     </mat-card>
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>
-                Outlined Text Field
-            </div>
+            <div mat-card-title>Outlined Text Field</div>
         </mat-card-header>
         <mat-card-content class="mat-select-demo">
             <div>
@@ -618,6 +838,17 @@
                     <input matInput placeholder="Placeholder" />
                     <mat-label>Default</mat-label>
                     <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
                 </mat-form-field>
             </div>
             <div>
@@ -625,6 +856,23 @@
                     <input disabled matInput placeholder="Placeholder" />
                     <mat-label>Disabled</mat-label>
                     <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Prefix Suffix Buttons" />
+                    <mat-label>Buttons</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <button mat-icon-button matPrefix>
+                        <mat-icon>info</mat-icon>
+                    </button>
+                    <button mat-icon-button matSuffix>
+                        <mat-icon matPrefix>info</mat-icon>
+                    </button>
                 </mat-form-field>
             </div>
             <div>
@@ -637,6 +885,160 @@
                         [errorStateMatcher]="errorMatcher"
                     />
                     <mat-error>Hint</mat-error>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>BLUI Input (button)</div>
+        </mat-card-header>
+        <mat-card-content class="mat-select-demo">
+            <div>
+                <mat-form-field blui-input appearance="standard">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Standard</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field blui-input appearance="legacy">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Legacy</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <button mat-icon-button matPrefix>
+                        <mat-icon>info</mat-icon>
+                    </button>
+                    <button mat-icon-button matSuffix>
+                        <mat-icon matPrefix>info</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field blui-input appearance="standard">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Standard</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <button mat-icon-button matPrefix>
+                        <mat-icon>info</mat-icon>
+                    </button>
+                    <button mat-icon-button matSuffix>
+                        <mat-icon matPrefix>info</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field blui-input appearance="outline">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <button mat-icon-button matPrefix>
+                        <mat-icon>info</mat-icon>
+                    </button>
+                    <button mat-icon-button matSuffix>
+                        <mat-icon matPrefix>info</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field blui-input appearance="fill">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <button mat-icon-button matPrefix>
+                        <mat-icon>info</mat-icon>
+                    </button>
+                    <button mat-icon-button matSuffix>
+                        <mat-icon matPrefix>info</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>BLUI Input (icon)</div>
+        </mat-card-header>
+        <mat-card-content class="mat-select-demo">
+            <div>
+                <mat-form-field blui-input appearance="legacy">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Legacy</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field blui-input appearance="standard">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Standard</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field blui-input appearance="outline">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field blui-input appearance="fill">
+                    <input matInput placeholder="Placeholder" />
+                    <mat-label>Default</mat-label>
+                    <mat-hint>Hint</mat-hint>
+                    <mat-hint align="end">0/10</mat-hint>
+                    <mat-icon matSuffix>info</mat-icon>
+                    <mat-icon matPrefix>info</mat-icon>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
+            <div mat-card-title>Text Area</div>
+        </mat-card-header>
+        <mat-card-content class="mat-select-demo">
+            <div>
+                <mat-form-field>
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput></textarea>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="standard">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput></textarea>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput></textarea>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput></textarea>
                 </mat-form-field>
             </div>
         </mat-card-content>

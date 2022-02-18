@@ -1,7 +1,7 @@
-@import '~@brightlayer-ui/colors/palette.scss';
+@use '~@brightlayer-ui/colors/palette.scss';
 
 .test-background-image mat-toolbar.blui-drawer-header {
-    background-color: map-get($blui-blue, 500);
+    background-color: map-get(palette.$blui-blue, 500);
     background-size: cover;
     color: white;
 }

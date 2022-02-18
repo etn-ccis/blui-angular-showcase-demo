@@ -21,6 +21,7 @@ import { NavigationEnd, Router } from '@angular/router';
                         *ngFor="let navItem of navItems"
                         [title]="navItem.title"
                         [subtitle]="navItem.subtitle"
+                        [expanded]="navItem.expanded"
                         [divider]="true"
                     >
                         <blui-drawer-nav-item
@@ -49,6 +50,7 @@ export class DrawerComponent {
     materialComponentsGroupId = 'Material Components';
     pageTemplatesGroupId = 'Page Templates';
     dataDisplay = 'Data Display';
+    typography = 'Typography';
     navigation = 'Navigation';
     surfaces = 'Surfaces';
     feedback = 'Feedback';
@@ -87,6 +89,10 @@ export class DrawerComponent {
                 {
                     title: this.surfaces,
                     onSelect: (): void => this.navigate('/blui-components/surface-components'),
+                },
+                {
+                    title: this.typography,
+                    onSelect: (): void => this.navigate('/blui-components/typography'),
                 },
             ],
         },
@@ -169,6 +175,11 @@ export class DrawerComponent {
             }
             case `/blui-components/navigation-components`: {
                 this.selectedItemId = `${this.bluiGroupId}${this.navigation}`;
+                this.navItems[0].expanded = true;
+                break;
+            }
+            case `/blui-components/typography`: {
+                this.selectedItemId = `${this.bluiGroupId}${this.typography}`;
                 this.navItems[0].expanded = true;
                 break;
             }
