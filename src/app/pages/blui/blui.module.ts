@@ -15,7 +15,7 @@ import {
     ThreeLinerModule,
     UserMenuModule,
     ToolbarMenuModule,
-} from "@brightlayer-ui/angular-components";
+} from '@brightlayer-ui/angular-components';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
@@ -44,7 +44,7 @@ import { BluiTypographyComponent } from './typography.component';
         MobileStepperModule,
         ScoreCardModule,
         UserMenuModule,
-        ToolbarMenuModule
+        ToolbarMenuModule,
     ],
     exports: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent, BluiTypographyComponent],
 })

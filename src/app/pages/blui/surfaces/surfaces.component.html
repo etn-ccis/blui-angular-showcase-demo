@@ -56,7 +56,6 @@
                 </blui-toolbar-menu>
             </mat-toolbar>
 
-
             <mat-toolbar style="margin-top: 16px" color="primary">
                 <blui-toolbar-menu label="Custom Menu">
                     <button mat-icon-button blui-icon>
@@ -65,21 +64,23 @@
                     <mat-nav-list blui-toolbar-menu-items [style.paddingTop.px]="0">
                         <blui-info-list-item [dense]="true" (click)="subtitle4 = 'Atlanta'">
                             <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset"
-                            >business</mat-icon
+                                >business</mat-icon
                             >
                             <span blui-title>Atlanta</span>
                         </blui-info-list-item>
                         <blui-info-list-item
-                                [dense]="true"
-                                (click)="subtitle4 = 'Pittsburgh'"
-                                [statusColor]="colors.red[500]"
+                            [dense]="true"
+                            (click)="subtitle4 = 'Pittsburgh'"
+                            [statusColor]="colors.red[500]"
                         >
-                            <mat-icon blui-icon [style.color]="colors.red[500]" style="transform: unset">house</mat-icon>
+                            <mat-icon blui-icon [style.color]="colors.red[500]" style="transform: unset"
+                                >house</mat-icon
+                            >
                             <span blui-title>Pittsburgh</span>
                         </blui-info-list-item>
                         <blui-info-list-item [dense]="true" (click)="subtitle4 = 'New York'">
                             <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset"
-                            >apartment</mat-icon
+                                >apartment</mat-icon
                             >
                             <span blui-title>New York</span>
                         </blui-info-list-item>
