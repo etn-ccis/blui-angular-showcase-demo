@@ -55,6 +55,15 @@
                             ],
                             "outputHashing": "all"
                         },
+                        "lib": {
+                            "tsConfig": "tsconfig.lib.json",
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true
+                        },
                         "development": {
                             "buildOptimizer": false,
                             "optimization": false,
@@ -69,6 +78,9 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
+                        "lib": {
+                            "browserTarget": "component-demo:build:lib"
+                        },
                         "production": {
                             "browserTarget": "component-demo:build:production"
                         },
