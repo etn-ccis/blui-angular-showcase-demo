@@ -66,19 +66,23 @@
                 <blui-toolbar-menu [label]="subtitle3">
                     <mat-icon blui-icon>account_circle</mat-icon>
                     <mat-nav-list blui-toolbar-menu-items [style.paddingTop.px]="0">
-                        <blui-info-list-item [dense]="true" (click)="subtitle3='Atlanta'">
+                        <blui-info-list-item [dense]="true" (click)="subtitle3 = 'Atlanta'">
                             <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset">
                                 business
                             </mat-icon>
                             <span blui-title>Atlanta</span>
                         </blui-info-list-item>
-                        <blui-info-list-item [dense]="true" [statusColor]="colors.red[500]" (click)="subtitle3='Pittsburgh'">
+                        <blui-info-list-item
+                            [dense]="true"
+                            [statusColor]="colors.red[500]"
+                            (click)="subtitle3 = 'Pittsburgh'"
+                        >
                             <mat-icon blui-icon [style.color]="colors.red[500]" style="transform: unset"
                                 >house</mat-icon
                             >
                             <span blui-title>Pittsburgh</span>
                         </blui-info-list-item>
-                        <blui-info-list-item [dense]="true" (click)="subtitle3='New York'">
+                        <blui-info-list-item [dense]="true" (click)="subtitle3 = 'New York'">
                             <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset">
                                 apartment
                             </mat-icon>
