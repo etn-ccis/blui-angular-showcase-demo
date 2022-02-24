@@ -40,68 +40,70 @@
 
     <mat-card class="ng-comp-card">
         <mat-card-header>
-            <div mat-card-title>Dropdown Toolbar</div>
+            <div mat-card-title>Toolbar Menu</div>
         </mat-card-header>
         <mat-card-content>
-            <blui-dropdown-toolbar title="Basic Usage" [subtitle]="subtitle1">
-                <ng-container blui-toolbar-menu>
-                    <button mat-menu-item (click)="subtitle1 = 'Item 1'">Item 1</button>
-                    <button mat-menu-item (click)="subtitle1 = 'Item 2'">Item 2</button>
-                    <button mat-menu-item (click)="subtitle1 = 'Item 3'">Item 3</button>
-                </ng-container>
-            </blui-dropdown-toolbar>
-            <blui-dropdown-toolbar title="W/ Nav Icon" [subtitle]="subtitle2">
-                <button mat-icon-button blui-nav-icon>
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <ng-container blui-toolbar-menu>
-                    <button mat-menu-item (click)="subtitle2 = 'Item 1'">Item 1</button>
-                    <button mat-menu-item (click)="subtitle2 = 'Item 2'">Item 2</button>
-                    <button mat-menu-item (click)="subtitle2 = 'Item 3'">Item 3</button>
-                </ng-container>
-            </blui-dropdown-toolbar>
-            <blui-dropdown-toolbar title="W/ Nav Icon" [subtitle]="subtitle3">
-                <button mat-icon-button blui-nav-icon>
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <ng-container blui-toolbar-menu>
-                    <div class="mat-overline" style="padding: 16px">menugroup 1</div>
-                    <mat-divider></mat-divider>
-                    <button mat-menu-item (click)="subtitle3 = 'Item 1'">Item 1</button>
-                    <button mat-menu-item (click)="subtitle3 = 'Item 2'">Item 2</button>
-                    <div class="mat-overline" style="padding: 16px">menugroup 2</div>
-                    <mat-divider></mat-divider>
-                    <button mat-menu-item (click)="subtitle3 = 'Item 3'">Item 3</button>
-                    <button mat-menu-item (click)="subtitle3 = 'Item 4'">Item 4</button>
-                </ng-container>
-            </blui-dropdown-toolbar>
-            <blui-dropdown-toolbar title="W/ Custom Menu" [subtitle]="subtitle4">
-                <button mat-icon-button blui-nav-icon>
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <mat-nav-list blui-toolbar-menu [style.paddingTop.px]="0">
-                    <blui-info-list-item [dense]="true" (click)="subtitle4 = 'Atlanta'">
-                        <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset"
-                            >business</mat-icon
+            <mat-toolbar color="primary">
+                <blui-toolbar-menu [label]="subtitle1">
+                    <ng-container blui-toolbar-menu-items>
+                        <button mat-menu-item (click)="subtitle1 = 'Item 1'">Item 1</button>
+                    </ng-container>
+                </blui-toolbar-menu>
+            </mat-toolbar>
+
+            <mat-toolbar style="margin-top: 16px" color="primary">
+                <blui-toolbar-menu [label]="subtitle2">
+                    <mat-icon blui-icon>account_circle</mat-icon>
+                    <ng-container blui-toolbar-menu-items>
+                        <button mat-menu-item (click)="subtitle2 = 'Item 1'">Item 1</button>
+                        <button mat-menu-item (click)="subtitle2 = 'Item 2'">Item 2</button>
+                        <button mat-menu-item (click)="subtitle2 = 'Item 3'">Item 3</button>
+                    </ng-container>
+                </blui-toolbar-menu>
+            </mat-toolbar>
+
+            <mat-toolbar style="margin-top: 16px" color="primary">
+                <blui-toolbar-menu [label]="subtitle3">
+                    <mat-icon blui-icon>account_circle</mat-icon>
+                    <mat-nav-list blui-toolbar-menu-items [style.paddingTop.px]="0">
+                        <blui-info-list-item [dense]="true" (click)="subtitle3 = 'Atlanta'">
+                            <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset">
+                                business
+                            </mat-icon>
+                            <span blui-title>Atlanta</span>
+                        </blui-info-list-item>
+                        <blui-info-list-item
+                            [dense]="true"
+                            [statusColor]="colors.red[500]"
+                            (click)="subtitle3 = 'Pittsburgh'"
                         >
-                        <span blui-title>Atlanta</span>
-                    </blui-info-list-item>
-                    <blui-info-list-item
-                        [dense]="true"
-                        (click)="subtitle4 = 'Pittsburgh'"
-                        [statusColor]="colors.red[500]"
-                    >
-                        <mat-icon blui-icon [style.color]="colors.red[500]" style="transform: unset">house</mat-icon>
-                        <span blui-title>Pittsburgh</span>
-                    </blui-info-list-item>
-                    <blui-info-list-item [dense]="true" (click)="subtitle4 = 'New York'">
-                        <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset"
-                            >apartment</mat-icon
-                        >
-                        <span blui-title>New York</span>
-                    </blui-info-list-item>
-                </mat-nav-list>
-            </blui-dropdown-toolbar>
+                            <mat-icon blui-icon [style.color]="colors.red[500]" style="transform: unset"
+                                >house</mat-icon
+                            >
+                            <span blui-title>Pittsburgh</span>
+                        </blui-info-list-item>
+                        <blui-info-list-item [dense]="true" (click)="subtitle3 = 'New York'">
+                            <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset">
+                                apartment
+                            </mat-icon>
+                            <span blui-title>New York</span>
+                        </blui-info-list-item>
+                    </mat-nav-list>
+                </blui-toolbar-menu>
+            </mat-toolbar>
+
+            <mat-toolbar style="margin-top: 16px" color="primary">
+                <button mat-icon-button style="margin: 0 -8px">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <blui-toolbar-menu [label]="subtitle4" style="margin: 0 12px">
+                    <ng-container blui-toolbar-menu-items>
+                        <button mat-menu-item (click)="subtitle4 = 'Item 1'">Item 1</button>
+                        <button mat-menu-item (click)="subtitle4 = 'Item 2'">Item 2</button>
+                        <button mat-menu-item (click)="subtitle4 = 'Item 3'">Item 3</button>
+                    </ng-container>
+                </blui-toolbar-menu>
+            </mat-toolbar>
         </mat-card-content>
     </mat-card>
 
