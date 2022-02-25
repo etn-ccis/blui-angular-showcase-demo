@@ -51,6 +51,20 @@
                 </blui-toolbar-menu>
             </mat-toolbar>
 
+            <mat-toolbar color="primary" style="margin-top: 16px">
+                <button mat-icon-button style="margin: 0 -8px">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <div style="margin: 0 12px">
+                    <div class="mat-title" style="margin-bottom: -8px">Title</div>
+                    <blui-toolbar-menu [label]="subtitle5">
+                        <ng-container blui-toolbar-menu-items>
+                            <button mat-menu-item (click)="subtitle5 = 'Item 1'">Item 1</button>
+                        </ng-container>
+                    </blui-toolbar-menu>
+                </div>
+            </mat-toolbar>
+
             <mat-toolbar style="margin-top: 16px" color="primary">
                 <blui-toolbar-menu [label]="subtitle2">
                     <mat-icon blui-icon>account_circle</mat-icon>
@@ -64,7 +78,7 @@
 
             <mat-toolbar style="margin-top: 16px" color="primary">
                 <blui-toolbar-menu [label]="subtitle3">
-                    <mat-icon blui-icon>account_circle</mat-icon>
+                    <mat-icon size="16" blui-icon>account_circle</mat-icon>
                     <mat-nav-list blui-toolbar-menu-items [style.paddingTop.px]="0">
                         <blui-info-list-item [dense]="true" (click)="subtitle3 = 'Atlanta'">
                             <mat-icon blui-icon [style.color]="colors.blue[500]" style="transform: unset">
