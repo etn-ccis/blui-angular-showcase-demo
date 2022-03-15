@@ -50,6 +50,14 @@ or
 npm run start
 ```
 
+## Library Development
+
+To run this project using a local copy of the `@brightlayer-ui/angular-components`, run:
+
+```
+yarn start:lib
+```
+
 ## Contributors
 
 ### Making changes as a submodule

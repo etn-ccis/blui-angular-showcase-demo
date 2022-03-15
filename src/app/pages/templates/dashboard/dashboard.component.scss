@@ -1,4 +1,4 @@
-@import '~@brightlayer-ui/colors/palette.scss';
+@use '~@brightlayer-ui/colors/palette.scss';
 
 .app-template-dashboard {
     display: flex;
@@ -27,7 +27,7 @@
     .red-score-card {
         margin-right: 8px;
         &.blui-score-card .blui-score-card-header {
-            background-color: map-get($blui-red, 500);
+            background-color: map-get(palette.$blui-red, 500);
         }
     }
 
@@ -42,7 +42,7 @@
         }
         .mat-expansion-panel-header-title,
         .mat-expansion-indicator::after {
-            color: map-get($blui-blue, 500);
+            color: map-get(palette.$blui-blue, 500);
         }
         .blui-info-list-item-left-content-wrapper {
             font-size: 12px;
@@ -63,7 +63,7 @@
     }
 
     .progress-icon {
-        color: map-get($blui-blue, 500);
+        color: map-get(palette.$blui-blue, 500);
     }
 
     blui-score-card {

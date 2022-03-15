@@ -1,10 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@brightlayer-ui/angular-themes/theme.scss';
-@import '~@brightlayer-ui/colors/palette.scss';
+@use '@brightlayer-ui/angular-themes/theme';
+@use 'refresh';
 
 body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
+}
+
+#type-table {
+    td,
+    th {
+        border: solid 1px black;
+    }
 }
 
 [dir='rtl'] .invert-rtl {
