@@ -34,7 +34,7 @@ jobs:
         id: fetch-branch-names
         name: Fetch branch names
         with:
-          github-token: $GITHUB_TOKEN
+          github-token: $AGENT_TOKEN
           script: |
             const pulls = await github.paginate('GET /repos/:owner/:repo/pulls', {
               owner: context.repo.owner,
@@ -125,7 +125,7 @@ jobs:
         env:
           PRS_STRING: ${{ steps.fetch-branch-names.outputs.prs-string }}
         with:
-          github-token: $GITHUB_TOKEN
+          github-token: $AGENT_TOKEN
           script: |
             const prString = process.env.PRS_STRING;
             const body = 'This PR was created by the Combine PRs action by combining the following PRs:\n' + prString;
