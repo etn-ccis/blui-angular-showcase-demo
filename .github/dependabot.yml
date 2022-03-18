@@ -3,8 +3,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
-      time: "17:00"
+      interval: "weekly"
+      day: "sunday"
     target-branch: "dev"
     labels:
       - "external-dependency"
