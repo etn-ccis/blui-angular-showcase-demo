@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: TimonVS/pr-labeler-action@v3
         with:
-          message: 'Need a default message for Blui'
           configuration-path: .github/pr-labeler.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
