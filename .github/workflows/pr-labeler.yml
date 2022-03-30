@@ -17,4 +17,3 @@ jobs:
       - run: echo "Are you sure this pull request is for master branch?"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
