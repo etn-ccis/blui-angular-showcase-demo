@@ -10,5 +10,10 @@ jobs:
       - uses: TimonVS/pr-labeler-action@v3
         with:
           configuration-path: .github/pr-labeler.yml
+  run_if:
+    if:  startsWith(github.head_ref, 'master/')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Are you sure this pull request is for master branch?"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
