@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import * as BLUIIcons from '@brightlayer-ui/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 
 @Component({
     selector: 'app-template-dashboard',
@@ -11,5 +11,5 @@ import * as BLUIIcons from '@brightlayer-ui/colors';
     },
 })
 export class DashboardComponent {
-    colors = BLUIIcons;
+    colors = BLUIColors;
 }

@@ -1,5 +1,4 @@
 import { ChangeDetectorRef, Component, ViewEncapsulation } from '@angular/core';
-import * as BLUIColors from '@brightlayer-ui/colors';
 import { DrawerNavItem } from '@brightlayer-ui/angular-components';
 import { ViewportService } from '../services/viewport.service';
 import { StateService } from '../services/state.service';
@@ -44,7 +43,6 @@ import { NavigationEnd, Router } from '@angular/router';
     encapsulation: ViewEncapsulation.None,
 })
 export class DrawerComponent {
-    colors = BLUIColors;
     selectedItemId: string;
     bluiGroupId = 'Brightlayer UI Components';
     materialComponentsGroupId = 'Material Components';

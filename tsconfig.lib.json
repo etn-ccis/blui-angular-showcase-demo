@@ -3,7 +3,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "paths": {
-      "@brightlayer-ui/angular-components": ["lib/core"]
+      "@brightlayer-ui/angular-components": ["lib/core"],
+      "@brightlayer-ui/colors": ["lib/colors"]
     }
   },
   "files": [

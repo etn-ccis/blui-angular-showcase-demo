@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import * as BLUIColors from '@brightlayer-ui/colors';
+import { BLUIColors } from '@brightlayer-ui/colors';
 import { RtlService } from '../../../services/rtl.service';
 
 const ELEMENT_DATA: any[] = [
