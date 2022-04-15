@@ -1200,10 +1200,10 @@
   dependencies:
     "@brightlayer-ui/types" "^2.0.0"
 
-"@brightlayer-ui/colors@^3.1.0-beta.1":
-  version "3.1.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/colors/-/colors-3.1.0-beta.1.tgz#b24d17cf59004e2edb4aadfe6110b8ed5d0818cc"
-  integrity sha512-eNRaXCmUbV6nOAFEJg4JSssyrypBR3N/Ps8/FuaN3m3rNhSBDmIWrqFrKx2ouGMIIT557XYYVInaZF2XAsFj1Q==
+"@brightlayer-ui/colors@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/colors/-/colors-3.1.0.tgz#eb1a0fe769328934e98d02f0f9232da72a0d714e"
+  integrity sha512-BZkrRovZQv4YrpGDagUH7tIera5v+EPjrV/gwUDgnRVT+yKOjz+KB/F3g5DzTxQiA/QDiuxHU/0CumSlxwljmQ==
   dependencies:
     "@brightlayer-ui/types" "^2.0.0"
 
