@@ -114,70 +114,92 @@
             <div mat-card-title>Info List Item</div>
         </mat-card-header>
         <mat-card-content>
-            <blui-info-list-item>
-                <span blui-title>Basic Usage</span>
-            </blui-info-list-item>
-            <blui-info-list-item>
-                <span blui-title>Info List Item</span>
-                <span blui-subtitle>with a Subtitle</span>
-            </blui-info-list-item>
-            <blui-info-list-item>
-                <span blui-title>Info List Item</span>
-                <span blui-subtitle>with an icon</span>
-                <mat-icon blui-icon>alarm</mat-icon>
-            </blui-info-list-item>
-            <blui-info-list-item [divider]="'partial'">
-                <span blui-title>Info List Item</span>
-                <span blui-subtitle>with a partial divider</span>
-            </blui-info-list-item>
-            <blui-info-list-item [divider]="'full'">
-                <span blui-title>Info List Item</span>
-                <span blui-subtitle>with a full divider</span>
-            </blui-info-list-item>
             <mat-nav-list>
-                <blui-info-list-item class="display-info-list-item" (click)="handleInfoListItemClick()">
+                <blui-info-list-item>
+                    <span blui-title>Basic Usage</span>
+                </blui-info-list-item>
+                <blui-info-list-item>
+                    <span blui-title>Info List Item</span>
+                    <span blui-subtitle>with a Subtitle</span>
+                </blui-info-list-item>
+                <blui-info-list-item>
+                    <span blui-title>Info List Item</span>
+                    <span blui-subtitle>with an icon</span>
+                    <mat-icon blui-icon>alarm</mat-icon>
+                </blui-info-list-item>
+                <blui-info-list-item [divider]="'partial'">
+                    <span blui-title>Info List Item</span>
+                    <span blui-subtitle>with a partial divider</span>
+                </blui-info-list-item>
+                <blui-info-list-item [divider]="'full'">
+                    <span blui-title>Info List Item</span>
+                    <span blui-subtitle>with a full divider</span>
+                </blui-info-list-item>
+                <blui-info-list-item
+                    class="display-info-list-item"
+                    (click)="handleInfoListItemClick()"
+                    [disabled]="false"
+                >
                     <span blui-title>Info List Item</span>
                     <span blui-subtitle>that is clickable</span>
                 </blui-info-list-item>
+                <blui-info-list-item
+                    class="display-info-list-item"
+                    (click)="handleInfoListItemClick()"
+                    [disabled]="true"
+                >
+                    <span blui-title>Info List Item</span>
+                    <span blui-subtitle>that is clickable & disabled</span>
+                </blui-info-list-item>
+                <blui-info-list-item [statusColor]="colors.green[700]" [avatar]="true">
+                    <div blui-title>Info List Item</div>
+                    <div blui-subtitle>with a status indicator</div>
+                    <mat-icon blui-icon [style.backgroundColor]="colors.green[700]" [style.color]="colors.white[50]"
+                        >offline_bolt</mat-icon
+                    >
+                </blui-info-list-item>
+                <blui-info-list-item [style.backgroundColor]="colors.yellow[500]">
+                    <div blui-title>Info List Item</div>
+                    <div blui-subtitle>with a background color</div>
+                    <mat-icon blui-icon>eco</mat-icon>
+                </blui-info-list-item>
+                <blui-info-list-item>
+                    <div blui-title>Info List Item</div>
+                    <div blui-subtitle>with a left component</div>
+                    <mat-icon [style.color]="colors.blue[500]" blui-icon>battery_charging_full</mat-icon>
+                    <div
+                        blui-left-content
+                        style="display: flex; flex-direction: column"
+                        [style.marginRight.px]="rtl.isRtl() ? 0 : 48"
+                        [style.marginLeft.px]="rtl.isRtl() ? 48 : 0"
+                    >
+                        <div class="mat-body-2">8:32 <strong>AM</strong></div>
+                        <div class="mat-body-2" style="margin-top: -4px">11/21/21</div>
+                    </div>
+                </blui-info-list-item>
+                <blui-info-list-item>
+                    <div blui-title>Info List Item</div>
+                    <div blui-subtitle>with a right component</div>
+                    <mat-icon [style.color]="colors.blue[500]" blui-icon>battery_charging_full</mat-icon>
+                    <blui-channel-value [value]="15" units="A" blui-right-content></blui-channel-value>
+                </blui-info-list-item>
+                <blui-info-list-item [statusColor]="colors.blue[500]">
+                    <div blui-title>Info List Item</div>
+                    <div blui-subtitle>with all properties</div>
+                    <div blui-info>more information here</div>
+                    <mat-icon blui-icon>devices</mat-icon>
+                </blui-info-list-item>
+                <blui-info-list-item
+                    [statusColor]="colors.blue[500]"
+                    [disabled]="true"
+                    (click)="handleInfoListItemClick()"
+                >
+                    <div blui-title>Disabled Info List Item</div>
+                    <div blui-subtitle>with all properties</div>
+                    <div blui-info>more information here</div>
+                    <mat-icon blui-icon>devices</mat-icon>
+                </blui-info-list-item>
             </mat-nav-list>
-            <blui-info-list-item [statusColor]="colors.green[700]" [avatar]="true">
-                <div blui-title>Info List Item</div>
-                <div blui-subtitle>with a status indicator</div>
-                <mat-icon blui-icon [style.backgroundColor]="colors.green[700]" [style.color]="colors.white[50]"
-                    >offline_bolt</mat-icon
-                >
-            </blui-info-list-item>
-            <blui-info-list-item [style.backgroundColor]="colors.yellow[500]">
-                <div blui-title>Info List Item</div>
-                <div blui-subtitle>with a background color</div>
-                <mat-icon blui-icon>eco</mat-icon>
-            </blui-info-list-item>
-            <blui-info-list-item>
-                <div blui-title>Info List Item</div>
-                <div blui-subtitle>with a left component</div>
-                <mat-icon [style.color]="colors.blue[500]" blui-icon>battery_charging_full</mat-icon>
-                <div
-                    blui-left-content
-                    style="display: flex; flex-direction: column"
-                    [style.marginRight.px]="rtl.isRtl() ? 0 : 48"
-                    [style.marginLeft.px]="rtl.isRtl() ? 48 : 0"
-                >
-                    <div class="mat-body-2">8:32 <strong>AM</strong></div>
-                    <div class="mat-body-2" style="margin-top: -4px">11/21/21</div>
-                </div>
-            </blui-info-list-item>
-            <blui-info-list-item>
-                <div blui-title>Info List Item</div>
-                <div blui-subtitle>with a right component</div>
-                <mat-icon [style.color]="colors.blue[500]" blui-icon>battery_charging_full</mat-icon>
-                <blui-channel-value [value]="15" units="A" blui-right-content></blui-channel-value>
-            </blui-info-list-item>
-            <blui-info-list-item [statusColor]="colors.blue[500]">
-                <div blui-title>Info List Item</div>
-                <div blui-subtitle>with all properties</div>
-                <div blui-info>more information here</div>
-                <mat-icon blui-icon>devices</mat-icon>
-            </blui-info-list-item>
         </mat-card-content>
     </mat-card>
 
