@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.3.7",
-    "@angular/cli": "~13.3.7",
+    "@angular/cli": "~14.0.0",
     "@angular/compiler-cli": "~13.3.9",
     "@angular/language-service": "~13.3.10",
     "@brightlayer-ui/eslint-config": "^3.0.0",
