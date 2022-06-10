@@ -1,7 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import * as BLUIColors from '@brightlayer-ui/colors';
 import { ViewportService } from './services/viewport.service';
 import { DrawerLayoutVariantType } from '@brightlayer-ui/angular-components';
 import { StateService } from './services/state.service';
@@ -17,7 +16,6 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent {
     isDarkMode = false;
     isRtl = false;
-    colors: Record<string, any>;
     variant: DrawerLayoutVariantType = 'persistent';
     userMenuOpen = false;
     title: string;
@@ -56,7 +54,6 @@ export class AppComponent {
         private readonly _rtlService: RtlService,
         private readonly _router: Router
     ) {
-        this.colors = BLUIColors;
         this.listenForRouteChanges();
         this._matIconRegistry.addSvgIconSetInNamespace(
             'blui-icons',
