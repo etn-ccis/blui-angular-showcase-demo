@@ -1218,10 +1218,10 @@
   resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons-svg/-/icons-svg-1.9.0.tgz#052dba903e7ad81e9b3a340215678a8620ac7782"
   integrity sha512-dDiHCSySw5G3xNPzviy3AylBEtII5Z63m7uZpBsJi9i3m+gjni/fuBuSZQ5OLzumQiljmQZvm13l3m+m1Tb6lA==
 
-"@brightlayer-ui/icons@^1.9.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons/-/icons-1.9.0.tgz#c318a6eb8e69dd458da8007b8a6c8af43d06c77d"
-  integrity sha512-y/VRG30WBuihc3kxHAVl7LlpwQ08hl4gnxo5BkJpPm8XJdpOckj9OPdd5woDIO26Dk20JiIK1FDJYZbzIqUPAg==
+"@brightlayer-ui/icons@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons/-/icons-1.10.0.tgz#456c545457970e586a3cf5c7f2a7140d8cb5e840"
+  integrity sha512-Az/KOXmp47E4gwM2iIa+Y5AfLopNhLb6bynb30HfqQzlBszQKheHSCUgI1L81RPdqLZeaksFSMrcIiK91PoEaw==
 
 "@brightlayer-ui/ng-progress-icons@^1.2.1":
   version "1.2.1"
