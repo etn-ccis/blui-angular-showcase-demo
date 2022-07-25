@@ -48,7 +48,7 @@
     "@brightlayer-ui/prettier-config": "^1.0.3",
     "@types/jasmine": "~4.0.3",
     "@types/jasminewd2": "~2.0.10",
-    "@types/node": "^18.0.6",
+    "@types/node": "^18.6.0",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.6",
     "codecov": "^3.8.2",
