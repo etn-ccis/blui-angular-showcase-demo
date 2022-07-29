@@ -1,6 +1,10 @@
-@use '@brightlayer-ui/angular-themes/theme';
+@use 'node_modules/@brightlayer-ui/angular-themes/theme';
+@use 'node_modules/@blui-lab/angular/themes/blueTheme';
 @use 'refresh';
 
+.blui-blue {
+    @include blueTheme.bluiLabBlueTheme();
+}
 body {
     margin: 0;
     -webkit-font-smoothing: antialiased;

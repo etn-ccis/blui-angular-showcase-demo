@@ -23,6 +23,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { BluiNavigationComponent } from './navigation/navigation.component';
 import { BluiTypographyComponent } from './typography.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { PasswordStrengthCheckerModule } from '@blui-lab/angular';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
     declarations: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent, BluiTypographyComponent],
@@ -38,6 +42,9 @@ import { BluiTypographyComponent } from './typography.component';
         ThreeLinerModule,
         MatButtonModule,
         MatCardModule,
+        MatInputModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
         MatIconModule,
         MatMenuModule,
         MatToolbarModule,
@@ -45,6 +52,7 @@ import { BluiTypographyComponent } from './typography.component';
         ScoreCardModule,
         UserMenuModule,
         ToolbarMenuModule,
+        PasswordStrengthCheckerModule,
     ],
     exports: [BluiSurfacesComponent, BluiDisplayComponent, BluiNavigationComponent, BluiTypographyComponent],
 })

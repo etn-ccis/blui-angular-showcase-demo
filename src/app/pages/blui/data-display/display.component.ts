@@ -1,6 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { BLUIColors } from '@brightlayer-ui/colors';
 import { RtlService } from '../../../services/rtl.service';
+import { FormControl } from '@angular/forms';
+import { PasswordRequirement } from '@blui-lab/angular';
 
 @Component({
     selector: 'app-blui-display',
@@ -15,6 +17,10 @@ export class BluiDisplayComponent {
     userMenuOpen3 = false;
     userMenuOpen4 = false;
     userMenuOpen5 = false;
+    passesStrengthCheck = false;
+
+    passwordFormControl: FormControl;
+    passwordRequirements: PasswordRequirement[];
 
     userMenuItems = [
         {
@@ -32,6 +38,29 @@ export class BluiDisplayComponent {
     ];
 
     constructor(public rtl: RtlService) {}
+
+    ngOnInit(): void {
+        this.passwordRequirements = this.createPasswordRequirements();
+        this.passwordFormControl = new FormControl('');
+    }
+
+    createPasswordRequirements(): PasswordRequirement[] {
+        const req: PasswordRequirement[] = [];
+        req.push({
+            description: 'Must be between 8 and 16 characters',
+            regex: /^.{8,16}$/,
+        });
+        req.push({
+            description: 'Must have one number',
+            regex: /[0-9]/,
+        });
+        req.push({
+            description: 'Must have uppercase Letter',
+            regex: /[A-Z]/,
+        });
+
+        return req;
+    }
 
     handleInfoListItemClick(): void {
         // eslint-disable-next-line no-console

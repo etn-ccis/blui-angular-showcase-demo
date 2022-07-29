@@ -265,6 +265,23 @@
 
     <mat-card class="ng-comp-card">
         <mat-card-header>
+            <div mat-card-title>Password Strength Checker</div>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput name="password" autocomplete="off" type="text" [formControl]="passwordFormControl" />
+            </mat-form-field>
+            <blui-password-strength-checker
+                [(meetsRequirements)]="passesStrengthCheck"
+                [formValue]="passwordFormControl.value"
+                [requirements]="passwordRequirements"
+            ></blui-password-strength-checker>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="ng-comp-card">
+        <mat-card-header>
             <div mat-card-title>User Menu</div>
         </mat-card-header>
         <mat-card-content>
