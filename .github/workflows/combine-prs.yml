@@ -128,11 +128,11 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const prString = process.env.PRS_STRING;
-            const body = 'This PR was created by the Combine PRs action by combining the following PRs:\n' + prString;
+            const body = 'This PR was created by the BLUI Combine PRs action by combining the following PRs:\n' + prString;
             await github.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Combined PR',
+              title: 'Bundle dependabot dependency updates',
               head: '${{ github.event.inputs.combineBranchName }}',
               base: '${{ steps.fetch-branch-names.outputs.base-branch }}',
               body: body
