@@ -4,7 +4,10 @@
   "compilerOptions": {
     "types": [
       "node"
-    ]
+    ],
+    "paths": {
+      "@brightlayer-ui/colors": ["../node_modules/@brightlayer-ui/colors/dist/es2015"]
+    }
   },
   "files": [
     "src/main.ts",
