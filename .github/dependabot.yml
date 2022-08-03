@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      open-pull-requests-limit: 1
+    open-pull-requests-limit: 1
     target-branch: "dev"
     labels:
       - "external-dependency"
