@@ -1,2 +1,2 @@
 master: ['hotfix/*', 'release/*', 'dev/*', 'dev*']
-external-dependency: ['combined/*', 'combined-dependabot/*']
+external-dependency: ['combined/*', 'combined-dependabots/*']
