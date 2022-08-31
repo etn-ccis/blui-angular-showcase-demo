@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.3.8",
-    "@angular/cli": "~13.3.8",
+    "@angular/cli": "~14.2.1",
     "@angular/compiler-cli": "~13.3.11",
     "@angular/language-service": "~14.2.0",
     "@brightlayer-ui/eslint-config": "^3.0.1",
@@ -50,7 +50,7 @@
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^18.7.5",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
-    "@typescript-eslint/parser": "^5.31.0",
+    "@typescript-eslint/parser": "^5.36.1",
     "codecov": "^3.8.2",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
