@@ -206,10 +206,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/language-service@~14.2.1":
-  version "14.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-14.2.1.tgz#600d95b7b42775a8fe9524129a71002d946a543c"
-  integrity sha512-i7a33+2Aq7c67udxAd6O9RYYLWEFHG0AI/pt0w+RL9ftrHjP4pTHZyRN+/KTn88jiIm39+bJVcnlhMwWUjgPKQ==
+"@angular/language-service@~14.2.3":
+  version "14.2.3"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-14.2.3.tgz#117ab7f238dd5bf172e63cb229a7a597e80e21de"
+  integrity sha512-11rp2DumlZFO5+/N38RW6lXzicD/6LlqeVoS4qf8sIMGJ4bzeyOrG0T/PAG2iEA7hay1jPH51t0G529xaSw0tQ==
 
 "@angular/material@^13.3.9":
   version "13.3.9"
@@ -4728,10 +4728,10 @@ firebase-frameworks@^0.4.2:
     semver "^7.3.7"
     tslib "^2.3.1"
 
-firebase-tools@^11.8.1:
-  version "11.8.1"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-11.8.1.tgz#94ee2ff310ab0df6071bc9679ce9b6cff5bdc923"
-  integrity sha512-qboaCh4zO8U23U8cQtZ4iM7pF/PzKZWhg63nqjgG/fHe+3Blq1btqXMJDLlKOsRje4DJeB+pqXcJEW1PclwKAw==
+firebase-tools@^11.10.0:
+  version "11.10.0"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-11.10.0.tgz#3a3fdc2e7eb77c16e16fbf7201029cb6d289e3ca"
+  integrity sha512-hel1UwDKsm0RlJyCBsMulE0EYzxKHusHJpezF7jpuIcP0Q5O41XXGDcW9uQB2gZopWJ1cf77ZOmYNLhrgfzauA==
   dependencies:
     "@google-cloud/pubsub" "^3.0.1"
     abort-controller "^3.0.0"
