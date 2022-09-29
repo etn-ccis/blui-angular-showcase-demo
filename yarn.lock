@@ -206,10 +206,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/language-service@~14.2.3":
-  version "14.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-14.2.3.tgz#117ab7f238dd5bf172e63cb229a7a597e80e21de"
-  integrity sha512-11rp2DumlZFO5+/N38RW6lXzicD/6LlqeVoS4qf8sIMGJ4bzeyOrG0T/PAG2iEA7hay1jPH51t0G529xaSw0tQ==
+"@angular/language-service@~14.2.4":
+  version "14.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-14.2.4.tgz#a03bc7c78d6bbe35befe7ea848b25e7a3f2d7fef"
+  integrity sha512-s2UvnGVRb2ltEnc/NSrCwa6lQoP2BFr3TaRfaOZurX0vr5Dou9VItrtqsk8b1ctPjgqtOQl1IgXT6V+dwN39yA==
 
 "@angular/material@^13.3.9":
   version "13.3.9"
@@ -6383,10 +6383,10 @@ karma-source-map-support@1.4.0:
   dependencies:
     source-map-support "^0.5.5"
 
-karma@~6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/karma/-/karma-6.4.0.tgz#82652dfecdd853ec227b74ed718a997028a99508"
-  integrity sha512-s8m7z0IF5g/bS5ONT7wsOavhW4i4aFkzD4u4wgzAQWT4HGUeWI3i21cK2Yz6jndMAeHETp5XuNsRoyGJZXVd4w==
+karma@~6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/karma/-/karma-6.4.1.tgz#f2253716dd3a41aaa813fa9f54b6ee047e1127d9"
+  integrity sha512-Cj57NKOskK7wtFWSlMvZf459iX+kpYIPXmkNUzP2WAFcA7nhr/ALn5R7sw3w+1udFDcpMx/tuB8d5amgm3ijaA==
   dependencies:
     "@colors/colors" "1.5.0"
     body-parser "^1.19.0"
