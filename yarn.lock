@@ -206,10 +206,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/language-service@~14.2.3":
-  version "14.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-14.2.3.tgz#117ab7f238dd5bf172e63cb229a7a597e80e21de"
-  integrity sha512-11rp2DumlZFO5+/N38RW6lXzicD/6LlqeVoS4qf8sIMGJ4bzeyOrG0T/PAG2iEA7hay1jPH51t0G529xaSw0tQ==
+"@angular/language-service@~14.2.4":
+  version "14.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-14.2.4.tgz#a03bc7c78d6bbe35befe7ea848b25e7a3f2d7fef"
+  integrity sha512-s2UvnGVRb2ltEnc/NSrCwa6lQoP2BFr3TaRfaOZurX0vr5Dou9VItrtqsk8b1ctPjgqtOQl1IgXT6V+dwN39yA==
 
 "@angular/material@^13.3.9":
   version "13.3.9"
@@ -8828,10 +8828,10 @@ rxjs@6.6.7:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^7.2.0, rxjs@^7.5.5, rxjs@~7.5.6:
-  version "7.5.6"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.6.tgz#0446577557862afd6903517ce7cae79ecb9662bc"
-  integrity sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==
+rxjs@^7.2.0, rxjs@^7.5.5, rxjs@~7.5.7:
+  version "7.5.7"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.7.tgz#2ec0d57fdc89ece220d2e702730ae8f1e49def39"
+  integrity sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==
   dependencies:
     tslib "^2.1.0"
 
