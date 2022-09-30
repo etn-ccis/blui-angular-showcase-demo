@@ -35,7 +35,7 @@
     "@brightlayer-ui/icons": "^1.11.0",
     "@brightlayer-ui/icons-svg": "^1.11.0",
     "@brightlayer-ui/ng-progress-icons": "^1.2.1",
-    "rxjs": "~7.5.6",
+    "rxjs": "~7.5.7",
     "tslib": "^2.4.0",
     "zone.js": "~0.11.8"
   },
