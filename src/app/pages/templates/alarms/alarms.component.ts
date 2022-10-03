@@ -1,4 +1,5 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ViewEncapsulation } from '@angular/core';
+import { ThemeService } from '../../../services/theme.service';
 import * as BLUIColors from '@brightlayer-ui/colors';
 
 @Component({
@@ -13,7 +14,7 @@ import * as BLUIColors from '@brightlayer-ui/colors';
 export class AlarmsComponent implements AfterViewInit {
     colors = BLUIColors;
 
-    constructor(private readonly _ref: ChangeDetectorRef) {}
+    constructor(private readonly _ref: ChangeDetectorRef, public themeService: ThemeService) {}
 
     ngAfterViewInit(): void {
         this._ref.detectChanges();

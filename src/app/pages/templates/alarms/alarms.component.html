@@ -38,8 +38,8 @@
                 <blui-list-item-tag
                     blui-right-content
                     label="acknowledged"
-                    [fontColor]="colors.blue[500]"
-                    [backgroundColor]="colors.blue[50]"
+                    [fontColor]="themeService.isDarkMode ? colors.blue[50] : colors.blue[500]"
+                    [backgroundColor]="themeService.isDarkMode ? colors.blue[500] : colors.blue[50]"
                 ></blui-list-item-tag>
             </blui-info-list-item>
             <blui-info-list-item iconAlign="center" divider="partial">
@@ -55,8 +55,8 @@
                 <blui-list-item-tag
                     blui-right-content
                     label="closed"
-                    [fontColor]="colors.gray[100]"
-                    [backgroundColor]="colors.white[50]"
+                    [fontColor]="themeService.isDarkMode ? colors.white[50] : colors.gray[100]"
+                    [backgroundColor]="themeService.isDarkMode ? colors.gray[100] : colors.white[50]"
                 ></blui-list-item-tag>
             </blui-info-list-item>
             <blui-info-list-item iconAlign="center" divider="partial">
@@ -72,8 +72,8 @@
                 <blui-list-item-tag
                     blui-right-content
                     label="closed"
-                    [fontColor]="colors.gray[100]"
-                    [backgroundColor]="colors.white[50]"
+                    [fontColor]="themeService.isDarkMode ? colors.white[50] : colors.gray[100]"
+                    [backgroundColor]="themeService.isDarkMode ? colors.gray[100] : colors.white[50]"
                 ></blui-list-item-tag>
             </blui-info-list-item>
             <blui-info-list-item divider="partial" iconAlign="center">
@@ -89,8 +89,8 @@
                 <blui-list-item-tag
                     blui-right-content
                     label="closed"
-                    [fontColor]="colors.gray[100]"
-                    [backgroundColor]="colors.white[50]"
+                    [fontColor]="themeService.isDarkMode ? colors.white[50] : colors.gray[100]"
+                    [backgroundColor]="themeService.isDarkMode ? colors.gray[100] : colors.white[50]"
                 ></blui-list-item-tag>
             </blui-info-list-item>
             <blui-info-list-item divider="partial" iconAlign="center">
@@ -106,8 +106,8 @@
                 <blui-list-item-tag
                     blui-right-content
                     label="acknowledged"
-                    [fontColor]="colors.blue[500]"
-                    [backgroundColor]="colors.blue[50]"
+                    [fontColor]="themeService.isDarkMode ? colors.blue[50] : colors.blue[500]"
+                    [backgroundColor]="themeService.isDarkMode ? colors.blue[500] : colors.blue[50]"
                 ></blui-list-item-tag>
             </blui-info-list-item>
             <blui-info-list-item divider="partial" iconAlign="center">
