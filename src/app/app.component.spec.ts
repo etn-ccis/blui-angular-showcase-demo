@@ -130,22 +130,12 @@ describe('AppComponent', () => {
         void expect(toggleThemeSpy).toHaveBeenCalledTimes(1);
     });
 
-    it('should toggle theme from dark mode', () => {
-        fixture.detectChanges();
-        component.isDarkMode = true;
-        const toggleThemeBtn = fixture.debugElement.query(By.css('.toggle-theme'));
-        toggleThemeBtn.triggerEventHandler('click', undefined);
-        fixture.detectChanges();
-        void expect(component.isDarkMode).toBe(false);
-    });
-
     it('should toggle theme to dark mode', () => {
         fixture.detectChanges();
-        component.isDarkMode = false;
         const toggleThemeBtn = fixture.debugElement.query(By.css('.toggle-theme'));
         toggleThemeBtn.triggerEventHandler('click', undefined);
         fixture.detectChanges();
-        void expect(component.isDarkMode).toBe(true);
+        void expect(component.isDarkMode()).toBe(true);
     });
 
     it('should toggle rtl to ltr', () => {

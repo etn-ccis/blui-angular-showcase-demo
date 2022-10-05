@@ -161,6 +161,11 @@ export class AppComponent {
         this._themeService.isDarkMode = !this._themeService.isDarkMode;
     }
 
+    // Use in unit tests.
+    isDarkMode(): boolean {
+        return this._themeService.isDarkMode;
+    }
+
     toggleDirectionality(): void {
         this.isRtl = !this.isRtl;
         this._rtlService.setRTL(this.isRtl);
