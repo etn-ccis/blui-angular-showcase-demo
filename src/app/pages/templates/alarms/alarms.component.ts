@@ -14,9 +14,13 @@ import * as BLUIColors from '@brightlayer-ui/colors';
 export class AlarmsComponent implements AfterViewInit {
     colors = BLUIColors;
 
-    constructor(private readonly _ref: ChangeDetectorRef, public themeService: ThemeService) {}
+    constructor(private readonly _ref: ChangeDetectorRef, private readonly _themeService: ThemeService) {}
 
     ngAfterViewInit(): void {
         this._ref.detectChanges();
+    }
+
+    isDark(): boolean {
+        return this._themeService.isDarkMode;
     }
 }

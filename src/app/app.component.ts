@@ -53,7 +53,7 @@ export class AppComponent {
         private readonly _viewportService: ViewportService,
         private readonly _rtlService: RtlService,
         private readonly _router: Router,
-        private themeService: ThemeService
+        private readonly _themeService: ThemeService
     ) {
         this.listenForRouteChanges();
         this._matIconRegistry.addSvgIconSetInNamespace(
@@ -151,14 +151,19 @@ export class AppComponent {
 
     toggleTheme(): void {
         const body = document.querySelector('body') as HTMLElement;
-        if (this.themeService.isDarkMode) {
+        if (this._themeService.isDarkMode) {
             body.classList.remove('blui-blue-dark');
             body.classList.add('blui-blue');
         } else {
             body.classList.remove('blui-blue');
             body.classList.add('blui-blue-dark');
         }
-        this.themeService.isDarkMode = !this.themeService.isDarkMode;
+        this._themeService.isDarkMode = !this._themeService.isDarkMode;
+    }
+
+    // Use in unit tests.
+    isDarkMode(): boolean {
+        return this._themeService.isDarkMode;
     }
 
     toggleDirectionality(): void {
