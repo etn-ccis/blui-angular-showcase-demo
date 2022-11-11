@@ -1,10 +1,10 @@
-import { FeedbackBottomSheetExample, FeedbackDialogExample, MatFeedackComponent } from './feedback.component';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSnackBarModule, MatSnackBarRef } from '@angular/material/snack-bar';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatBottomSheetModule, MatBottomSheetRef } from '@angular/material/bottom-sheet';
-import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
+import {MatFeedackComponent} from './feedback.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {MatSnackBarRef} from '@angular/material/snack-bar';
+import {MatDialogRef} from '@angular/material/dialog';
+import {MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import {AppModule} from "../../../app.module";
+
 describe('MatFeedackComponent', () => {
     let component: MatFeedackComponent;
     let fixture: ComponentFixture<MatFeedackComponent>;
@@ -23,14 +23,7 @@ describe('MatFeedackComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [MatFeedackComponent, FeedbackDialogExample, FeedbackBottomSheetExample],
-            imports: [
-                MatDialogModule,
-                MatBottomSheetModule,
-                BrowserAnimationsModule,
-                MatSnackBarModule,
-                BrowserDynamicTestingModule,
-            ],
+            imports: [AppModule],
             providers: [
                 {
                     provide: MatDialogRef,
