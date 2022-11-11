@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {BluiNavigationComponent} from './navigation.component';
-import {BluiModule} from "../blui.module";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BluiNavigationComponent } from './navigation.component';
+import { BluiModule } from '../blui.module';
 
 describe('BluiNavigationComponent', () => {
     let component: BluiNavigationComponent;

@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatDisplayComponent} from './display.component';
-import {AppModule} from "../../../app.module";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDisplayComponent } from './display.component';
+import { AppModule } from '../../../app.module';
 
 describe('MatDisplayComponent', () => {
     let component: MatDisplayComponent;

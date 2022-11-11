@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatNavigationComponent} from './navigation.component';
-import {AppModule} from "../../../app.module";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatNavigationComponent } from './navigation.component';
+import { AppModule } from '../../../app.module';
 
 describe('MatNavigationComponent', () => {
     let component: MatNavigationComponent;

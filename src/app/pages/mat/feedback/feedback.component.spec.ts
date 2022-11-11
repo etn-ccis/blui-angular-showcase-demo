@@ -1,9 +1,9 @@
-import {MatFeedackComponent} from './feedback.component';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatSnackBarRef} from '@angular/material/snack-bar';
-import {MatDialogRef} from '@angular/material/dialog';
-import {MatBottomSheetRef} from '@angular/material/bottom-sheet';
-import {AppModule} from "../../../app.module";
+import { MatFeedackComponent } from './feedback.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatSnackBarRef } from '@angular/material/snack-bar';
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { AppModule } from '../../../app.module';
 
 describe('MatFeedackComponent', () => {
     let component: MatFeedackComponent;

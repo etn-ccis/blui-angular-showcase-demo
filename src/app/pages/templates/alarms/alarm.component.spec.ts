@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AlarmsComponent } from './alarms.component';
-import {AppModule} from "../../../app.module";
+import { AppModule } from '../../../app.module';
 
 describe('AlarmsComponent', () => {
     let component: AlarmsComponent;

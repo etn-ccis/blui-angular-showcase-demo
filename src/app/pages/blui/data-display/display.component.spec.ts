@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {BluiDisplayComponent} from './display.component';
-import {BluiModule} from "../blui.module";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BluiDisplayComponent } from './display.component';
+import { BluiModule } from '../blui.module';
 
 describe('BluiDisplayComponent', () => {
     let component: BluiDisplayComponent;
@@ -8,7 +8,7 @@ describe('BluiDisplayComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [BluiModule]
+            imports: [BluiModule],
         }).compileComponents();
     });
 
