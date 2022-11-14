@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatInputsComponent } from './inputs.component';
+import { AppModule } from '../../../app.module';
 
 describe('MatInputsComponent', () => {
     let component: MatInputsComponent;
@@ -7,7 +8,7 @@ describe('MatInputsComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [MatInputsComponent],
+            imports: [AppModule],
         }).compileComponents();
     });
 

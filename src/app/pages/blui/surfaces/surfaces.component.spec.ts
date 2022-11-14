@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BluiSurfacesComponent } from './surfaces.component';
+import { BluiModule } from '../blui.module';
 
 describe('BluiSurfacesComponent', () => {
     let component: BluiSurfacesComponent;
@@ -7,7 +8,7 @@ describe('BluiSurfacesComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [BluiSurfacesComponent],
+            imports: [BluiModule],
         }).compileComponents();
     });
 

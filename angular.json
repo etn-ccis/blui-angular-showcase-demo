@@ -108,13 +108,14 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.scss"
+                            "src/styles.scss",
+                            "./node_modules/@brightlayer-ui/angular-themes/open-sans.scss",
+                            "./node_modules/@brightlayer-ui/icons/iconfont/BrightlayerUIIcons.css"
                         ],
                         "scripts": []
                     }
                 }
             }
         }
-    },
-    "defaultProject": "component-demo"
+    }
 }
