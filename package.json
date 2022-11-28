@@ -42,7 +42,7 @@
   "devDependencies": {
     "@angular/language-service": "^14.2.10",
     "firebase-tools": "^11.16.0",
-    "npm-check-updates": "^16.3.18",
+    "npm-check-updates": "^16.4.3",
     "@angular-devkit/build-angular": "^14.2.9",
     "@angular/cli": "^14.2.9",
     "@angular/compiler-cli": "^14.2.10",
