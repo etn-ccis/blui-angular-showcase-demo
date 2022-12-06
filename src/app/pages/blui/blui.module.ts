@@ -5,7 +5,6 @@ import { MatCardModule } from '@angular/material/card';
 import {
     AppBarModule,
     ChannelValueModule,
-    DropdownToolbarModule,
     EmptyStateModule,
     HeroModule,
     InfoListItemModule,
@@ -30,7 +29,6 @@ import { BluiTypographyComponent } from './typography.component';
         AppBarModule,
         CommonModule,
         ChannelValueModule,
-        DropdownToolbarModule,
         EmptyStateModule,
         HeroModule,
         InfoListItemModule,

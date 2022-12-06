@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatDisplayComponent } from './display.component';
+import { AppModule } from '../../../app.module';
 
 describe('MatDisplayComponent', () => {
     let component: MatDisplayComponent;
@@ -7,7 +8,7 @@ describe('MatDisplayComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [MatDisplayComponent],
+            imports: [AppModule],
         }).compileComponents();
     });
 

@@ -1,10 +1,10 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { UntypedFormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
 export class AlwaysErrorState implements ErrorStateMatcher {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    isErrorState(control: UntypedFormControl | null, form: FormGroupDirective | NgForm | null): boolean {
         return true;
     }
 }
@@ -17,5 +17,5 @@ export class AlwaysErrorState implements ErrorStateMatcher {
 })
 export class MatInputsComponent {
     errorMatcher = new AlwaysErrorState();
-    errorControl: FormControl = new FormControl('', [Validators.required]);
+    errorControl: UntypedFormControl = new UntypedFormControl('', [Validators.required]);
 }
