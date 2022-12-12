@@ -86,4 +86,4 @@ git submodule update --remote //this is the command to update the pointer
 // Create a new branch and add/commit/push the updated pointer to the parent repository
 ```
 
-Most parent repositories will have an NPM script to update the pointer.
+Most parent repositories will have an NPM script to update the pointer. TEST
