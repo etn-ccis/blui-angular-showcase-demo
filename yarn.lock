@@ -209,10 +209,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/language-service@^14.2.10":
-  version "14.2.11"
-  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-14.2.11.tgz#c60a02b9d5be68327294decaab8cf5f701f51fd2"
-  integrity sha512-YOQ7zVnRkZaIlAwA+u+x+wUGlvvKQDR+CGkIF19L/C0Zo6b8vFmfcNqWig6Wq8sRwS+5fULcPoOAESaUwq3urw==
+"@angular/language-service@^15.0.4":
+  version "15.0.4"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-15.0.4.tgz#06ace02f410308f38663a7f7a4c699daff1a29ed"
+  integrity sha512-HGudgKAGvGCw4D1SXHxvXfoBG64/IVYLA9rkbodNAMfOnQwOCxgktkaQ6zzr59C0BS5mXlbBUcEYOC0Q5BXdsw==
 
 "@angular/material@^14.2.7":
   version "14.2.7"
@@ -4548,7 +4548,6 @@ eslint-visitor-keys@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz#f6480fa6b1f30efe2d1968aa8ac745b862469826"
   integrity sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA==
-
 
 eslint@^8.28.0:
   version "8.28.0"
