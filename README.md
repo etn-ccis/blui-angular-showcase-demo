@@ -1,4 +1,4 @@
-# Angular Showcase Demo
+## Angular Showcase Demo
 
 [![](https://img.shields.io/circleci/project/github/etn-ccis/blui-angular-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-angular-showcase-demo/tree/master)[![codecov](https://codecov.io/gh/etn-ccis/blui-angular-showcase-demo/branch/master/graph/badge.svg?token=K87B6K67G5)](https://codecov.io/gh/etn-ccis/blui-angular-showcase-demo)
 
