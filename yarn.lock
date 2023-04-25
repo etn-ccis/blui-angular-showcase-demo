@@ -1443,15 +1443,15 @@
   optionalDependencies:
     eslint-plugin-react "^7.28.0"
 
-"@brightlayer-ui/icons-svg@^1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons-svg/-/icons-svg-1.11.0.tgz#2f4d6ea83bd7628f8e18064e4391ed19a581647e"
-  integrity sha512-ANrFfZ/QseSdkef4ufUelH9PGDsHfvLZwSdmWyQjkj/WcrXYG+aVn2CB8Pij+4E9nwd2XFv+4HHXrD5L0bNLpw==
+"@brightlayer-ui/icons-svg@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons-svg/-/icons-svg-1.12.0.tgz#5d2421ffe0c056478ebb32f980192b268df2a6e2"
+  integrity sha512-xrqYJQ9M9ZaErMYGrLo3I6AmJZOw+yhcWYXDuMXw+PetwYPZO6SaJioE6KtH5975XSXfy60pZd9h+N4ACBSs+Q==
 
-"@brightlayer-ui/icons@^1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons/-/icons-1.11.0.tgz#412baae591b9c5fc87dda7b3cdd278dc2671d667"
-  integrity sha512-2pHKJY7Xpao6BQ1ZIRcXxpTFuhSlalOJKw2//D05mNSzIFTZmBCv+6OVtAE45NxbLNIDP/To0/Cykm2mA9I1Vw==
+"@brightlayer-ui/icons@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/icons/-/icons-2.1.0.tgz#732f917f1275e430c57d225946a6df5ea68ac893"
+  integrity sha512-qRROlcwoXKUrWCtIpzy69n+jmHBJztOLVnyAFL+TXcz360rNVCBEQRNOBKIk2+Z2ltlhsbGFpF5P0t6Hoz69jQ==
 
 "@brightlayer-ui/ng-progress-icons@^1.2.1":
   version "1.2.1"
@@ -9686,10 +9686,10 @@ rxjs@6.6.7:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^7.5.5, rxjs@~7.5.7:
-  version "7.5.7"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.7.tgz#2ec0d57fdc89ece220d2e702730ae8f1e49def39"
-  integrity sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==
+rxjs@^7.5.5, rxjs@~7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.8.0.tgz#90a938862a82888ff4c7359811a595e14e1e09a4"
+  integrity sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==
   dependencies:
     tslib "^2.1.0"
 
@@ -10945,9 +10945,9 @@ verror@1.10.0:
     extsprintf "^1.2.0"
 
 vm2@^3.9.8:
-  version "3.9.11"
-  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.9.11.tgz#a880f510a606481719ec3f9803b940c5805a06fe"
-  integrity sha512-PFG8iJRSjvvBdisowQ7iVF580DXb1uCIiGaXgm7tynMR1uTBlv7UJlB1zdv5KJ+Tmq1f0Upnj3fayoEOPpCBKg==
+  version "3.9.17"
+  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.9.17.tgz#251b165ff8a0e034942b5181057305e39570aeab"
+  integrity sha512-AqwtCnZ/ERcX+AVj9vUsphY56YANXxRuqMb7GsDtAr0m0PcQX3u0Aj3KWiXM0YAHy7i6JEeHrwOnwXbGYgRpAw==
   dependencies:
     acorn "^8.7.0"
     acorn-walk "^8.2.0"
