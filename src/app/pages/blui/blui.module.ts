@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BluiSurfacesComponent } from './surfaces/surfaces.component';
 import { BluiDisplayComponent } from './data-display/display.component';
-import { MatCardModule } from '@angular/material/card';
+import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import {
     AppBarModule,
     ChannelValueModule,
@@ -16,10 +16,10 @@ import {
     ToolbarMenuModule,
 } from '@brightlayer-ui/angular-components';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
 import { BluiNavigationComponent } from './navigation/navigation.component';
 import { BluiTypographyComponent } from './typography.component';
 
