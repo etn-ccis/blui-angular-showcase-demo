@@ -80,6 +80,8 @@ $warn: (
     ),
 );
 
+@include theme-bases.shared();
+
 .blui-blue {
     $blui-blue-primary: theme-bases.$blui-blue-primary;
     $blui-blue-accent: theme-bases.$blui-blue-accent;
