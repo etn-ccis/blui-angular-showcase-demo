@@ -5,7 +5,7 @@ orbs:
 jobs:
   build_demo:
     docker:
-      - image: cimg/node:16.19.1-browsers
+      - image: cimg/node:20.4.0-browsers
     steps:
       - checkout
       - browser-tools/install-browser-tools
@@ -45,7 +45,7 @@ jobs:
   coverage_report:
         working_directory: ~/angular-showcase-demo
         docker:
-            - image: cimg/node:14.19.0-browsers
+            - image: cimg/node:20.4.0-browsers
         steps:
             - checkout
             - attach_workspace:
