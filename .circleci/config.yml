@@ -1,11 +1,11 @@
 version: 2.1
 orbs:
     codecov: codecov/codecov@3.2.2
-    browser-tools: circleci/browser-tools@1.2.4
+    browser-tools: circleci/browser-tools@1.4.2
 jobs:
   build_demo:
     docker:
-      - image: cimg/node:14.19.0-browsers
+      - image: cimg/node:16.19.1-browsers
     steps:
       - checkout
       - browser-tools/install-browser-tools
