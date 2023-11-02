@@ -1,7 +1,7 @@
 import { MatFeedackComponent } from './feedback.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatLegacySnackBarRef as MatSnackBarRef } from '@angular/material/legacy-snack-bar';
-import { MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
+import { MatDialogRef } from '@angular/material/dialog'
 import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { AppModule } from '../../../app.module';
 
