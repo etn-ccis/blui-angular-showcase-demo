@@ -1,6 +1,6 @@
 # Angular Showcase Demo
 
-[![](https://img.shields.io/circleci/project/github/etn-ccis/blui-angular-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-angular-showcase-demo/tree/master)[![codecov](https://codecov.io/gh/etn-ccis/blui-angular-showcase-demo/branch/master/graph/badge.svg?token=K87B6K67G5)](https://codecov.io/gh/etn-ccis/blui-angular-showcase-demo)
+[![Build](https://github.com/etn-ccis/blui-angular-showcase-demo/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-angular-showcase-demo/actions/workflows/blui-ci.yml) [![codecov](https://codecov.io/gh/etn-ccis/blui-angular-showcase-demo/branch/master/graph/badge.svg?token=K87B6K67G5)](https://codecov.io/gh/etn-ccis/blui-angular-showcase-demo)
 
 This applications is a demo applications that is used to demonstrate and test various Brightlayer UI components, resources, etc.
 
