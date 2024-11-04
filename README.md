@@ -1,4 +1,4 @@
-## Angular Showcase Demo
+# Angular Showcase Demo
 
 [![Build](https://github.com/etn-ccis/blui-angular-showcase-demo/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-angular-showcase-demo/actions/workflows/blui-ci.yml) [![codecov](https://codecov.io/gh/etn-ccis/blui-angular-showcase-demo/branch/master/graph/badge.svg?token=K87B6K67G5)](https://codecov.io/gh/etn-ccis/blui-angular-showcase-demo)
 
